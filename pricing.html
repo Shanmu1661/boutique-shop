@@ -1,0 +1,516 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP Consultations & Pricing | Avenoir Boutique</title>
+    <meta name="description" content="View personal stylist consultation services, seasonal wardrobe makeovers, and boutique private membership prices.">
+    
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        luxury: {
+                            accent: '#c5a880',
+                            accentHover: '#b5966c',
+                            darkBg: '#121212',
+                            darkCard: '#1e1e1e',
+                            lightBg: '#fcfcfc'
+                        }
+                    },
+                    fontFamily: {
+                        primary: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    
+    <script src="assets/js/theme.js"></script>
+</head>
+<body class="bg-luxury-lightBg dark:bg-luxury-darkBg text-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    
+    
+
+    <!-- Header Navigation -->
+    
+    <div class="w-full overflow-x-hidden flex flex-col min-h-screen">
+    <!-- Main Navigation Header -->
+    <header id="main-header" class="sticky top-0 z-40 w-full transition-all duration-300 bg-white/95 dark:bg-neutral-900/95 shadow-luxury">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between">
+            
+            <!-- Left: Mobile Toggle & Logo -->
+            <div class="flex items-center gap-4 sm:gap-6">
+                <!-- Hamburger Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-gray-800 dark:text-white hover:text-luxury-accent transition">
+                    <i class="fa-solid fa-bars-staggered text-xl"></i>
+                </button>
+                
+                <!-- Logo/Boutique Name -->
+                <a href="index.html" class="flex items-center gap-2 sm:gap-3 select-none group">
+                    <img src="assets/images/logo/logo-icon-transparent.png" alt="Avenoir Logo" class="w-8 h-8 sm:w-10 h-10 object-contain transition-transform group-hover:scale-105 duration-300">
+                    <div class="flex flex-col">
+                        <span class="font-serif text-lg sm:text-2xl font-bold tracking-[0.15em] sm:tracking-[0.2em] text-gray-900 dark:text-white leading-none">AVENOIR</span>
+                        <span class="text-[7px] sm:text-[9px] tracking-[0.4em] uppercase text-luxury-accent font-bold mt-1">Haute Couture</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Center: Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-xs font-bold tracking-[0.2em] uppercase">
+                <!-- Home dropdown -->
+                <div class="mega-menu-trigger relative">
+                    <a href="index.html" class="hover:text-luxury-accent transition flex items-center gap-1 py-4">
+                        Home <i class="fa-solid fa-angle-down text-[10px]"></i>
+                    </a>
+                    <!-- Mega Menu (Home Variations) -->
+                    <div class="mega-menu absolute left-1/2 -translate-x-1/2 top-full w-56 bg-white dark:bg-neutral-900 border border-gray-100 dark:border-neutral-800 shadow-xl p-4 z-50">
+                        <ul class="flex flex-col gap-3 font-semibold text-gray-700 dark:text-gray-300 text-left uppercase tracking-wider text-[11px]">
+                            <li><a href="index.html" class="hover:text-luxury-accent transition block">Home 1</a></li>
+                            <li><a href="index-2.html" class="hover:text-luxury-accent transition block">Home 2</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <a href="products.html" class="hover:text-luxury-accent transition py-4">Shop</a>
+                <a href="about.html" class="hover:text-luxury-accent transition py-4">About Us</a>
+                <a href="blog.html" class="hover:text-luxury-accent transition py-4">Blog</a>
+                <a href="pricing.html" class="hover:text-luxury-accent transition py-4">Pricing</a>
+                <a href="contact.html" class="hover:text-luxury-accent transition py-4">Contact</a>
+            </nav>
+
+            <!-- Right: Utility icons -->
+            <div class="flex items-center gap-3 sm:gap-5">
+                <!-- RTL Toggle -->
+                <button onclick="window.ThemeToggler.toggleRTL(); window.location.reload();" class="text-[10px] tracking-widest font-bold uppercase border border-gray-200 dark:border-neutral-800 px-2.5 py-1 hover:border-luxury-accent hover:text-luxury-accent transition duration-300" title="Toggle Layout Direction (LTR/RTL)">
+                    <span class="rtl:hidden">RTL</span>
+                    <span class="hidden rtl:inline">LTR</span>
+                </button>
+
+                <!-- Theme Toggle -->
+                <button onclick="window.ThemeToggler.toggleTheme()" class="text-gray-800 dark:text-gray-200 hover:text-luxury-accent transition p-1" title="Toggle Theme">
+                    <i class="fa-regular fa-moon dark:hidden text-lg"></i>
+                    <i class="fa-regular fa-sun hidden dark:block text-lg"></i>
+                </button>
+
+                <!-- User Account -->
+                <a href="login.html" class="hidden sm:inline-block text-gray-800 dark:text-gray-200 hover:text-luxury-accent transition p-1" title="Account">
+                    <i class="fa-regular fa-user text-lg"></i>
+                </a>
+
+                <!-- Wishlist Link (Hidden on mobile) -->
+                <a href="#" onclick="window.Cart.showToast('Wishlist view coming soon!')" class="hidden sm:inline-block relative text-gray-800 dark:text-gray-200 hover:text-luxury-accent transition p-1" title="Wishlist">
+                    <i class="fa-regular fa-heart text-lg"></i>
+                    <span class="wishlist-count absolute -top-1 -right-1 bg-luxury-accent text-white text-[9px] font-bold rounded-full w-4 h-4 flex items-center justify-center hidden">0</span>
+                </a>
+
+                <!-- Cart Toggle -->
+                <a href="#" class="cart-toggle hidden sm:inline-block relative text-gray-800 dark:text-gray-200 hover:text-luxury-accent transition p-1" title="Shopping Bag">
+                    <i class="fa-solid fa-bag-shopping text-lg"></i>
+                    <span class="cart-count absolute -top-1 -right-1 bg-black text-white dark:bg-white dark:text-black text-[9px] font-bold rounded-full w-4 h-4 flex items-center justify-center hidden">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="relative py-24 sm:py-32 bg-neutral-950 overflow-hidden flex items-center justify-center border-b border-gray-100 dark:border-neutral-800/40">
+        <img src="assets/images/banners/women-banner.jpg" alt="VIP Styling Banner" class="absolute inset-0 w-full h-full object-cover object-top opacity-70">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+        <div class="relative max-w-3xl mx-auto text-center px-4 text-white z-10" data-aos="fade-up">
+            <span class="text-xs uppercase font-bold tracking-[0.3em] text-luxury-accent">VIP Styling Services</span>
+            <h1 class="font-serif text-4xl sm:text-5xl font-bold tracking-wide mt-3">Personal Stylist Consultations</h1>
+        </div>
+    </section>
+
+    <!-- Pricing Plans Grid (3 Tiers) -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+            
+            <!-- Tier 1 -->
+            <div class="bg-white dark:bg-neutral-900 border border-gray-100 dark:border-neutral-800 p-8 rounded shadow-luxury hover:shadow-luxury-hover transition-luxury flex flex-col justify-between" data-aos="fade-up">
+                <div class="font-sans">
+                    <span class="text-[10px] uppercase font-bold text-gray-400 tracking-widest block mb-2">Hourly Service</span>
+                    <h3 class="font-serif text-xl font-bold text-gray-900 dark:text-white mb-4">Styling Session</h3>
+                    <div class="flex items-baseline mb-6">
+                        <span class="text-2xl font-bold text-gray-900 dark:text-white">$</span>
+                        <span class="text-5xl font-serif text-gray-900 dark:text-white font-medium">95</span>
+                        <span class="text-xs text-gray-400 font-semibold ms-2">/ hour</span>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-neutral-400 leading-relaxed mb-6">A one-on-one session with our senior styling directors to inspect fit, silhouettes, and catalog pairing recommendations.</p>
+                    
+                    <ul class="flex flex-col gap-3.5 text-xs text-gray-600 dark:text-neutral-400 border-t border-gray-100 dark:border-neutral-800/80 pt-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-luxury-accent"></i> 60-Minute Consultation</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-luxury-accent"></i> Style &amp; Silhouette Review</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-luxury-accent"></i> Digital Outfit Catalog PDF</li>
+                    </ul>
+                </div>
+                <button onclick="window.Cart.showToast('Consultation request sent!')" class="mt-8 w-full border border-black dark:border-white text-black dark:text-white font-semibold text-[10px] py-4 uppercase tracking-widest hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition duration-300">Book Session</button>
+            </div>
+
+            <!-- Tier 2 (Highlighted) -->
+            <div class="bg-black text-white border border-neutral-800 p-8 rounded shadow-luxury shadow-luxury-hover scale-100 lg:scale-[1.03] transition-luxury flex flex-col justify-between relative" data-aos="fade-up" data-aos-delay="100">
+                <span class="absolute top-4 end-4 bg-luxury-accent text-white text-[9px] uppercase font-bold tracking-widest px-2.5 py-1">Most Popular</span>
+                <div class="font-sans">
+                    <span class="text-[10px] uppercase font-bold text-luxury-accent tracking-widest block mb-2">Complete Wardrobe Review</span>
+                    <h3 class="font-serif text-xl font-bold text-white mb-4">Wardrobe Makeover</h3>
+                    <div class="flex items-baseline mb-6">
+                        <span class="text-2xl font-bold text-white">$</span>
+                        <span class="text-5xl font-serif text-white font-medium">350</span>
+                        <span class="text-xs text-gray-400 font-semibold ms-2">/ complete package</span>
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed mb-6">Our flagship design service. Includes home stylist visit to purge and reorganize your wardrobe capsule, plus bespoke measurements.</p>
+                    
+                    <ul class="flex flex-col gap-3.5 text-xs text-gray-300 border-t border-neutral-800 pt-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-luxury-accent"></i> 3-Hour Home Stylist Visit</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-luxury-accent"></i> Reorganize Wardrobe &amp; Purge</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-luxury-accent"></i> 15% discount on Avenoir Catalog</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-luxury-accent"></i> Free bespoke measurement profile</li>
+                    </ul>
+                </div>
+                <button onclick="window.Cart.showToast('Makeover booking submitted!')" class="mt-8 w-full bg-luxury-accent hover:bg-luxury-accentHover text-white font-semibold text-[10px] py-4 uppercase tracking-widest transition duration-300">Book Makeover</button>
+            </div>
+
+            <!-- Tier 3 -->
+            <div class="bg-white dark:bg-neutral-900 border border-gray-100 dark:border-neutral-800 p-8 rounded shadow-luxury hover:shadow-luxury-hover transition-luxury flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                <div class="font-sans">
+                    <span class="text-[10px] uppercase font-bold text-gray-400 tracking-widest block mb-2">Annual Membership</span>
+                    <h3 class="font-serif text-xl font-bold text-gray-900 dark:text-white mb-4">Couture Club VIP</h3>
+                    <div class="flex items-baseline mb-6">
+                        <span class="text-2xl font-bold text-gray-900 dark:text-white">$</span>
+                        <span class="text-5xl font-serif text-gray-900 dark:text-white font-medium">990</span>
+                        <span class="text-xs text-gray-400 font-semibold ms-2">/ year</span>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-neutral-400 leading-relaxed mb-6">Elite membership. Early private previews, free tailoring alterations on all orders, and quarterly dedicated styling calls.</p>
+                    
+                    <ul class="flex flex-col gap-3.5 text-xs text-gray-600 dark:text-neutral-400 border-t border-gray-100 dark:border-neutral-800/80 pt-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-luxury-accent"></i> Priority Private runway previews</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-luxury-accent"></i> Unlimited free tailoring adjustments</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-luxury-accent"></i> 4x 60-Minute Quarterly Calls</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-luxury-accent"></i> Invites to offline brand events</li>
+                    </ul>
+                </div>
+                <button onclick="window.Cart.showToast('VIP Club request sent!')" class="mt-8 w-full border border-black dark:border-white text-black dark:text-white font-semibold text-[10px] py-4 uppercase tracking-widest hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition duration-300">Join Club</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- The Styling Experience Process -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-gray-100 dark:border-neutral-800/80" data-aos="fade-up">
+        <div class="text-center max-w-xl mx-auto mb-16">
+            <span class="text-xs uppercase font-bold tracking-[0.2em] text-luxury-accent">The Experience Journey</span>
+            <h2 class="font-serif text-3xl text-gray-800 dark:text-gray-100 mt-2 font-medium">How the Consultations Work</h2>
+            <div class="h-0.5 w-12 bg-luxury-accent mx-auto mt-3"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="text-center md:text-left">
+                <span class="font-serif text-4xl font-light text-luxury-accent/40 block mb-3">01</span>
+                <h4 class="font-serif text-base font-semibold text-gray-950 dark:text-white mb-2">Intake Consultation</h4>
+                <p class="text-xs text-gray-500 dark:text-neutral-400 leading-relaxed">We begin with a digital styling questionnaire and a 30-minute introductory call to align on your style goals, capsule preferences, and sizing requirements.</p>
+            </div>
+            <div class="text-center md:text-left">
+                <span class="font-serif text-4xl font-light text-luxury-accent/40 block mb-3">02</span>
+                <h4 class="font-serif text-base font-semibold text-gray-950 dark:text-white mb-2">Wardrobe Analysis</h4>
+                <p class="text-xs text-gray-500 dark:text-neutral-400 leading-relaxed">Our senior stylists analyze your current collection, identifying foundational pieces to retain and highlighting gaps that need structured layering.</p>
+            </div>
+            <div class="text-center md:text-left">
+                <span class="font-serif text-4xl font-light text-luxury-accent/40 block mb-3">03</span>
+                <h4 class="font-serif text-base font-semibold text-gray-950 dark:text-white mb-2">Custom Curation</h4>
+                <p class="text-xs text-gray-500 dark:text-neutral-400 leading-relaxed">Receive a bespoke lookbook containing complete styling pairing recommendations, customized fit specifications, and a priority shopping wishlist.</p>
+            </div>
+            <div class="text-center md:text-left">
+                <span class="font-serif text-4xl font-light text-luxury-accent/40 block mb-3">04</span>
+                <h4 class="font-serif text-base font-semibold text-gray-950 dark:text-white mb-2">Private Fitting</h4>
+                <p class="text-xs text-gray-500 dark:text-neutral-400 leading-relaxed">Schedule a private session in our showroom or your home for final bespoke tailor adjustments to ensure every garment falls with natural elegance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonial -->
+    <section class="bg-neutral-900 dark:bg-neutral-950 text-white py-20 relative overflow-hidden my-8" data-aos="fade-up">
+        <div class="absolute inset-0 opacity-10">
+            <img src="assets/images/banners/craftsmanship.jpg" class="w-full h-full object-cover">
+        </div>
+        <div class="relative max-w-4xl mx-auto px-4 text-center z-10">
+            <i class="fa-solid fa-quote-left text-luxury-accent text-3xl mb-6 block"></i>
+            <blockquote class="font-serif text-xl sm:text-2xl italic leading-relaxed text-neutral-200">
+                "The Wardrobe Makeover package entirely changed the way I approach dressing. Instead of standing in front of a full closet wondering what to wear, I now have a curated capsule of high-quality, perfectly fitted items that match effortlessly."
+            </blockquote>
+            <cite class="not-italic text-xs font-bold uppercase tracking-[0.25em] text-luxury-accent mt-6 block">â€” Alexandra V., Paris Couture Club Member</cite>
+        </div>
+    </section>
+
+    <!-- Consultation FAQs -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24" data-aos="fade-up">
+        <div class="text-center max-w-xl mx-auto mb-16">
+            <span class="text-xs uppercase font-bold tracking-[0.2em] text-luxury-accent">Common Inquiries</span>
+            <h2 class="font-serif text-3xl text-gray-800 dark:text-gray-100 mt-2 font-medium">Styling Consultations FAQ</h2>
+            <div class="h-0.5 w-12 bg-luxury-accent mx-auto mt-3"></div>
+        </div>
+
+        <div class="space-y-6">
+            <div class="border-b border-gray-100 dark:border-neutral-850 pb-6 text-left">
+                <h4 class="font-serif text-base font-semibold text-gray-900 dark:text-white mb-2">Can styling sessions be conducted virtually?</h4>
+                <p class="text-xs text-gray-500 dark:text-neutral-400 leading-relaxed font-sans">Yes, we offer fully digital consultations for international clients. You will receive step-by-step guidance on self-measurement and visual reviews via secure high-definition video calls.</p>
+            </div>
+            <div class="border-b border-gray-100 dark:border-neutral-850 pb-6 text-left">
+                <h4 class="font-serif text-base font-semibold text-gray-900 dark:text-white mb-2">What should I prepare for a Wardrobe Makeover?</h4>
+                <p class="text-xs text-gray-500 dark:text-neutral-400 leading-relaxed font-sans">Before your stylist arrives, we recommend preparing all current outfits in a single area. Do not worry about folding or sorting; our stylist will catalog and assess every item to build your new tailored capsule profile.</p>
+            </div>
+            <div class="border-b border-gray-100 dark:border-neutral-850 pb-6 text-left">
+                <h4 class="font-serif text-base font-semibold text-gray-900 dark:text-white mb-2">Are the tailoring costs included in the packages?</h4>
+                <p class="text-xs text-gray-500 dark:text-neutral-400 leading-relaxed font-sans">For Couture Club VIP members, tailoring alterations on all Avenoir brand purchases are completely unlimited and free. For hourly styling sessions or wardrobe makeovers, basic alterations can be added at standard studio rates.</p>
+            </div>
+        </div>
+    </section>
+
+        <!-- Master Footer -->
+    <footer class="bg-white dark:bg-neutral-950 border-t border-gray-100 dark:border-neutral-900 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Branding column -->
+                <div>
+                    <span class="font-serif text-xl font-semibold tracking-widest text-gray-900 dark:text-white">AVENOIR</span>
+                    <p class="text-xs text-gray-500 dark:text-neutral-400 mt-4 leading-relaxed font-sans">A multipurpose luxury boutique template designed for fashion boutiques, couture houses, agencies, and elite e-commerce brands.</p>
+                    <div class="flex gap-4 mt-6">
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-luxury-accent transition"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-luxury-accent transition"><i class="fa-brands fa-pinterest"></i></a>
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-luxury-accent transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-luxury-accent transition"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <div>
+                    <h4 class="text-xs uppercase font-bold tracking-widest text-gray-800 dark:text-white border-b border-gray-100 dark:border-neutral-900 pb-3 mb-4">Shop Pages</h4>
+                    <ul class="flex flex-col gap-2 text-xs font-semibold text-gray-500 dark:text-neutral-400">
+                        <li><a href="pages/men.html" class="hover:text-luxury-accent transition">Men's Department</a></li>
+                        <li><a href="pages/women.html" class="hover:text-luxury-accent transition">Women's Department</a></li>
+                        <li><a href="pages/new-arrivals.html" class="hover:text-luxury-accent transition">New Arrivals</a></li>
+                        <li><a href="pages/sale.html" class="hover:text-luxury-accent transition text-red-500">Sale Collection</a></li>
+                        <li><a href="pages/lookbook.html" class="hover:text-luxury-accent transition">Editorial Lookbook</a></li>
+                    </ul>
+                </div>
+
+                <!-- Boutique Info -->
+                <div>
+                    <h4 class="text-xs uppercase font-bold tracking-widest text-gray-800 dark:text-white border-b border-gray-100 dark:border-neutral-900 pb-3 mb-4">Support & FAQ</h4>
+                    <ul class="flex flex-col gap-2 text-xs font-semibold text-gray-500 dark:text-neutral-400">
+                        <li><a href="pages/faq.html" class="hover:text-luxury-accent transition">Sizing & Order FAQ</a></li>
+                        <li><a href="pages/size-guide.html" class="hover:text-luxury-accent transition">Measurement Sizing Guide</a></li>
+                        <li><a href="pricing.html" class="hover:text-luxury-accent transition">VIP Styling Plans</a></li>
+                        <li><a href="coming-soon.html" class="hover:text-luxury-accent transition">New Collections Launch</a></li>
+                        <li><a href="404.html" class="hover:text-luxury-accent transition">Error Utility Page</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact column -->
+                <div>
+                    <h4 class="text-xs uppercase font-bold tracking-widest text-gray-800 dark:text-white border-b border-gray-100 dark:border-neutral-900 pb-3 mb-4">The Boutique</h4>
+                    <address class="text-xs text-gray-500 dark:text-neutral-400 not-italic flex flex-col gap-3 font-sans leading-relaxed">
+                        <span class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-location-dot text-luxury-accent mt-0.5"></i>
+                            <span>45 Rue du Faubourg Saint-HonorÃ©,<br>75008 Paris, France</span>
+                        </span>
+                        <span class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-phone text-luxury-accent"></i>
+                            <span>+33 1 42 68 53 00</span>
+                        </span>
+                        <span class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-envelope text-luxury-accent"></i>
+                            <span>couture@avenoir.com</span>
+                        </span>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-100 dark:border-neutral-900 pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] font-semibold text-gray-400">
+                <p>&copy; 2026 Avenoir Couture. All Rights Reserved. Crafted for ThemeForest and client boutiques.</p>
+                <div class="flex gap-4 mt-4 sm:mt-0">
+                    <a href="documentation/index.html" class="hover:text-luxury-accent transition">Documentation</a>
+                    <span>&bull;</span>
+                    <a href="#" class="hover:text-luxury-accent transition">Privacy Policy</a>
+                    <span>&bull;</span>
+                    <a href="#" class="hover:text-luxury-accent transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    <!-- ==================== DRAWER AND MODAL OVERLAYS ==================== -->
+
+    <!-- Mobile Drawer Overlay -->
+    <div id="mobile-drawer-overlay" class="fixed inset-0 bg-black/50 z-45 hidden transition-opacity duration-300"></div>
+
+    <!-- Mobile Side Drawer -->
+    <aside id="mobile-drawer" class="fixed top-0 right-0 bottom-0 w-80 max-w-full bg-white dark:bg-neutral-900 z-50 shadow-2xl translate-x-full drawer-transition flex flex-col">
+        <div class="p-6 border-b border-gray-100 dark:border-neutral-800 flex justify-between items-center">
+            <span class="font-serif text-lg font-bold tracking-widest">AVENOIR</span>
+            <button id="close-mobile-drawer" class="text-gray-800 dark:text-white hover:text-luxury-accent transition">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+        </div>
+        <div class="p-6 flex-grow overflow-y-auto">
+            <ul class="flex flex-col gap-6 text-sm font-bold uppercase tracking-widest text-gray-800 dark:text-gray-200">
+                <li><a href="index.html" class="hover:text-luxury-accent transition block">Home 1</a></li>
+                <li><a href="index-2.html" class="hover:text-luxury-accent transition block">Home 2</a></li>
+                <li><a href="products.html" class="hover:text-luxury-accent transition block">Shop</a></li>
+                <li><a href="about.html" class="hover:text-luxury-accent transition block">About Us</a></li>
+                <li><a href="blog.html" class="hover:text-luxury-accent transition block">Blog</a></li>
+                <li><a href="pricing.html" class="hover:text-luxury-accent transition block">Pricing</a></li>
+                <li><a href="contact.html" class="hover:text-luxury-accent transition block">Contact</a></li>
+                
+                <li class="border-t border-gray-100 dark:border-neutral-800/40 pt-4"><a href="#" class="cart-toggle hover:text-luxury-accent transition flex items-center justify-between block w-full">
+                    <span class="flex items-center gap-2">
+                        <i class="fa-solid fa-bag-shopping text-base"></i> Shopping Bag
+                    </span>
+                    <span class="cart-count bg-black text-white dark:bg-white dark:text-black text-[10px] font-bold rounded-full px-2 py-0.5 hidden">0</span>
+                </a></li>
+                <li><a href="login.html" class="hover:text-luxury-accent transition flex items-center gap-2 block"><i class="fa-regular fa-user text-base"></i> Login / Account</a></li>
+            </ul>
+        </div>
+        
+    </aside>
+
+    <!-- Shopping Cart Drawer Overlay -->
+    <div id="cart-overlay" class="fixed inset-0 bg-black/50 z-45 hidden transition-opacity duration-300"></div>
+
+    <!-- Shopping Cart Off-canvas Drawer -->
+    <aside id="cart-drawer" class="fixed top-0 right-0 bottom-0 w-96 max-w-full bg-white dark:bg-neutral-900 z-50 shadow-2xl translate-x-full drawer-transition flex flex-col">
+        <div class="p-6 border-b border-gray-100 dark:border-neutral-800 flex justify-between items-center bg-gray-50 dark:bg-neutral-900/50">
+            <div class="flex items-center gap-2">
+                <h4 class="font-serif text-lg font-bold tracking-wider text-gray-800 dark:text-white">Shopping Bag</h4>
+                <span id="cart-total-items" class="text-xs font-bold text-gray-400 font-sans">(0 items)</span>
+            </div>
+            <button id="close-cart" class="text-gray-800 dark:text-white hover:text-red-500 transition">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+        </div>
+        
+        <!-- Cart Items dynamic container -->
+        <div id="cart-items-list" class="flex-grow overflow-y-auto px-6 divide-y divide-gray-100 dark:divide-neutral-800">
+            <!-- Rendered by main.js -->
+        </div>
+
+        <div class="p-6 border-t border-gray-100 dark:border-neutral-800 bg-gray-50 dark:bg-neutral-900/50 flex flex-col gap-4">
+            <div class="flex justify-between items-center text-sm font-semibold">
+                <span class="text-gray-500 dark:text-neutral-400">Subtotal:</span>
+                <span id="cart-subtotal" class="text-gray-900 dark:text-white font-bold text-base">$0.00</span>
+            </div>
+            <p class="text-[10px] text-gray-400 font-sans leading-relaxed">Tax, shipping, and coupons calculated at checkout.</p>
+            <div class="grid grid-cols-2 gap-3 mt-2">
+                <button onclick="window.Cart.toggle(false)" class="border border-black dark:border-white text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-semibold text-[10px] tracking-widest uppercase py-3.5 transition duration-300">View Bag</button>
+                <a href="pricing.html" class="bg-black dark:bg-white text-white dark:text-black hover:bg-luxury-accent dark:hover:bg-luxury-accent hover:text-white dark:hover:text-white font-semibold text-[10px] tracking-widest uppercase py-3.5 text-center transition duration-300 block">Checkout</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Search Overlay -->
+    <div id="search-overlay" class="fixed inset-0 bg-white/95 dark:bg-neutral-950/95 z-50 transition-all duration-300 opacity-0 pointer-events-none flex flex-col justify-center px-4">
+        <button id="close-search" class="absolute top-8 right-8 text-gray-800 dark:text-white hover:text-red-500 transition">
+            <i class="fa-solid fa-xmark text-2xl"></i>
+        </button>
+        <div class="max-w-2xl mx-auto w-full text-center">
+            <span class="text-xs uppercase font-bold tracking-[0.2em] text-luxury-accent mb-4 block">Boutique Search Engine</span>
+            <form action="products.html" method="GET" class="border-b border-black dark:border-white pb-3 flex items-center">
+                <input type="text" name="search" id="overlay-search-input" placeholder="Search products, materials, editorials..." class="bg-transparent text-xl sm:text-2xl font-serif text-gray-900 dark:text-white border-none outline-none w-full focus:ring-0 placeholder-gray-400">
+                <button type="submit" class="text-gray-800 dark:text-white hover:text-luxury-accent transition"><i class="fa-solid fa-magnifying-glass text-xl sm:text-2xl"></i></button>
+            </form>
+            <p class="text-xs text-gray-400 mt-4 tracking-wider">Try typing: "Linen Blazer", "Silk Dress", "Suede Chelsea Boots", "Sale"</p>
+        </div>
+    </div>
+
+    <!-- Quick View Modal Overlay -->
+    <div id="quickview-modal" class="fixed inset-0 bg-black/60 z-50 transition-all duration-300 opacity-0 pointer-events-none flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-neutral-900 w-full max-w-4xl rounded shadow-2xl overflow-hidden relative flex flex-col md:flex-row h-[90vh] md:h-auto max-h-[90vh] border border-gray-100 dark:border-neutral-800">
+            <button id="close-quickview" class="absolute top-4 right-4 text-gray-800 dark:text-white hover:text-red-500 transition z-20">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            
+            <!-- Left: Dynamic Image Slider (Swiper) -->
+            <div class="w-full md:w-1/2 relative bg-gray-50 dark:bg-neutral-950 aspect-[3/4] md:aspect-auto">
+                <div class="swiper-container qv-swiper-container h-full">
+                    <div class="swiper-wrapper" id="quickview-images">
+                        <!-- Populated by JS -->
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+            <!-- Right: Product Details Form -->
+            <div class="w-full md:w-1/2 p-6 sm:p-8 overflow-y-auto flex flex-col h-full justify-between">
+                <div>
+                    <span id="quickview-category" class="text-[10px] uppercase font-bold text-luxury-accent tracking-widest">OUTERWEAR</span>
+                    <h3 id="quickview-name" class="font-serif text-2xl text-gray-900 dark:text-white mt-1 mb-3">Tailored Sport Coat</h3>
+                    <div id="quickview-price" class="mb-4">
+                        <!-- Price -->
+                    </div>
+                    <div class="h-px bg-gray-100 dark:bg-neutral-800 my-4"></div>
+                    <p id="quickview-desc" class="text-xs sm:text-sm text-gray-500 dark:text-neutral-400 mb-6 font-sans leading-relaxed">Description goes here.</p>
+                    
+                    <!-- Variant selector options -->
+                    <div class="flex flex-col gap-4 mb-6">
+                        <div>
+                            <span class="text-xs text-gray-400 block mb-2">Select Size:</span>
+                            <div class="flex flex-wrap gap-2" id="quickview-sizes">
+                                <!-- Populated dynamically -->
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-xs text-gray-400 block mb-2">Select Color:</span>
+                            <div class="flex items-center gap-2" id="quickview-colors">
+                                <!-- Populated dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-auto">
+                    <div class="h-px bg-gray-100 dark:bg-neutral-800 my-4"></div>
+                    <div class="flex gap-4">
+                        <button id="quickview-add-to-cart" class="w-full bg-black hover:bg-neutral-800 dark:bg-white dark:hover:bg-neutral-200 text-white dark:text-black font-semibold text-xs tracking-widest uppercase py-4 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-bag-shopping"></i> Add to Bag
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Avenoir Boutique</title>
+    
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        luxury: {
+                            accent: '#c5a880',
+                            accentHover: '#b5966c',
+                            darkBg: '#121212',
+                            darkCard: '#1e1e1e',
+                            lightBg: '#fcfcfc'
+                        }
+                    },
+                    fontFamily: {
+                        primary: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    
+    <script src="assets/js/theme.js"></script>
+</head>
+<body class="bg-luxury-lightBg dark:bg-luxury-darkBg text-gray-900 dark:text-gray-100 transition-colors duration-300 min-h-screen flex items-center justify-center p-4">
+
+    <!-- Error Block -->
+    <div class="max-w-md mx-auto text-center font-sans">
+        <span class="font-serif text-8xl font-bold tracking-widest text-luxury-accent block mb-4">404</span>
+        <h1 class="font-serif text-2xl font-medium mb-3 text-gray-800 dark:text-white">Page Not Found</h1>
+        <p class="text-xs text-gray-500 dark:text-neutral-400 mb-8 leading-relaxed">The page you are looking for has been moved, renamed, or is temporarily unavailable in our catalog database.</p>
+        
+        <!-- Search -->
+        <form action="products.html" method="GET" class="border border-gray-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 p-1 flex items-center mb-8">
+            <input type="text" name="search" placeholder="Search catalog..." class="bg-transparent text-xs px-3.5 py-2.5 outline-none w-full border-none focus:ring-0">
+            <button type="submit" class="bg-black dark:bg-white text-white dark:text-black hover:bg-luxury-accent hover:text-white transition px-4 py-2.5 text-xs font-bold uppercase tracking-widest">Search</button>
+        </form>
+
+        <a href="index.html" class="inline-block px-8 py-3.5 bg-black dark:bg-white text-white dark:text-black hover:bg-luxury-accent hover:text-white font-bold text-xs tracking-widest uppercase transition-all duration-300">Return to Home</a>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

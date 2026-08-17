@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon | Avenoir Collection</title>
+    
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        luxury: {
+                            accent: '#c5a880',
+                            accentHover: '#b5966c',
+                            darkBg: '#121212',
+                            darkCard: '#1e1e1e',
+                            lightBg: '#fcfcfc'
+                        }
+                    },
+                    fontFamily: {
+                        primary: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    
+    <script src="assets/js/theme.js"></script>
+</head>
+<body class="bg-gray-50 dark:bg-luxury-darkBg text-gray-900 dark:text-gray-100 transition-colors duration-300 min-h-screen flex items-center justify-center p-4">
+
+    <!-- Coming Soon block -->
+    <div class="max-w-xl mx-auto text-center font-sans">
+        
+        <div class="mb-10">
+            <a href="index.html" class="flex items-center gap-2 sm:gap-3 select-none group">
+                    <img src="assets/images/logo/logo-icon-transparent.png" alt="Avenoir Logo" class="w-8 h-8 sm:w-10 h-10 object-contain transition-transform group-hover:scale-105 duration-300">
+                    <div class="flex flex-col">
+                        <span class="font-serif text-lg sm:text-2xl font-bold tracking-[0.15em] sm:tracking-[0.2em] text-gray-900 dark:text-white leading-none">AVENOIR</span>
+                        <span class="text-[7px] sm:text-[9px] tracking-[0.4em] uppercase text-luxury-accent font-bold mt-1">Haute Couture</span>
+                    </div>
+                </a>
+        </div>
+
+        <h1 class="font-serif text-2xl sm:text-4xl text-gray-800 dark:text-white font-medium mb-3">The Fall/Winter Collection Is Launching</h1>
+        <p class="text-xs text-gray-500 dark:text-neutral-400 mb-8 max-w-sm mx-auto leading-relaxed">Our designers are weaving cashmere knits and wool coats. Subscribe below to receive early invite codes on launch day.</p>
+
+        <!-- Countdown Timer -->
+        <div class="grid grid-cols-4 gap-4 max-w-sm mx-auto mb-10 text-center font-serif">
+            <div class="border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-3.5 rounded">
+                <span class="text-xl sm:text-2xl font-bold text-luxury-accent block" id="timer-days">00</span>
+                <span class="text-[9px] uppercase tracking-widest text-gray-400 font-semibold mt-1 block">Days</span>
+            </div>
+            <div class="border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-3.5 rounded">
+                <span class="text-xl sm:text-2xl font-bold text-luxury-accent block" id="timer-hours">00</span>
+                <span class="text-[9px] uppercase tracking-widest text-gray-400 font-semibold mt-1 block">Hours</span>
+            </div>
+            <div class="border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-3.5 rounded">
+                <span class="text-xl sm:text-2xl font-bold text-luxury-accent block" id="timer-minutes">00</span>
+                <span class="text-[9px] uppercase tracking-widest text-gray-400 font-semibold mt-1 block">Mins</span>
+            </div>
+            <div class="border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-3.5 rounded">
+                <span class="text-xl sm:text-2xl font-bold text-luxury-accent block" id="timer-seconds">00</span>
+                <span class="text-[9px] uppercase tracking-widest text-gray-400 font-semibold mt-1 block">Secs</span>
+            </div>
+        </div>
+
+        <!-- Subscribe Form -->
+        <form class="newsletter-form border border-gray-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 p-1.5 flex flex-col sm:flex-row gap-2 max-w-md mx-auto mb-8">
+            <input type="email" required placeholder="Your email address..." class="bg-transparent text-xs px-4 py-3 outline-none w-full border-none focus:ring-0">
+            <button type="submit" class="bg-black dark:bg-white text-white dark:text-black hover:bg-luxury-accent hover:text-white transition px-6 py-3.5 text-xs font-bold uppercase tracking-widest shrink-0">Notify Me</button>
+        </form>
+
+        <!-- Social Icons -->
+        <div class="flex justify-center gap-5 text-gray-400">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="hover:text-luxury-accent transition"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer" class="hover:text-luxury-accent transition"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" class="hover:text-luxury-accent transition"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="index.html" class="hover:text-luxury-accent transition"><i class="fa-solid fa-arrow-left arrow-icon"></i> Home</a>
+        </div>
+    </div>
+
+    <!-- Countdown Timer Script -->
+    <script>
+        // Set date to 30 days from now
+        const launchDate = new Date();
+        launchDate.setDate(launchDate.getDate() + 30);
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = launchDate.getTime() - now;
+
+            // Calculations
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output
+            document.getElementById("timer-days").textContent = days.toString().padStart(2, '0');
+            document.getElementById("timer-hours").textContent = hours.toString().padStart(2, '0');
+            document.getElementById("timer-minutes").textContent = minutes.toString().padStart(2, '0');
+            document.getElementById("timer-seconds").textContent = seconds.toString().padStart(2, '0');
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

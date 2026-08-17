@@ -1,0 +1,207 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --font-primary: 'Plus Jakarta Sans', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--font-primary);
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #fcfcfc;
+    color: #1a1a1a;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+.dark ::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+::-webkit-scrollbar-thumb {
+    background: #c5a880;
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #b5966c;
+}
+
+/* Font Families Utility overrides */
+.font-primary { font-family: var(--font-primary); }
+.font-serif { font-family: var(--font-serif); }
+.font-sans { font-family: var(--font-sans); }
+
+/* Custom Transitions & Hovers */
+.transition-luxury {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Image Zoom Card Effect */
+.img-zoom-container {
+    overflow: hidden;
+}
+.img-zoom-container img {
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.img-zoom-container:hover img {
+    transform: scale(1.08);
+}
+
+/* Underline Hover Link Animation */
+.link-hover-underline {
+    position: relative;
+}
+.link-hover-underline::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: currentColor;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+.link-hover-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Luxury Card Shadow */
+.shadow-luxury {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
+}
+.shadow-luxury-hover:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+/* Off-canvas Animation */
+.drawer-transition {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Glassmorphism elements */
+.glassmorphism {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+.dark .glassmorphism {
+    background: rgba(18, 18, 18, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Hide Spinners for inputs */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* Mega Menu Styles */
+.mega-menu-trigger:hover .mega-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.mega-menu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Quick View Swiper Custom styles */
+.swiper-button-next, .swiper-button-prev {
+    color: #c5a880 !important;
+}
+.swiper-pagination-bullet-active {
+    background: #c5a880 !important;
+}
+
+/* Pulse badge for Sales */
+@keyframes sale-pulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+.sale-pulse {
+    animation: sale-pulse 2s infinite;
+}
+
+/* Product Card Quick Actions hover */
+.product-card .quick-actions {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.product-card:hover .quick-actions {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Size/Color Filter buttons custom styles */
+.color-swatch-active {
+    outline: 2px solid #c5a880;
+    outline-offset: 2px;
+}
+.size-swatch-active {
+    border-color: #1a1a1a !important;
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+}
+.dark .size-swatch-active {
+    border-color: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #1a1a1a !important;
+}
+
+/* Mobile responsive adjustments for product card quick actions */
+@media (max-width: 1023px) {
+    .product-card .quick-actions {
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+        position: relative !important;
+        bottom: auto !important;
+        inset-x: auto !important;
+        padding: 8px !important;
+        background: #fcfcfc !important;
+        display: flex !important;
+        width: 100% !important;
+        justify-content: center !important;
+        border-top: 1px solid #f1f1f1 !important;
+    }
+    .dark .product-card .quick-actions {
+        background: #1e1e1e !important;
+        border-top: 1px solid #2b2b2b !important;
+    }
+    .product-card .quick-actions button {
+        padding: 6px 10px !important;
+        font-size: 8px !important;
+        border-radius: 4px !important;
+    }
+}

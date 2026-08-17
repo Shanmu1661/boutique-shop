@@ -1,0 +1,604 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Ethos & Team | Avenoir Boutique</title>
+    <meta name="description" content="Read the history of Avenoir Boutique, our commitment to conscious slow-fashion, and meet our editorial designers.">
+    
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        luxury: {
+                            accent: '#c5a880',
+                            accentHover: '#b5966c',
+                            darkBg: '#121212',
+                            darkCard: '#1e1e1e',
+                            lightBg: '#fcfcfc'
+                        }
+                    },
+                    fontFamily: {
+                        primary: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    
+    <script src="assets/js/theme.js"></script>
+</head>
+<body class="bg-luxury-lightBg dark:bg-luxury-darkBg text-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    
+    
+    
+
+    <!-- Header Navigation -->
+    
+    <div class="w-full overflow-x-hidden flex flex-col min-h-screen">
+    <!-- Main Navigation Header -->
+    <header id="main-header" class="sticky top-0 z-40 w-full transition-all duration-300 bg-white/95 dark:bg-neutral-900/95 shadow-luxury">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between">
+            
+            <!-- Left: Mobile Toggle & Logo -->
+            <div class="flex items-center gap-4 sm:gap-6">
+                <!-- Hamburger Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-gray-800 dark:text-white hover:text-luxury-accent transition">
+                    <i class="fa-solid fa-bars-staggered text-xl"></i>
+                </button>
+                
+                <!-- Logo/Boutique Name -->
+                <a href="index.html" class="flex items-center gap-2 sm:gap-3 select-none group">
+                    <img src="assets/images/logo/logo-icon-transparent.png" alt="Avenoir Logo" class="w-8 h-8 sm:w-10 h-10 object-contain transition-transform group-hover:scale-105 duration-300">
+                    <div class="flex flex-col">
+                        <span class="font-serif text-lg sm:text-2xl font-bold tracking-[0.15em] sm:tracking-[0.2em] text-gray-900 dark:text-white leading-none">AVENOIR</span>
+                        <span class="text-[7px] sm:text-[9px] tracking-[0.4em] uppercase text-luxury-accent font-bold mt-1">Haute Couture</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Center: Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-xs font-bold tracking-[0.2em] uppercase">
+                <!-- Home dropdown -->
+                <div class="mega-menu-trigger relative">
+                    <a href="index.html" class="hover:text-luxury-accent transition flex items-center gap-1 py-4">
+                        Home <i class="fa-solid fa-angle-down text-[10px]"></i>
+                    </a>
+                    <!-- Mega Menu (Home Variations) -->
+                    <div class="mega-menu absolute left-1/2 -translate-x-1/2 top-full w-56 bg-white dark:bg-neutral-900 border border-gray-100 dark:border-neutral-800 shadow-xl p-4 z-50">
+                        <ul class="flex flex-col gap-3 font-semibold text-gray-700 dark:text-gray-300 text-left uppercase tracking-wider text-[11px]">
+                            <li><a href="index.html" class="hover:text-luxury-accent transition block">Home 1</a></li>
+                            <li><a href="index-2.html" class="hover:text-luxury-accent transition block">Home 2</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <a href="products.html" class="hover:text-luxury-accent transition py-4">Shop</a>
+                <a href="about.html" class="hover:text-luxury-accent transition py-4">About Us</a>
+                <a href="blog.html" class="hover:text-luxury-accent transition py-4">Blog</a>
+                <a href="pricing.html" class="hover:text-luxury-accent transition py-4">Pricing</a>
+                <a href="contact.html" class="hover:text-luxury-accent transition py-4">Contact</a>
+            </nav>
+
+            <!-- Right: Utility icons -->
+            <div class="flex items-center gap-3 sm:gap-5">
+                <!-- RTL Toggle -->
+                <button onclick="window.ThemeToggler.toggleRTL(); window.location.reload();" class="text-[10px] tracking-widest font-bold uppercase border border-gray-200 dark:border-neutral-800 px-2.5 py-1 hover:border-luxury-accent hover:text-luxury-accent transition duration-300" title="Toggle Layout Direction (LTR/RTL)">
+                    <span class="rtl:hidden">RTL</span>
+                    <span class="hidden rtl:inline">LTR</span>
+                </button>
+
+                <!-- Theme Toggle -->
+                <button onclick="window.ThemeToggler.toggleTheme()" class="text-gray-800 dark:text-gray-200 hover:text-luxury-accent transition p-1" title="Toggle Theme">
+                    <i class="fa-regular fa-moon dark:hidden text-lg"></i>
+                    <i class="fa-regular fa-sun hidden dark:block text-lg"></i>
+                </button>
+
+                <!-- User Account -->
+                <a href="login.html" class="hidden sm:inline-block text-gray-800 dark:text-gray-200 hover:text-luxury-accent transition p-1" title="Account">
+                    <i class="fa-regular fa-user text-lg"></i>
+                </a>
+
+                <!-- Wishlist Link (Hidden on mobile) -->
+                <a href="#" onclick="window.Cart.showToast('Wishlist view coming soon!')" class="hidden sm:inline-block relative text-gray-800 dark:text-gray-200 hover:text-luxury-accent transition p-1" title="Wishlist">
+                    <i class="fa-regular fa-heart text-lg"></i>
+                    <span class="wishlist-count absolute -top-1 -right-1 bg-luxury-accent text-white text-[9px] font-bold rounded-full w-4 h-4 flex items-center justify-center hidden">0</span>
+                </a>
+
+                <!-- Cart Toggle -->
+                <a href="#" class="cart-toggle hidden sm:inline-block relative text-gray-800 dark:text-gray-200 hover:text-luxury-accent transition p-1" title="Shopping Bag">
+                    <i class="fa-solid fa-bag-shopping text-lg"></i>
+                    <span class="cart-count absolute -top-1 -right-1 bg-black text-white dark:bg-white dark:text-black text-[9px] font-bold rounded-full w-4 h-4 flex items-center justify-center hidden">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Title Banner -->
+    <section class="relative py-24 sm:py-32 bg-neutral-950 overflow-hidden flex items-center justify-center border-b border-gray-100 dark:border-neutral-800/40">
+        <img src="assets/images/banners/hero-main-2.jpg" alt="About Us Banner" class="absolute inset-0 w-full h-full object-cover object-top opacity-70">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+        <div class="relative max-w-3xl mx-auto text-center px-4 text-white z-10" data-aos="fade-up">
+            <span class="text-xs uppercase font-bold tracking-[0.3em] text-luxury-accent">The Atelier Story</span>
+            <h1 class="font-serif text-4xl sm:text-5xl font-bold tracking-wide mt-3 mb-6">About House of Avenoir</h1>
+            <p class="text-sm text-gray-300 leading-relaxed font-sans max-w-xl mx-auto">Founded in Paris in 2018, Avenoir represents the marriage of historic architectural tailoring with forward-looking carbon-conscious fiber sourcing.</p>
+        </div>
+    </section>
+
+    <!-- History Timeline & Mission -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="relative aspect-[4/5] overflow-hidden bg-gray-50 dark:bg-neutral-900 border border-gray-100 dark:border-neutral-800 shadow-luxury" data-aos="fade-right">
+                <img src="assets/images/banners/hero-main-1.jpg" alt="Avenoir tailoring archive" class="absolute inset-0 w-full h-full object-cover">
+            </div>
+            <div data-aos="fade-left">
+                <span class="text-xs text-luxury-accent font-bold tracking-[0.2em] uppercase block mb-2">Our Mission</span>
+                <h2 class="font-serif text-3xl font-medium text-gray-800 dark:text-gray-100 mb-6">Refining The Silhouette, Protecting The Origin</h2>
+                
+                <!-- Timeline points -->
+                <div class="flex flex-col gap-8 font-sans">
+                    <div class="flex gap-4">
+                        <span class="font-serif text-xl font-bold text-luxury-accent">2018</span>
+                        <div>
+                            <h4 class="font-bold text-sm text-gray-900 dark:text-white uppercase tracking-wider">Atelier Inception</h4>
+                            <p class="text-xs text-gray-500 dark:text-neutral-400 mt-1 leading-relaxed">Starting as a bespoke private styling studio in Saint-HonorÃ©, drafting concepts for luxury Parisian clients.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <span class="font-serif text-xl font-bold text-luxury-accent">2021</span>
+                        <div>
+                            <h4 class="font-bold text-sm text-gray-900 dark:text-white uppercase tracking-wider">Conscious Certification</h4>
+                            <p class="text-xs text-gray-500 dark:text-neutral-400 mt-1 leading-relaxed">Transitioning 100% of our silk and linen lines to certified traceably sourced sustainable organic farming models.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <span class="font-serif text-xl font-bold text-luxury-accent">2026</span>
+                        <div>
+                            <h4 class="font-bold text-sm text-gray-900 dark:text-white uppercase tracking-wider">Global Digital Showroom</h4>
+                            <p class="text-xs text-gray-500 dark:text-neutral-400 mt-1 leading-relaxed">Bringing our slow-fashion capsule collections to a wider international audience through curated digital and physical showrooms.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stat Counter Section (Multipurpose layout) -->
+    <section class="bg-gray-50 dark:bg-neutral-900 border-t border-b border-gray-100 dark:border-neutral-800 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <span class="font-serif text-4xl sm:text-5xl font-bold text-luxury-accent">8+</span>
+                    <p class="text-[10px] uppercase font-bold text-gray-500 tracking-widest mt-2">Years of Couture</p>
+                </div>
+                <div>
+                    <span class="font-serif text-4xl sm:text-5xl font-bold text-luxury-accent">14k</span>
+                    <p class="text-[10px] uppercase font-bold text-gray-500 tracking-widest mt-2">Satisfied Clients</p>
+                </div>
+                <div>
+                    <span class="font-serif text-4xl sm:text-5xl font-bold text-luxury-accent">100%</span>
+                    <p class="text-[10px] uppercase font-bold text-gray-500 tracking-widest mt-2">Organic Traceable</p>
+                </div>
+                <div>
+                    <span class="font-serif text-4xl sm:text-5xl font-bold text-luxury-accent">35</span>
+                    <p class="text-[10px] uppercase font-bold text-gray-500 tracking-widest mt-2">Atelier Awards</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Members Grid Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24" data-aos="fade-up">
+        <div class="text-center max-w-xl mx-auto mb-16">
+            <span class="text-xs uppercase font-bold tracking-[0.2em] text-luxury-accent">The Artisans</span>
+            <h2 class="font-serif text-3xl sm:text-4xl text-gray-800 dark:text-gray-100 mt-2 font-medium">Meet the Tailors &amp; Designers</h2>
+            <div class="h-0.5 w-16 bg-luxury-accent mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Member 1 -->
+            <div class="group border border-gray-100 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-luxury shadow-luxury-hover transition-luxury rounded overflow-hidden">
+                <div class="relative aspect-[3/4] overflow-hidden bg-gray-50 dark:bg-neutral-950">
+                    <img src="assets/images/team/member-1.jpg" alt="Marc Antoine" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <div class="p-5 text-center">
+                    <h3 class="font-serif text-base font-medium text-gray-900 dark:text-white">Marc-Antoine Valois</h3>
+                    <p class="text-[10px] uppercase tracking-widest text-luxury-accent font-bold mt-1">Creative Director</p>
+                </div>
+            </div>
+
+            <!-- Member 2 -->
+            <div class="group border border-gray-100 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-luxury shadow-luxury-hover transition-luxury rounded overflow-hidden">
+                <div class="relative aspect-[3/4] overflow-hidden bg-gray-50 dark:bg-neutral-950">
+                    <img src="assets/images/team/member-2.jpg" alt="Elena Rostova" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <div class="p-5 text-center">
+                    <h3 class="font-serif text-base font-medium text-gray-900 dark:text-white">Elena Rostova</h3>
+                    <p class="text-[10px] uppercase tracking-widest text-luxury-accent font-bold mt-1">Lead Textile Designer</p>
+                </div>
+            </div>
+
+            <!-- Member 3 -->
+            <div class="group border border-gray-100 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-luxury shadow-luxury-hover transition-luxury rounded overflow-hidden">
+                <div class="relative aspect-[3/4] overflow-hidden bg-gray-50 dark:bg-neutral-950">
+                    <img src="assets/images/team/member-3.jpg" alt="Julian Reed" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <div class="p-5 text-center">
+                    <h3 class="font-serif text-base font-medium text-gray-900 dark:text-white">Julian Reed</h3>
+                    <p class="text-[10px] uppercase tracking-widest text-luxury-accent font-bold mt-1">Senior Menswear Tailor</p>
+                </div>
+            </div>
+
+            <!-- Member 4 -->
+            <div class="group border border-gray-100 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-luxury shadow-luxury-hover transition-luxury rounded overflow-hidden">
+                <div class="relative aspect-[3/4] overflow-hidden bg-gray-50 dark:bg-neutral-950">
+                    <img src="assets/images/team/member-4.jpg" alt="Sofia Loren" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <div class="p-5 text-center">
+                    <h3 class="font-serif text-base font-medium text-gray-900 dark:text-white">Sofia Loren</h3>
+                    <p class="text-[10px] uppercase tracking-widest text-luxury-accent font-bold mt-1">Atelier Ambassador</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainable Materials Showcase -->
+    <section class="bg-gray-50 dark:bg-neutral-900/50 border-t border-b border-gray-100 dark:border-neutral-800 py-16 sm:py-24" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-xl mx-auto mb-16">
+                <span class="text-xs uppercase font-bold tracking-[0.2em] text-luxury-accent">The Materials</span>
+                <h2 class="font-serif text-3xl sm:text-4xl text-gray-800 dark:text-gray-100 mt-2 font-medium">Sourced Consciously, Woven Lovingly</h2>
+                <div class="h-0.5 w-16 bg-luxury-accent mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Material 1: Mulberry Silk -->
+                <div class="bg-white dark:bg-neutral-900 border border-gray-100 dark:border-neutral-800/80 p-8 rounded shadow-luxury flex flex-col items-center text-center">
+                    <div class="w-12 h-12 bg-amber-50 dark:bg-neutral-850 flex items-center justify-center rounded-full text-luxury-accent mb-6">
+                        <i class="fa-solid fa-leaf text-lg"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-medium text-gray-900 dark:text-white mb-3">Mulberry Silk</h3>
+                    <p class="text-xs text-gray-500 dark:text-neutral-400 leading-relaxed">100% organic mulberry silk harvested in sustainable silkworm farms. Extracted using traditional zero-chemical processes for a fluid, weightless drape that flows like liquid.</p>
+                </div>
+
+                <!-- Material 2: Italian Linen -->
+                <div class="bg-white dark:bg-neutral-900 border border-gray-100 dark:border-neutral-800/80 p-8 rounded shadow-luxury flex flex-col items-center text-center">
+                    <div class="w-12 h-12 bg-amber-50 dark:bg-neutral-850 flex items-center justify-center rounded-full text-luxury-accent mb-6">
+                        <i class="fa-solid fa-wheat-awn text-lg"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-medium text-gray-900 dark:text-white mb-3">Italian Flax Linen</h3>
+                    <p class="text-xs text-gray-500 dark:text-neutral-400 leading-relaxed">Locally cultivated in the fields of Tuscany. Naturally irrigated by rainfall and woven into exceptionally breathable, durable fabrics that soften beautifully with age.</p>
+                </div>
+
+                <!-- Material 3: Merino Wool -->
+                <div class="bg-white dark:bg-neutral-900 border border-gray-100 dark:border-neutral-800/80 p-8 rounded shadow-luxury flex flex-col items-center text-center">
+                    <div class="w-12 h-12 bg-amber-50 dark:bg-neutral-850 flex items-center justify-center rounded-full text-luxury-accent mb-6">
+                        <i class="fa-solid fa-cloud text-lg"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-medium text-gray-900 dark:text-white mb-3">Australian Merino</h3>
+                    <p class="text-xs text-gray-500 dark:text-neutral-400 leading-relaxed">Extra-fine Merino wool sourced from certified non-mulesed farms. Offers natural temperature regulation, outstanding breathability, and a incredibly soft next-to-skin touch.</p>
+                </div>
+
+                <!-- Material 4: Mongolian Cashmere -->
+                <div class="bg-white dark:bg-neutral-900 border border-gray-100 dark:border-neutral-800/80 p-8 rounded shadow-luxury flex flex-col items-center text-center">
+                    <div class="w-12 h-12 bg-amber-50 dark:bg-neutral-850 flex items-center justify-center rounded-full text-luxury-accent mb-6">
+                        <i class="fa-solid fa-wind text-lg"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-medium text-gray-900 dark:text-white mb-3">Mongolian Cashmere</h3>
+                    <p class="text-xs text-gray-500 dark:text-neutral-400 leading-relaxed">Grade-A fibers combed gently from free-roaming cashmere goats. Responsibly harvested to preserve grassland ecosystems, providing unparalleled, cloud-like softness.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Craftsmanship & Process Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24" data-aos="fade-up">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            <!-- Left: Text and steps (7 cols) -->
+            <div class="lg:col-span-7">
+                <span class="text-xs uppercase font-bold tracking-[0.2em] text-luxury-accent block mb-2">Our Method</span>
+                <h2 class="font-serif text-3xl sm:text-4xl text-gray-800 dark:text-gray-100 font-medium mb-12">The Artisanal Journey</h2>
+                
+                <div class="space-y-10">
+                    <!-- Step 1 -->
+                    <div class="flex gap-6">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full border border-luxury-accent text-luxury-accent flex items-center justify-center font-bold text-sm">01</span>
+                        <div>
+                            <h3 class="font-serif text-lg font-medium text-gray-900 dark:text-white mb-2">Bespoke Architectural Sketching</h3>
+                            <p class="text-xs text-gray-500 dark:text-neutral-400 leading-relaxed">Every capsule starts with hand-drawn structural sketches at our Saint-HonorÃ© atelier, drawing silhouettes inspired by neoclassical geometry and structural fluidity.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="flex gap-6">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full border border-luxury-accent text-luxury-accent flex items-center justify-center font-bold text-sm">02</span>
+                        <div>
+                            <h3 class="font-serif text-lg font-medium text-gray-900 dark:text-white mb-2">Zero-Waste Pattern Engineering</h3>
+                            <p class="text-xs text-gray-500 dark:text-neutral-400 leading-relaxed">Our designers arrange pattern layouts with extreme precision to minimize fabric scraps, utilizing heritage cutting methodologies that achieve up to 98% material yield.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="flex gap-6">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full border border-luxury-accent text-luxury-accent flex items-center justify-center font-bold text-sm">03</span>
+                        <div>
+                            <h3 class="font-serif text-lg font-medium text-gray-900 dark:text-white mb-2">Hand-Stitched Tailoring</h3>
+                            <p class="text-xs text-gray-500 dark:text-neutral-400 leading-relaxed">Experienced tailors spend upwards of 18 hours hand-crafting each blazer and robe. Fine details such as pick stitching, bound seams, and shell buttons are sewn completely by hand.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Beautiful image showing tailor hand at work (5 cols) -->
+            <div class="lg:col-span-5">
+                <div class="relative aspect-[4/5] overflow-hidden bg-gray-50 dark:bg-neutral-900 border border-gray-100 dark:border-neutral-800 rounded shadow-luxury">
+                    <img src="assets/images/banners/craftsmanship.jpg" alt="Tailor drawing lines and cutting textile on workbench" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Slider Section -->
+    <section class="bg-gray-50 dark:bg-neutral-900 border-t border-b border-gray-100 dark:border-neutral-800/40 py-16 sm:py-24">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <span class="text-xs uppercase font-bold tracking-[0.2em] text-luxury-accent mb-4 block">Testimonials</span>
+            <div class="swiper-container testimonial-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <i class="fa-solid fa-quote-left text-3xl text-luxury-accent mb-6"></i>
+                        <p class="font-serif text-lg sm:text-xl text-gray-800 dark:text-gray-200 leading-relaxed italic max-w-2xl mx-auto">"The quality of the mulberry silk slip dress is unparalleled. The draping fits beautifully, and the breathable, weightless organic texture is perfect for formal settings."</p>
+                        <cite class="not-italic text-xs font-bold uppercase tracking-widest text-gray-500 dark:text-neutral-400 mt-6 block">â€” Charlotte V., Paris</cite>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Master Footer -->
+    <footer class="bg-white dark:bg-neutral-950 border-t border-gray-100 dark:border-neutral-900 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Branding column -->
+                <div>
+                    <span class="font-serif text-xl font-semibold tracking-widest text-gray-900 dark:text-white">AVENOIR</span>
+                    <p class="text-xs text-gray-500 dark:text-neutral-400 mt-4 leading-relaxed font-sans">A multipurpose luxury boutique template designed for fashion boutiques, couture houses, agencies, and elite e-commerce brands.</p>
+                    <div class="flex gap-4 mt-6">
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-luxury-accent transition"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-luxury-accent transition"><i class="fa-brands fa-pinterest"></i></a>
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-luxury-accent transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-luxury-accent transition"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <div>
+                    <h4 class="text-xs uppercase font-bold tracking-widest text-gray-800 dark:text-white border-b border-gray-100 dark:border-neutral-900 pb-3 mb-4">Shop Pages</h4>
+                    <ul class="flex flex-col gap-2 text-xs font-semibold text-gray-500 dark:text-neutral-400">
+                        <li><a href="pages/men.html" class="hover:text-luxury-accent transition">Men's Department</a></li>
+                        <li><a href="pages/women.html" class="hover:text-luxury-accent transition">Women's Department</a></li>
+                        <li><a href="pages/new-arrivals.html" class="hover:text-luxury-accent transition">New Arrivals</a></li>
+                        <li><a href="pages/sale.html" class="hover:text-luxury-accent transition text-red-500">Sale Collection</a></li>
+                        <li><a href="pages/lookbook.html" class="hover:text-luxury-accent transition">Editorial Lookbook</a></li>
+                    </ul>
+                </div>
+
+                <!-- Boutique Info -->
+                <div>
+                    <h4 class="text-xs uppercase font-bold tracking-widest text-gray-800 dark:text-white border-b border-gray-100 dark:border-neutral-900 pb-3 mb-4">Support & FAQ</h4>
+                    <ul class="flex flex-col gap-2 text-xs font-semibold text-gray-500 dark:text-neutral-400">
+                        <li><a href="pages/faq.html" class="hover:text-luxury-accent transition">Sizing & Order FAQ</a></li>
+                        <li><a href="pages/size-guide.html" class="hover:text-luxury-accent transition">Measurement Sizing Guide</a></li>
+                        <li><a href="pricing.html" class="hover:text-luxury-accent transition">VIP Styling Plans</a></li>
+                        <li><a href="coming-soon.html" class="hover:text-luxury-accent transition">New Collections Launch</a></li>
+                        <li><a href="404.html" class="hover:text-luxury-accent transition">Error Utility Page</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact column -->
+                <div>
+                    <h4 class="text-xs uppercase font-bold tracking-widest text-gray-800 dark:text-white border-b border-gray-100 dark:border-neutral-900 pb-3 mb-4">The Boutique</h4>
+                    <address class="text-xs text-gray-500 dark:text-neutral-400 not-italic flex flex-col gap-3 font-sans leading-relaxed">
+                        <span class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-location-dot text-luxury-accent mt-0.5"></i>
+                            <span>45 Rue du Faubourg Saint-HonorÃ©,<br>75008 Paris, France</span>
+                        </span>
+                        <span class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-phone text-luxury-accent"></i>
+                            <span>+33 1 42 68 53 00</span>
+                        </span>
+                        <span class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-envelope text-luxury-accent"></i>
+                            <span>couture@avenoir.com</span>
+                        </span>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-100 dark:border-neutral-900 pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] font-semibold text-gray-400">
+                <p>&copy; 2026 Avenoir Couture. All Rights Reserved. Crafted for ThemeForest and client boutiques.</p>
+                <div class="flex gap-4 mt-4 sm:mt-0">
+                    <a href="documentation/index.html" class="hover:text-luxury-accent transition">Documentation</a>
+                    <span>&bull;</span>
+                    <a href="#" class="hover:text-luxury-accent transition">Privacy Policy</a>
+                    <span>&bull;</span>
+                    <a href="#" class="hover:text-luxury-accent transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    <!-- ==================== DRAWER AND MODAL OVERLAYS ==================== -->
+
+    <!-- Mobile Drawer Overlay -->
+    <div id="mobile-drawer-overlay" class="fixed inset-0 bg-black/50 z-45 hidden transition-opacity duration-300"></div>
+
+    <!-- Mobile Side Drawer -->
+    <aside id="mobile-drawer" class="fixed top-0 right-0 bottom-0 w-80 max-w-full bg-white dark:bg-neutral-900 z-50 shadow-2xl translate-x-full drawer-transition flex flex-col">
+        <div class="p-6 border-b border-gray-100 dark:border-neutral-800 flex justify-between items-center">
+            <span class="font-serif text-lg font-bold tracking-widest">AVENOIR</span>
+            <button id="close-mobile-drawer" class="text-gray-800 dark:text-white hover:text-luxury-accent transition">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+        </div>
+        <div class="p-6 flex-grow overflow-y-auto">
+            <ul class="flex flex-col gap-6 text-sm font-bold uppercase tracking-widest text-gray-800 dark:text-gray-200">
+                <li><a href="index.html" class="hover:text-luxury-accent transition block">Home 1</a></li>
+                <li><a href="index-2.html" class="hover:text-luxury-accent transition block">Home 2</a></li>
+                <li><a href="products.html" class="hover:text-luxury-accent transition block">Shop</a></li>
+                <li><a href="about.html" class="hover:text-luxury-accent transition block">About Us</a></li>
+                <li><a href="blog.html" class="hover:text-luxury-accent transition block">Blog</a></li>
+                <li><a href="pricing.html" class="hover:text-luxury-accent transition block">Pricing</a></li>
+                <li><a href="contact.html" class="hover:text-luxury-accent transition block">Contact</a></li>
+                
+                <li class="border-t border-gray-100 dark:border-neutral-800/40 pt-4"><a href="#" class="cart-toggle hover:text-luxury-accent transition flex items-center justify-between block w-full">
+                    <span class="flex items-center gap-2">
+                        <i class="fa-solid fa-bag-shopping text-base"></i> Shopping Bag
+                    </span>
+                    <span class="cart-count bg-black text-white dark:bg-white dark:text-black text-[10px] font-bold rounded-full px-2 py-0.5 hidden">0</span>
+                </a></li>
+                <li><a href="login.html" class="hover:text-luxury-accent transition flex items-center gap-2 block"><i class="fa-regular fa-user text-base"></i> Login / Account</a></li>
+            </ul>
+        </div>
+        
+    </aside>
+
+    <!-- Shopping Cart Drawer Overlay -->
+    <div id="cart-overlay" class="fixed inset-0 bg-black/50 z-45 hidden transition-opacity duration-300"></div>
+
+    <!-- Shopping Cart Off-canvas Drawer -->
+    <aside id="cart-drawer" class="fixed top-0 right-0 bottom-0 w-96 max-w-full bg-white dark:bg-neutral-900 z-50 shadow-2xl translate-x-full drawer-transition flex flex-col">
+        <div class="p-6 border-b border-gray-100 dark:border-neutral-800 flex justify-between items-center bg-gray-50 dark:bg-neutral-900/50">
+            <div class="flex items-center gap-2">
+                <h4 class="font-serif text-lg font-bold tracking-wider text-gray-800 dark:text-white">Shopping Bag</h4>
+                <span id="cart-total-items" class="text-xs font-bold text-gray-400 font-sans">(0 items)</span>
+            </div>
+            <button id="close-cart" class="text-gray-800 dark:text-white hover:text-red-500 transition">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+        </div>
+        
+        <!-- Cart Items dynamic container -->
+        <div id="cart-items-list" class="flex-grow overflow-y-auto px-6 divide-y divide-gray-100 dark:divide-neutral-800">
+            <!-- Rendered by main.js -->
+        </div>
+
+        <div class="p-6 border-t border-gray-100 dark:border-neutral-800 bg-gray-50 dark:bg-neutral-900/50 flex flex-col gap-4">
+            <div class="flex justify-between items-center text-sm font-semibold">
+                <span class="text-gray-500 dark:text-neutral-400">Subtotal:</span>
+                <span id="cart-subtotal" class="text-gray-900 dark:text-white font-bold text-base">$0.00</span>
+            </div>
+            <p class="text-[10px] text-gray-400 font-sans leading-relaxed">Tax, shipping, and coupons calculated at checkout.</p>
+            <div class="grid grid-cols-2 gap-3 mt-2">
+                <button onclick="window.Cart.toggle(false)" class="border border-black dark:border-white text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-semibold text-[10px] tracking-widest uppercase py-3.5 transition duration-300">View Bag</button>
+                <a href="pricing.html" class="bg-black dark:bg-white text-white dark:text-black hover:bg-luxury-accent dark:hover:bg-luxury-accent hover:text-white dark:hover:text-white font-semibold text-[10px] tracking-widest uppercase py-3.5 text-center transition duration-300 block">Checkout</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Search Overlay -->
+    <div id="search-overlay" class="fixed inset-0 bg-white/95 dark:bg-neutral-950/95 z-50 transition-all duration-300 opacity-0 pointer-events-none flex flex-col justify-center px-4">
+        <button id="close-search" class="absolute top-8 right-8 text-gray-800 dark:text-white hover:text-red-500 transition">
+            <i class="fa-solid fa-xmark text-2xl"></i>
+        </button>
+        <div class="max-w-2xl mx-auto w-full text-center">
+            <span class="text-xs uppercase font-bold tracking-[0.2em] text-luxury-accent mb-4 block">Boutique Search Engine</span>
+            <form action="products.html" method="GET" class="border-b border-black dark:border-white pb-3 flex items-center">
+                <input type="text" name="search" id="overlay-search-input" placeholder="Search products, materials, editorials..." class="bg-transparent text-xl sm:text-2xl font-serif text-gray-900 dark:text-white border-none outline-none w-full focus:ring-0 placeholder-gray-400">
+                <button type="submit" class="text-gray-800 dark:text-white hover:text-luxury-accent transition"><i class="fa-solid fa-magnifying-glass text-xl sm:text-2xl"></i></button>
+            </form>
+            <p class="text-xs text-gray-400 mt-4 tracking-wider">Try typing: "Linen Blazer", "Silk Dress", "Suede Chelsea Boots", "Sale"</p>
+        </div>
+    </div>
+
+    <!-- Quick View Modal Overlay -->
+    <div id="quickview-modal" class="fixed inset-0 bg-black/60 z-50 transition-all duration-300 opacity-0 pointer-events-none flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-neutral-900 w-full max-w-4xl rounded shadow-2xl overflow-hidden relative flex flex-col md:flex-row h-[90vh] md:h-auto max-h-[90vh] border border-gray-100 dark:border-neutral-800">
+            <button id="close-quickview" class="absolute top-4 right-4 text-gray-800 dark:text-white hover:text-red-500 transition z-20">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            
+            <!-- Left: Dynamic Image Slider (Swiper) -->
+            <div class="w-full md:w-1/2 relative bg-gray-50 dark:bg-neutral-950 aspect-[3/4] md:aspect-auto">
+                <div class="swiper-container qv-swiper-container h-full">
+                    <div class="swiper-wrapper" id="quickview-images">
+                        <!-- Populated by JS -->
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+            <!-- Right: Product Details Form -->
+            <div class="w-full md:w-1/2 p-6 sm:p-8 overflow-y-auto flex flex-col h-full justify-between">
+                <div>
+                    <span id="quickview-category" class="text-[10px] uppercase font-bold text-luxury-accent tracking-widest">OUTERWEAR</span>
+                    <h3 id="quickview-name" class="font-serif text-2xl text-gray-900 dark:text-white mt-1 mb-3">Tailored Sport Coat</h3>
+                    <div id="quickview-price" class="mb-4">
+                        <!-- Price -->
+                    </div>
+                    <div class="h-px bg-gray-100 dark:bg-neutral-800 my-4"></div>
+                    <p id="quickview-desc" class="text-xs sm:text-sm text-gray-500 dark:text-neutral-400 mb-6 font-sans leading-relaxed">Description goes here.</p>
+                    
+                    <!-- Variant selector options -->
+                    <div class="flex flex-col gap-4 mb-6">
+                        <div>
+                            <span class="text-xs text-gray-400 block mb-2">Select Size:</span>
+                            <div class="flex flex-wrap gap-2" id="quickview-sizes">
+                                <!-- Populated dynamically -->
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-xs text-gray-400 block mb-2">Select Color:</span>
+                            <div class="flex items-center gap-2" id="quickview-colors">
+                                <!-- Populated dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-auto">
+                    <div class="h-px bg-gray-100 dark:bg-neutral-800 my-4"></div>
+                    <div class="flex gap-4">
+                        <button id="quickview-add-to-cart" class="w-full bg-black hover:bg-neutral-800 dark:bg-white dark:hover:bg-neutral-200 text-white dark:text-black font-semibold text-xs tracking-widest uppercase py-4 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-bag-shopping"></i> Add to Bag
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

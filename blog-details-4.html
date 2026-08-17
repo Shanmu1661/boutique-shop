@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Geometry of Tailoring | Avenoir Journal</title>
+    
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        luxury: {
+                            accent: '#c5a880',
+                            accentHover: '#b5966c',
+                            darkBg: '#121212',
+                            darkCard: '#1e1e1e',
+                            lightBg: '#fcfcfc'
+                        }
+                    },
+                    fontFamily: {
+                        primary: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    
+    <script src="assets/js/theme.js"></script>
+</head>
+<body class="bg-luxury-lightBg dark:bg-luxury-darkBg text-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    <div class="w-full overflow-x-hidden flex flex-col min-h-screen">
+    <!-- Main Navigation Header -->
+    <header id="main-header" class="sticky top-0 z-40 w-full transition-all duration-300 bg-white/95 dark:bg-neutral-900/95 shadow-luxury">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between">
+            
+            <!-- Left: Mobile Toggle & Logo -->
+            <div class="flex items-center gap-4 sm:gap-6">
+                <!-- Hamburger Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-gray-800 dark:text-white hover:text-luxury-accent transition">
+                    <i class="fa-solid fa-bars-staggered text-xl"></i>
+                </button>
+                
+                <!-- Logo/Boutique Name -->
+                <a href="index.html" class="flex items-center gap-2 sm:gap-3 select-none group">
+                    <img src="assets/images/logo/logo-icon-transparent.png" alt="Avenoir Logo" class="w-8 h-8 sm:w-10 h-10 object-contain transition-transform group-hover:scale-105 duration-300">
+                    <div class="flex flex-col">
+                        <span class="font-serif text-lg sm:text-2xl font-bold tracking-[0.15em] sm:tracking-[0.2em] text-gray-900 dark:text-white leading-none">AVENOIR</span>
+                        <span class="text-[7px] sm:text-[9px] tracking-[0.4em] uppercase text-luxury-accent font-bold mt-1">Haute Couture</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Center: Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-xs font-bold tracking-[0.2em] uppercase">
+                <a href="index.html" class="hover:text-luxury-accent transition py-4">Home</a>
+                <a href="products.html" class="hover:text-luxury-accent transition py-4">Shop</a>
+                <a href="about.html" class="hover:text-luxury-accent transition py-4">About Us</a>
+                <a href="blog.html" class="hover:text-luxury-accent transition py-4 text-luxury-accent">Blog</a>
+                <a href="pricing.html" class="hover:text-luxury-accent transition py-4">Pricing</a>
+                <a href="contact.html" class="hover:text-luxury-accent transition py-4">Contact</a>
+            </nav>
+
+            <!-- Right: Utility icons -->
+            <div class="flex items-center gap-3 sm:gap-5">
+                <!-- Theme Toggle -->
+                <button onclick="window.ThemeToggler.toggleTheme()" class="text-gray-800 dark:text-gray-200 hover:text-luxury-accent transition p-1" title="Toggle Theme">
+                    <i class="fa-regular fa-moon dark:hidden text-lg"></i>
+                    <i class="fa-regular fa-sun hidden dark:block text-lg"></i>
+                </button>
+
+                <!-- User Account -->
+                <a href="login.html" class="hidden sm:inline-block text-gray-800 dark:text-gray-200 hover:text-luxury-accent transition p-1" title="Account">
+                    <i class="fa-regular fa-user text-lg"></i>
+                </a>
+
+                <!-- Cart Toggle -->
+                <a href="#" class="cart-toggle hidden sm:inline-block relative text-gray-800 dark:text-gray-200 hover:text-luxury-accent transition p-1" title="Shopping Bag">
+                    <i class="fa-solid fa-bag-shopping text-lg"></i>
+                    <span class="cart-count absolute -top-1 -right-1 bg-black text-white dark:bg-white dark:text-black text-[9px] font-bold rounded-full w-4 h-4 flex items-center justify-center hidden">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Details Page Main Container -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Back link -->
+        <a href="blog.html" class="text-xs font-bold tracking-widest uppercase text-luxury-accent hover:underline mb-8 inline-block"><i class="fa-solid fa-arrow-left arrow-icon me-2"></i> Back to Journal</a>
+
+        <article class="font-sans">
+            <header class="mb-10 text-center sm:text-left">
+                <div class="flex flex-wrap items-center justify-center sm:justify-start gap-3 text-[10px] font-bold tracking-widest text-luxury-accent uppercase mb-4">
+                    <span>Atelier Design</span>
+                    <span>&bull;</span>
+                    <time>July 15, 2026</time>
+                </div>
+                <h1 class="font-serif text-3xl sm:text-5xl font-medium text-gray-900 dark:text-white leading-tight mb-6">The Geometry of Tailoring: Behind the Neoclassical Silhouettes</h1>
+                
+                <div class="flex items-center justify-center sm:justify-start gap-3">
+                    <img src="assets/images/team/member-1.jpg" alt="Marc Antoine" class="w-10 h-10 rounded-full object-cover bg-gray-50 dark:bg-neutral-900 border border-gray-100 dark:border-neutral-800">
+                    <div class="text-start">
+                        <span class="text-xs font-bold block text-gray-900 dark:text-white">Marc-Antoine Valois</span>
+                        <span class="text-[9px] uppercase tracking-wider text-gray-400 font-semibold">Creative Director</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Featured Image -->
+            <div class="aspect-[16:9] overflow-hidden bg-gray-50 dark:bg-neutral-900 border border-gray-100 dark:border-neutral-850 rounded mb-10">
+                <img src="assets/images/banners/craftsmanship.jpg" alt="Pattern Cutting & Drafting Tailoring" class="w-full h-full object-cover">
+            </div>
+
+            <!-- Content Area -->
+            <div class="prose max-w-none text-sm text-gray-500 dark:text-neutral-400 leading-relaxed space-y-6">
+                <p>Tailoring is more than a process of joining textiles; it is an exercise in structural geometry. At House of Avenoir, our pattern engineering relies on the principles of architectural line and gravity, ensuring that every blazer and drape flows smoothly with the natural movement of the body.</p>
+                
+                <p>Neoclassical design centers on proportion. When drafting a sleeve, we consider the balance of the shoulder line, the sweep of the armscye, and the canvas layering. By employing ancient hair-canvas stitching alongside modern laser layouts, we create jackets that hold their form without rigidity.</p>
+
+                <blockquote class="border-s-4 border-luxury-accent ps-4 italic my-6 text-gray-700 dark:text-neutral-300 font-serif">
+                    "A pattern is a series of mathematical equations balanced on the shoulders. If the shoulder anchors correctly, the rest of the fabric falls in absolute harmony."
+                </blockquote>
+
+                <p>Our commitment to zero-waste cutting also influences this geometric layout. By aligning curves interlocking like puzzle pieces, we minimize gaps and waste, transforming luxury tailoring into a completely sustainable, zero-waste art form.</p>
+            </div>
+
+            <!-- Comments Area -->
+            <div class="mt-16 border-t border-gray-100 dark:border-neutral-800 pt-12">
+                <h3 class="font-serif text-xl font-medium text-gray-900 dark:text-white mb-6">Leave a Response</h3>
+                <form class="flex flex-col gap-4 font-sans text-xs" onsubmit="event.preventDefault(); alert('Response submitted!'); this.reset();">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <input type="text" required placeholder="Name" class="px-4 py-3 bg-gray-50 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 outline-none focus:border-suxury-accent text-xs">
+                        <input type="email" required placeholder="Email" class="px-4 py-3 bg-gray-50 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 outline-none focus:border-suxury-accent text-xs">
+                    </div>
+                    <textarea rows="5" required placeholder="Write comment response..." class="px-4 py-3 bg-gray-50 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 outline-none focus:border-suxury-accent text-xs"></textarea>
+                    <button type="submit" class="self-start px-8 py-3 bg-black dark:bg-white text-white dark:text-black hover:bg-luxury-accent hover:text-white font-bold tracking-widest uppercase transition-all duration-300">Submit Response</button>
+                </form>
+            </div>
+        </article>
+    </section>
+
+        <!-- Master Footer -->
+    <footer class="bg-white dark:bg-neutral-950 border-t border-gray-100 dark:border-neutral-900 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Branding column -->
+                <div>
+                    <span class="font-serif text-xl font-semibold tracking-widest text-gray-900 dark:text-white">AVENOIR</span>
+                    <p class="text-xs text-gray-500 dark:text-neutral-400 mt-4 leading-relaxed font-sans">A multipurpose luxury boutique template designed for fashion boutiques, couture houses, agencies, and elite e-commerce brands.</p>
+                    <div class="flex gap-4 mt-6">
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-luxury-accent transition"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-luxury-accent transition"><i class="fa-brands fa-pinterest"></i></a>
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-luxury-accent transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-luxury-accent transition"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <div>
+                    <h4 class="text-xs uppercase font-bold tracking-widest text-gray-800 dark:text-white border-b border-gray-100 dark:border-neutral-900 pb-3 mb-4">Shop Pages</h4>
+                    <ul class="flex flex-col gap-2 text-xs font-semibold text-gray-500 dark:text-neutral-400">
+                        <li><a href="pages/men.html" class="hover:text-luxury-accent transition">Men's Department</a></li>
+                        <li><a href="pages/women.html" class="hover:text-luxury-accent transition">Women's Department</a></li>
+                        <li><a href="pages/new-arrivals.html" class="hover:text-luxury-accent transition">New Arrivals</a></li>
+                        <li><a href="pages/sale.html" class="hover:text-luxury-accent transition text-red-500">Sale Collection</a></li>
+                        <li><a href="pages/lookbook.html" class="hover:text-luxury-accent transition">Editorial Lookbook</a></li>
+                    </ul>
+                </div>
+
+                <!-- Boutique Info -->
+                <div>
+                    <h4 class="text-xs uppercase font-bold tracking-widest text-gray-800 dark:text-white border-b border-gray-100 dark:border-neutral-900 pb-3 mb-4">Support & FAQ</h4>
+                    <ul class="flex flex-col gap-2 text-xs font-semibold text-gray-500 dark:text-neutral-400">
+                        <li><a href="pages/faq.html" class="hover:text-luxury-accent transition">Sizing & Order FAQ</a></li>
+                        <li><a href="pages/size-guide.html" class="hover:text-luxury-accent transition">Measurement Sizing Guide</a></li>
+                        <li><a href="pricing.html" class="hover:text-luxury-accent transition">VIP Styling Plans</a></li>
+                        <li><a href="coming-soon.html" class="hover:text-luxury-accent transition">New Collections Launch</a></li>
+                        <li><a href="404.html" class="hover:text-luxury-accent transition">Error Utility Page</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact column -->
+                <div>
+                    <h4 class="text-xs uppercase font-bold tracking-widest text-gray-800 dark:text-white border-b border-gray-100 dark:border-neutral-900 pb-3 mb-4">The Boutique</h4>
+                    <address class="text-xs text-gray-500 dark:text-neutral-400 not-italic flex flex-col gap-3 font-sans leading-relaxed">
+                        <span class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-location-dot text-luxury-accent mt-0.5"></i>
+                            <span>45 Rue du Faubourg Saint-HonorÃ©,<br>75008 Paris, France</span>
+                        </span>
+                        <span class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-phone text-luxury-accent"></i>
+                            <span>+33 1 42 68 53 00</span>
+                        </span>
+                        <span class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-envelope text-luxury-accent"></i>
+                            <span>couture@avenoir.com</span>
+                        </span>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-100 dark:border-neutral-900 pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] font-semibold text-gray-400">
+                <p>&copy; 2026 Avenoir Couture. All Rights Reserved. Crafted for ThemeForest and client boutiques.</p>
+                <div class="flex gap-4 mt-4 sm:mt-0">
+                    <a href="documentation/index.html" class="hover:text-luxury-accent transition">Documentation</a>
+                    <span>&bull;</span>
+                    <a href="#" class="hover:text-luxury-accent transition">Privacy Policy</a>
+                    <span>&bull;</span>
+                    <a href="#" class="hover:text-luxury-accent transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
