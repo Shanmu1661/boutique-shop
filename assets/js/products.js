@@ -65,7 +65,7 @@ const PRODUCTS_DATA = [
         ],
         images: [
             "assets/images/products/men/merino-1.jpg",
-            "assets/images/products/men/merino-2.jpg"
+            "assets/images/products/men/merino-2-new.jpg"
         ],
         isNew: false,
         isSale: false,

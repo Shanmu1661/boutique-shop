@@ -1,10 +1,10 @@
 ﻿<!DOCTYPE html>
-<html lang="en" class="dark" dir="ltr">
+<html lang="en" class="light" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Noir Collection | Avenoir Luxury Showcase</title>
-    <meta name="description" content="Explore Avenoir's exclusive high-fashion editorial collection featuring minimalist patterns, dark velvet fabrics, and premium silhouettes.">
+    <title>Shopping Bag & Checkout | Avenoir Atelier</title>
+    <meta name="description" content="View your selected luxury garments, manage quantities, and complete your concierge order.">
     
     <!-- Tailwind CSS Play CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -34,27 +34,19 @@
     
     <!-- Vendor CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
     
-    <!-- Theme Manager -->
     <script src="assets/js/theme.js"></script>
 </head>
 <body class="bg-luxury-lightBg dark:bg-luxury-darkBg text-gray-900 dark:text-gray-100 transition-colors duration-300">
 
-    
-    
-
-    <!-- Sticky Header -->
-    
     <div class="w-full flex flex-col min-h-screen">
     <!-- Main Navigation Header -->
-    <header id="main-header" data-transparent-onload="true" class="sticky top-0 z-40 w-full transition-all duration-300 bg-white dark:bg-neutral-900 shadow-luxury">
+    <header id="main-header" class="sticky top-0 z-40 w-full transition-all duration-300 bg-white dark:bg-neutral-900 shadow-luxury">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between">
             
             <!-- Left: Mobile Toggle & Logo -->
@@ -81,7 +73,7 @@
                     <a href="index.html" class="hover:text-luxury-accent transition flex items-center gap-1 py-4">
                         Home <i class="fa-solid fa-angle-down text-[10px]"></i>
                     </a>
-                    <!-- Mega Menu (Home Variations) -->
+                    <!-- Mega Menu -->
                     <div class="mega-menu absolute left-1/2 -translate-x-1/2 top-full w-56 bg-white dark:bg-neutral-900 border border-gray-100 dark:border-neutral-800 shadow-xl p-4 z-50">
                         <ul class="flex flex-col gap-3 font-semibold text-gray-700 dark:text-gray-300 text-left uppercase tracking-wider text-[11px]">
                             <li><a href="index.html" class="hover:text-luxury-accent transition block">Home 1</a></li>
@@ -116,7 +108,7 @@
                     <i class="fa-regular fa-user text-lg"></i>
                 </a>
 
-                <!-- Wishlist Link (Hidden on mobile) -->
+                <!-- Wishlist Link -->
                 <a href="#" onclick="window.Cart.showToast('Wishlist view coming soon!')" class="hidden sm:inline-block relative text-gray-800 dark:text-gray-200 hover:text-luxury-accent transition p-1" title="Wishlist">
                     <i class="fa-regular fa-heart text-lg"></i>
                     <span class="wishlist-count absolute -top-1 -right-1 bg-luxury-accent text-white text-[9px] font-bold rounded-full w-4 h-4 flex items-center justify-center hidden">0</span>
@@ -131,134 +123,106 @@
         </div>
     </header>
 
-    <!-- Fullscreen Editorial Campaign Banner -->
-    <section class="relative h-[100vh] overflow-hidden flex items-center bg-black">
-        <img src="assets/images/banners/hero-main-2.jpg" alt="Noir Collection" class="absolute inset-0 w-full h-full object-cover opacity-80 scale-105 animate-[pulse_10s_infinite]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent"></div>
-        
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
-            <div class="max-w-xl" data-aos="fade-right">
-                <span class="text-xs uppercase font-bold tracking-[0.3em] text-luxury-accent mb-4 block">Limited Haute Couture Edition</span>
-                <h1 class="font-serif text-5xl sm:text-7xl font-bold tracking-wide leading-[1.1] mb-6">Noir Velvet &amp; Stone</h1>
-                <p class="text-xs sm:text-sm text-gray-400 leading-relaxed tracking-wider mb-8">An architectural design direction celebrating shadows, structured forms, and heavy velvet fabrics. Designed for those who appreciate clean, dramatic silhouettes.</p>
-                <div class="flex gap-4">
-                    <a href="products.html?category=women" class="px-8 py-4 bg-luxury-accent hover:bg-luxury-accentHover text-white font-bold text-xs tracking-widest uppercase transition">Explore Collection</a>
-                    <a href="pages/lookbook.html" class="px-8 py-4 border border-white/20 hover:border-white text-white font-bold text-xs tracking-widest uppercase transition">Lookbook Film</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="absolute bottom-10 start-1/2 -translate-x-1/2 flex flex-col items-center text-gray-500 animate-bounce">
-            <span class="text-[9px] uppercase tracking-[0.3em] mb-2 font-bold">Scroll to View</span>
-            <i class="fa-solid fa-chevron-down text-xs"></i>
-        </div>
+    <!-- Page Header Banner -->
+    <section class="bg-gray-50 dark:bg-neutral-900/40 py-16 text-center border-b border-gray-100 dark:border-neutral-800/40">
+        <span class="text-xs uppercase font-bold tracking-[0.3em] text-luxury-accent mb-3 block">Your Atelier Selection</span>
+        <h1 class="font-serif text-3xl sm:text-5xl font-bold tracking-wide">Shopping Bag &amp; Checkout</h1>
     </section>
 
-    <!-- Luxury Philosophy Segment -->
-    <section class="py-24 bg-white dark:bg-neutral-950 border-b border-gray-100 dark:border-neutral-900/40">
-        <div class="max-w-4xl mx-auto px-4 text-center" data-aos="fade-up">
-            <span class="text-xs text-luxury-accent font-bold tracking-[0.3em] uppercase block mb-3">Our Core Philosophy</span>
-            <h2 class="font-serif text-3xl sm:text-5xl font-medium tracking-wide text-gray-900 dark:text-white mb-6">Crafting Slow Fashion Pieces Designed To Endure</h2>
-            <p class="text-sm text-gray-600 dark:text-gray-400 font-sans leading-relaxed max-w-2xl mx-auto mb-10">We reject standard mass-production loops. Each collection undergoes an intricate design process starting with sketch concept blueprints, moving to organic fabric dyeing, and ending in precision double-seam tailoring.</p>
-            <div class="flex justify-center gap-12 text-center">
-                <div>
-                    <span class="font-serif text-3xl text-luxury-accent block font-medium">100%</span>
-                    <span class="text-[9px] uppercase tracking-widest text-gray-500 font-bold mt-1 block">Traceable Silks</span>
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex-grow w-full">
+        <!-- Cart & Checkout grid -->
+        <div id="cart-page-content" class="grid grid-cols-1 lg:grid-cols-3 gap-16">
+            <!-- Left Column: Selected items list -->
+            <div class="lg:col-span-2">
+                <h3 class="font-serif text-2xl font-medium text-gray-900 dark:text-white mb-8 border-b border-gray-150 dark:border-neutral-800 pb-3">Selected Garments</h3>
+                
+                <div id="cart-page-items-list" class="divide-y divide-gray-100 dark:divide-neutral-800">
+                    <!-- Populated dynamically -->
                 </div>
-                <div>
-                    <span class="font-serif text-3xl text-luxury-accent block font-medium">20+</span>
-                    <span class="text-[9px] uppercase tracking-widest text-gray-500 font-bold mt-1 block">Master Tailors</span>
+                
+                <!-- Keep Shopping Link -->
+                <div class="mt-8">
+                    <a href="products.html" class="text-xs font-bold tracking-widest uppercase text-luxury-accent hover:underline flex items-center gap-2">
+                        <i class="fa-solid fa-arrow-left arrow-icon"></i> Continue Shopping
+                    </a>
                 </div>
-                <div>
-                    <span class="font-serif text-3xl text-luxury-accent block font-medium">1.5k</span>
-                    <span class="text-[9px] uppercase tracking-widest text-gray-500 font-bold mt-1 block">Capsules Yearly</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Dual Column Split Lookbook section -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div class="order-2 lg:order-1" data-aos="fade-right">
-                <span class="text-xs text-luxury-accent font-bold tracking-[0.25em] uppercase block mb-3">Design Focus</span>
-                <h3 class="font-serif text-3xl sm:text-4xl font-medium text-gray-900 dark:text-white mb-6">Double-Breasted Wool Trench</h3>
-                <p class="text-sm text-gray-600 dark:text-gray-400 font-sans leading-relaxed mb-6">Woven in heavy double-faced wool threads from Biella, Italy. The signature trench coat showcases details including double storm chest flaps, custom brass buckle belt adjusters, and deep utility pockets.</p>
-                <div class="flex items-center gap-6 mb-8 text-xs font-semibold text-gray-600 dark:text-gray-300">
-                    <span class="flex items-center gap-2"><i class="fa-solid fa-wind text-luxury-accent"></i> Wind Resistant</span>
-                    <span class="flex items-center gap-2"><i class="fa-solid fa-snowflake text-luxury-accent"></i> Thermal Insulation</span>
-                </div>
-                <div class="flex gap-4">
-                    <a href="product-details.html?id=6" class="px-8 py-3.5 bg-black dark:bg-white text-white dark:text-black hover:bg-luxury-accent dark:hover:bg-luxury-accent dark:hover:text-white font-bold text-xs tracking-widest uppercase transition">Shop Coat - $320</a>
-                    <button onclick="window.QuickView.open(6)" class="px-5 py-3.5 bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800 text-black dark:text-white hover:bg-gray-100 dark:hover:bg-neutral-800 font-bold text-xs transition">Quick View</button>
-                </div>
-            </div>
-            <div class="order-1 lg:order-2 aspect-[4/5] overflow-hidden bg-gray-100 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800 shadow-2xl" data-aos="fade-left">
-                <img src="assets/images/products/women/trench-1.jpg" alt="Wool Trench Coat" class="w-full h-full object-cover">
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 border-t border-gray-100 dark:border-neutral-900/40">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            <!-- Left Header -->
-            <div data-aos="fade-right">
-                <span class="text-xs text-luxury-accent font-bold tracking-[0.3em] uppercase block mb-3">Atelier Assistant</span>
-                <h3 class="font-serif text-3xl sm:text-4xl font-medium text-gray-900 dark:text-white mb-6">Frequently Asked Questions</h3>
-                <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed font-sans mb-8">Can't find the answer you are looking for? Reach out to our concierge service for personalized guidance.</p>
-                <a href="contact.html" class="inline-block px-8 py-3.5 border border-black dark:border-white text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-bold text-xs tracking-widest uppercase transition">Contact Stylist</a>
             </div>
             
-            <!-- Right Accordions (Takes 2/3 cols) -->
-            <div class="lg:col-span-2 flex flex-col gap-4" data-aos="fade-left">
-                <!-- FAQ 1 -->
-                <details class="group border border-gray-100 dark:border-neutral-800 bg-white dark:bg-neutral-900/50 p-6 rounded shadow-luxury">
-                    <summary class="flex justify-between items-center font-serif text-base font-semibold cursor-pointer list-none text-gray-800 dark:text-white">
-                        <span>How can I customize a garment's sizing?</span>
-                        <span class="text-luxury-accent transition-transform group-open:rotate-180"><i class="fa-solid fa-angle-down"></i></span>
-                    </summary>
-                    <p class="text-xs text-gray-500 dark:text-neutral-400 mt-4 leading-relaxed">We offer bespoke adjustment services for all collection items. You can choose "Custom Measure" during checkout, or schedule an online fitting consultation with one of our master tailors.</p>
-                </details>
+            <!-- Right Column: Order breakdown & checkout form -->
+            <div class="bg-gray-50 dark:bg-neutral-900/50 border border-gray-100 dark:border-neutral-800 p-8 rounded shadow-luxury h-fit">
+                <h3 class="font-serif text-xl font-medium text-gray-900 dark:text-white mb-6">Order Summary</h3>
+                
+                <div class="flex flex-col gap-4 text-xs font-sans text-gray-500 dark:text-neutral-400">
+                    <div class="flex justify-between">
+                        <span>Items Subtotal:</span>
+                        <span id="cart-page-subtotal" class="font-bold text-gray-900 dark:text-white">$0.00</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Shipping &amp; Handling:</span>
+                        <span class="text-green-600 font-bold uppercase tracking-wider text-[10px]">Complimentary</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Estimated Tax (VAT):</span>
+                        <span class="font-bold text-gray-900 dark:text-white">$0.00</span>
+                    </div>
+                    <div class="h-px bg-gray-200 dark:bg-neutral-800 my-2"></div>
+                    <div class="flex justify-between text-sm font-bold text-gray-900 dark:text-white">
+                        <span>Total:</span>
+                        <span id="cart-page-total" class="text-base text-luxury-accent font-serif font-bold">$0.00</span>
+                    </div>
+                </div>
 
-                <!-- FAQ 2 -->
-                <details class="group border border-gray-100 dark:border-neutral-800 bg-white dark:bg-neutral-900/50 p-6 rounded shadow-luxury">
-                    <summary class="flex justify-between items-center font-serif text-base font-semibold cursor-pointer list-none text-gray-800 dark:text-white">
-                        <span>What is your policy on carbon-conscious shipping?</span>
-                        <span class="text-luxury-accent transition-transform group-open:rotate-180"><i class="fa-solid fa-angle-down"></i></span>
-                    </summary>
-                    <p class="text-xs text-gray-500 dark:text-neutral-400 mt-4 leading-relaxed">All our shipments are 100% carbon-neutral. We package our garments in biodegradable linen dustbags and compostable mailers, partnering with logistics fleets that prioritize carbon-conscious offset initiatives.</p>
-                </details>
+                <div class="h-px bg-gray-200 dark:bg-neutral-800 my-6"></div>
 
-                <!-- FAQ 3 -->
-                <details class="group border border-gray-100 dark:border-neutral-800 bg-white dark:bg-neutral-900/50 p-6 rounded shadow-luxury">
-                    <summary class="flex justify-between items-center font-serif text-base font-semibold cursor-pointer list-none text-gray-800 dark:text-white">
-                        <span>How do I care for my silk and velvet garments?</span>
-                        <span class="text-luxury-accent transition-transform group-open:rotate-180"><i class="fa-solid fa-angle-down"></i></span>
-                    </summary>
-                    <p class="text-xs text-gray-500 dark:text-neutral-400 mt-4 leading-relaxed">We recommend dry cleaning or delicate hand washing with cold water and organic pH-neutral silk detergent. Avoid wringing and dry flat in the shade to maintain the fiber integrity.</p>
-                </details>
-
-                <!-- FAQ 4 -->
-                <details class="group border border-gray-100 dark:border-neutral-800 bg-white dark:bg-neutral-900/50 p-6 rounded shadow-luxury">
-                    <summary class="flex justify-between items-center font-serif text-base font-semibold cursor-pointer list-none text-gray-800 dark:text-white">
-                        <span>Where are your tailoring ateliers located?</span>
-                        <span class="text-luxury-accent transition-transform group-open:rotate-180"><i class="fa-solid fa-angle-down"></i></span>
-                    </summary>
-                    <p class="text-xs text-gray-500 dark:text-neutral-400 mt-4 leading-relaxed">Our couture collections are hand-stitched in Saint-HonorÃ©, Paris, with secondary organic weaving houses in Biella, Italy, ensuring ethical craftsmanship and heritage quality.</p>
-                </details>
-
-                <!-- FAQ 5 -->
-                <details class="group border border-gray-100 dark:border-neutral-800 bg-white dark:bg-neutral-900/50 p-6 rounded shadow-luxury">
-                    <summary class="flex justify-between items-center font-serif text-base font-semibold cursor-pointer list-none text-gray-800 dark:text-white">
-                        <span>Can I return or exchange a limited-edition piece?</span>
-                        <span class="text-luxury-accent transition-transform group-open:rotate-180"><i class="fa-solid fa-angle-down"></i></span>
-                    </summary>
-                    <p class="text-xs text-gray-500 dark:text-neutral-400 mt-4 leading-relaxed">We accept returns and exchanges on standard items within 14 days of delivery. For customized pieces or private styling capsules, sales are final as each garment is crafted specifically to your dimensions.</p>
-                </details>
+                <!-- Checkout Form -->
+                <h3 class="font-serif text-lg font-medium text-gray-900 dark:text-white mb-4">Concierge Checkout</h3>
+                <form id="checkout-form" class="flex flex-col gap-4 font-sans text-xs" onsubmit="handlePlaceOrder(event)">
+                    <div>
+                        <label class="block text-[10px] uppercase font-bold text-gray-400 mb-1.5" for="checkout-name">Full Name</label>
+                        <input type="text" id="checkout-name" required placeholder="Lucas Moreau" class="w-full px-4 py-3 bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 outline-none focus:border-luxury-accent text-gray-900 dark:text-white">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase font-bold text-gray-400 mb-1.5" for="checkout-email">Email Address</label>
+                        <input type="email" id="checkout-email" required placeholder="lucas@example.com" class="w-full px-4 py-3 bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 outline-none focus:border-luxury-accent text-gray-900 dark:text-white">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase font-bold text-gray-400 mb-1.5" for="checkout-address">Shipping Address</label>
+                        <input type="text" id="checkout-address" required placeholder="45 Rue du Faubourg Saint-HonorÃ©" class="w-full px-4 py-3 bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 outline-none focus:border-luxury-accent text-gray-900 dark:text-white">
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-[10px] uppercase font-bold text-gray-400 mb-1.5" for="checkout-city">City</label>
+                            <input type="text" id="checkout-city" required placeholder="Paris" class="w-full px-4 py-3 bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 outline-none focus:border-luxury-accent text-gray-900 dark:text-white">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] uppercase font-bold text-gray-400 mb-1.5" for="checkout-zip">Postal Code</label>
+                            <input type="text" id="checkout-zip" required placeholder="75008" class="w-full px-4 py-3 bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 outline-none focus:border-luxury-accent text-gray-900 dark:text-white">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase font-bold text-gray-400 mb-1.5" for="checkout-card">Payment Details (Demo)</label>
+                        <input type="text" id="checkout-card" required placeholder="4111 2222 3333 4444" class="w-full px-4 py-3 bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 outline-none focus:border-luxury-accent text-gray-900 dark:text-white">
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-black hover:bg-neutral-800 dark:bg-white dark:hover:bg-neutral-200 text-white dark:text-black font-semibold text-xs tracking-widest uppercase py-4 mt-4 transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-credit-card"></i> Place Atelier Order
+                    </button>
+                </form>
             </div>
         </div>
-    </section>
+
+        <!-- Success Modal/State -->
+        <div id="order-success-screen" class="hidden flex flex-col items-center justify-center py-20 text-center max-w-lg mx-auto">
+            <div class="w-20 h-20 bg-green-50 dark:bg-neutral-900 border border-green-200 dark:border-green-800/40 text-green-500 rounded-full flex items-center justify-center mb-8 shadow-md">
+                <i class="fa-solid fa-check text-4xl animate-pulse"></i>
+            </div>
+            <span class="text-xs uppercase font-bold tracking-[0.3em] text-luxury-accent mb-3">Order Confirmed</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold tracking-wide mb-4">Thank you for your order!</h2>
+            <p class="text-xs text-gray-500 dark:text-neutral-400 leading-relaxed font-sans mb-8">Your capsule styling selection is now in preparation at our Parisian atelier. A confirmation email with tracking coordinates has been dispatched to <span id="confirmed-email" class="font-bold text-gray-900 dark:text-white"></span>.</p>
+            <a href="products.html" class="px-8 py-4 bg-black dark:bg-white text-white dark:text-black hover:bg-luxury-accent hover:text-white font-bold text-xs tracking-widest uppercase transition">Continue Shopping</a>
+        </div>
+    </main>
 
     <!-- Master Footer -->
     <footer class="bg-white dark:bg-neutral-950 border-t border-gray-100 dark:border-neutral-900 pt-16 pb-8">
@@ -266,7 +230,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 <!-- Branding column -->
                 <div>
-                    <span class="font-serif text-xl font-semibold tracking-widest">AVENOIR</span>
+                    <span class="font-serif text-xl font-semibold tracking-widest text-gray-900 dark:text-white">AVENOIR</span>
                     <p class="text-xs text-gray-500 dark:text-neutral-400 mt-4 leading-relaxed font-sans">A multipurpose luxury boutique template designed for fashion boutiques, couture houses, agencies, and elite e-commerce brands.</p>
                     <div class="flex gap-4 mt-6">
                         <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-luxury-accent transition"><i class="fa-brands fa-instagram"></i></a>
@@ -334,11 +298,6 @@
     </footer>
     </div>
 
-    <!-- ==================== DRAWER AND MODAL OVERLAYS ==================== -->
-
-    <!-- Mobile Drawer Overlay -->
-    <div id="mobile-drawer-overlay" class="fixed inset-0 bg-black/50 z-45 hidden transition-opacity duration-300"></div>
-
     <!-- Mobile Side Drawer -->
     <aside id="mobile-drawer" class="fixed top-0 right-0 bottom-0 w-80 max-w-full bg-white dark:bg-neutral-900 z-50 shadow-2xl translate-x-full drawer-transition flex flex-col">
         <div class="p-6 border-b border-gray-100 dark:border-neutral-800 flex justify-between items-center">
@@ -351,22 +310,13 @@
             <ul class="flex flex-col gap-6 text-sm font-bold uppercase tracking-widest text-gray-800 dark:text-gray-200">
                 <li><a href="index.html" class="hover:text-luxury-accent transition block">Home 1</a></li>
                 <li><a href="index-2.html" class="hover:text-luxury-accent transition block">Home 2</a></li>
-                <li><a href="products.html" class="hover:text-luxury-accent transition block">Shop</a></li>
-                <li><a href="about.html" class="hover:text-luxury-accent transition block">About Us</a></li>
-                <li><a href="blog.html" class="hover:text-luxury-accent transition block">Blog</a></li>
+                <li><a href="products.html" class="hover:text-luxury-accent transition block">Shop Catalog</a></li>
+                <li><a href="about.html" class="hover:text-luxury-accent transition block">Atelier Story</a></li>
+                <li><a href="blog.html" class="hover:text-luxury-accent transition block">Magazine Journal</a></li>
                 <li><a href="pricing.html" class="hover:text-luxury-accent transition block">Pricing</a></li>
                 <li><a href="contact.html" class="hover:text-luxury-accent transition block">Contact</a></li>
-                
-                <li class="border-t border-gray-100 dark:border-neutral-800/40 pt-4"><a href="#" class="cart-toggle hover:text-luxury-accent transition flex items-center justify-between block w-full">
-                    <span class="flex items-center gap-2">
-                        <i class="fa-solid fa-bag-shopping text-base"></i> Shopping Bag
-                    </span>
-                    <span class="cart-count bg-black text-white dark:bg-white dark:text-black text-[10px] font-bold rounded-full px-2 py-0.5 hidden">0</span>
-                </a></li>
-                <li><a href="login.html" class="hover:text-luxury-accent transition flex items-center gap-2 block"><i class="fa-regular fa-user text-base"></i> Login / Account</a></li>
             </ul>
         </div>
-        
     </aside>
 
     <!-- Shopping Cart Drawer Overlay -->
@@ -384,7 +334,6 @@
             </button>
         </div>
         
-        <!-- Cart Items dynamic container -->
         <div id="cart-items-list" class="flex-grow overflow-y-auto px-6 divide-y divide-gray-100 dark:divide-neutral-800">
             <!-- Rendered by main.js -->
         </div>
@@ -417,79 +366,116 @@
         </div>
     </div>
 
-    <!-- Quick View Modal Overlay -->
-    <div id="quickview-modal" class="fixed inset-0 bg-black/60 z-50 transition-all duration-300 opacity-0 pointer-events-none flex items-center justify-center p-4">
-        <div class="bg-white dark:bg-neutral-900 w-full max-w-4xl rounded shadow-2xl overflow-hidden relative flex flex-col md:flex-row h-[90vh] md:h-auto max-h-[90vh] border border-gray-100 dark:border-neutral-800">
-            <button id="close-quickview" class="absolute top-4 right-4 text-gray-800 dark:text-white hover:text-red-500 transition z-20">
-                <i class="fa-solid fa-xmark text-lg"></i>
-            </button>
-            
-            <!-- Left: Dynamic Image Slider (Swiper) -->
-            <div class="w-full md:w-1/2 relative bg-gray-50 dark:bg-neutral-950 aspect-[3/4] md:aspect-auto">
-                <div class="swiper-container qv-swiper-container h-full">
-                    <div class="swiper-wrapper" id="quickview-images">
-                        <!-- Populated by JS -->
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-
-            <!-- Right: Product Details Form -->
-            <div class="w-full md:w-1/2 p-6 sm:p-8 overflow-y-auto flex flex-col h-full justify-between">
-                <div>
-                    <span id="quickview-category" class="text-[10px] uppercase font-bold text-luxury-accent tracking-widest">OUTERWEAR</span>
-                    <h3 id="quickview-name" class="font-serif text-2xl text-gray-900 dark:text-white mt-1 mb-3">Tailored Sport Coat</h3>
-                    <div id="quickview-price" class="mb-4">
-                        <!-- Price -->
-                    </div>
-                    <div class="h-px bg-gray-100 dark:bg-neutral-800 my-4"></div>
-                    <p id="quickview-desc" class="text-xs sm:text-sm text-gray-500 dark:text-neutral-400 mb-6 font-sans leading-relaxed">Description goes here.</p>
-                    
-                    <!-- Variant selector options -->
-                    <div class="flex flex-col gap-4 mb-6">
-                        <div>
-                            <span class="text-xs text-gray-400 block mb-2">Select Size:</span>
-                            <div class="flex flex-wrap gap-2" id="quickview-sizes">
-                                <!-- Populated dynamically -->
-                            </div>
-                        </div>
-                        <div>
-                            <span class="text-xs text-gray-400 block mb-2">Select Color:</span>
-                            <div class="flex items-center gap-2" id="quickview-colors">
-                                <!-- Populated dynamically -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-auto">
-                    <div class="h-px bg-gray-100 dark:bg-neutral-800 my-4"></div>
-                    <div class="flex gap-4">
-                        <button id="quickview-add-to-cart" class="w-full bg-black hover:bg-neutral-800 dark:bg-white dark:hover:bg-neutral-200 text-white dark:text-black font-semibold text-xs tracking-widest uppercase py-4 transition flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-bag-shopping"></i> Add to Bag
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-<!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Scripts -->
     <script src="assets/js/products.js"></script>
     <script src="assets/js/main.js"></script>
+    
+    <!-- Cart Page Specific Script -->
+    <script>
+        function renderCartPage() {
+            const listContainer = document.getElementById("cart-page-items-list");
+            const subtotalLabel = document.getElementById("cart-page-subtotal");
+            const totalLabel = document.getElementById("cart-page-total");
+            const contentGrid = document.getElementById("cart-page-content");
+            const successScreen = document.getElementById("order-success-screen");
+            
+            // Read items from local storage
+            const cartItems = JSON.parse(localStorage.getItem("boutique-cart")) || [];
+            
+            // Update summary subtotal & total
+            const subtotal = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+            subtotalLabel.textContent = `$${subtotal.toFixed(2)}`;
+            totalLabel.textContent = `$${subtotal.toFixed(2)}`;
+            
+            if (cartItems.length === 0) {
+                // If cart is empty and success is not visible, show empty cart view
+                if (successScreen.classList.contains("hidden")) {
+                    contentGrid.innerHTML = `
+                        <div class="lg:col-span-3 flex flex-col items-center justify-center py-20 text-center">
+                            <i class="fa-solid fa-bag-shopping text-6xl text-gray-200 dark:text-neutral-800 mb-6"></i>
+                            <h2 class="font-serif text-2xl font-bold mb-2 text-gray-800 dark:text-gray-200">Your shopping bag is empty</h2>
+                            <p class="text-xs text-gray-500 dark:text-neutral-500 max-w-xs mb-8">You haven't added any luxury pieces to your selection yet.</p>
+                            <a href="products.html" class="px-8 py-4 bg-black dark:bg-white text-white dark:text-black hover:bg-luxury-accent hover:text-white font-bold text-xs tracking-widest uppercase transition">Go To Shop</a>
+                        </div>
+                    `;
+                }
+                return;
+            }
+            
+            // Build items list
+            listContainer.innerHTML = cartItems.map((item, idx) => `
+                <div class="flex flex-col sm:flex-row gap-6 py-6 items-start sm:items-center">
+                    <img src="${item.image}" alt="${item.name}" class="w-24 h-32 object-cover bg-gray-50 dark:bg-neutral-950 rounded shrink-0">
+                    <div class="flex-grow">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-serif text-lg font-bold text-gray-900 dark:text-white">${item.name}</h4>
+                                <p class="text-xs text-gray-400 mt-1">Size: <span class="font-bold text-gray-600 dark:text-gray-300">${item.size}</span> | Color: <span class="font-bold text-gray-600 dark:text-gray-300">${item.color}</span></p>
+                            </div>
+                            <button onclick="removePageItem(${idx})" class="text-gray-400 hover:text-red-500 transition" title="Remove item">
+                                <i class="fa-regular fa-trash-can text-sm"></i>
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center mt-6">
+                            <div class="flex items-center border border-gray-200 dark:border-neutral-700 rounded bg-white dark:bg-neutral-900">
+                                <button onclick="updatePageQty(${idx}, ${item.quantity - 1})" class="px-3 py-1 text-gray-500 hover:bg-gray-50 dark:hover:bg-neutral-800 text-sm font-semibold">-</button>
+                                <span class="px-4 text-xs font-bold text-gray-800 dark:text-gray-200">${item.quantity}</span>
+                                <button onclick="updatePageQty(${idx}, ${item.quantity + 1})" class="px-3 py-1 text-gray-500 hover:bg-gray-50 dark:hover:bg-neutral-800 text-sm font-semibold">+</button>
+                            </div>
+                            <span class="text-sm font-bold text-gray-900 dark:text-white">$${(item.price * item.quantity).toFixed(2)}</span>
+                        </div>
+                    </div>
+                </div>
+            `).join("");
+        }
+        
+        function updatePageQty(index, newQty) {
+            window.Cart.updateQty(index, newQty);
+            renderCartPage();
+        }
+        
+        function removePageItem(index) {
+            window.Cart.remove(index);
+            renderCartPage();
+        }
+        
+        function handlePlaceOrder(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById("checkout-name").value;
+            const email = document.getElementById("checkout-email").value;
+            const address = document.getElementById("checkout-address").value;
+            const city = document.getElementById("checkout-city").value;
+            const zip = document.getElementById("checkout-zip").value;
+            
+            const cartItems = JSON.parse(localStorage.getItem("boutique-cart")) || [];
+            const subtotal = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+            
+            const orderData = {
+                orderNumber: 'AV-' + Math.floor(100000 + Math.random() * 900000),
+                date: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }),
+                customerName: name,
+                customerEmail: email,
+                shippingAddress: `${address}, ${city}, ${zip}`,
+                items: cartItems,
+                total: subtotal
+            };
+            
+            // Save order data to local storage for the confirmation page
+            localStorage.setItem("boutique-last-order", JSON.stringify(orderData));
+            
+            // Clear cart
+            localStorage.removeItem("boutique-cart");
+            
+            // Redirect to order-confirmation.html
+            window.location.href = "order-confirmation.html";
+        }
+        
+        // Initial page render
+        document.addEventListener("DOMContentLoaded", () => {
+            renderCartPage();
+        });
+    </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
 

@@ -52,9 +52,9 @@
     
 
     
-    <div class="w-full overflow-x-hidden flex flex-col min-h-screen">
+    <div class="w-full flex flex-col min-h-screen">
     <!-- Main Navigation Header -->
-    <header id="main-header" class="sticky top-0 z-40 w-full transition-all duration-300 bg-white/95 dark:bg-neutral-900/95 shadow-luxury">
+    <header id="main-header" data-transparent-onload="true" class="sticky top-0 z-40 w-full transition-all duration-300 bg-white dark:bg-neutral-900 shadow-luxury">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between">
             
             <!-- Left: Mobile Toggle & Logo -->
@@ -183,7 +183,7 @@
 
             <!-- New Arrivals -->
             <a href="pages/new-arrivals.html" class="group relative block aspect-[3/4] overflow-hidden bg-gray-100 dark:bg-neutral-900 border border-gray-100 dark:border-neutral-800 shadow-luxury">
-                <img src="assets/images/banners/hero-main-1.jpg" alt="New Arrivals" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <img src="assets/images/banners/new-arrivals-banner.jpg" alt="New Arrivals" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-4 sm:p-6">
                     <h3 class="font-serif text-base sm:text-2xl text-white font-medium mb-1">New Arrivals</h3>
                     <span class="text-[8px] sm:text-[10px] tracking-widest text-luxury-accent font-bold uppercase">Shop New &rarr;</span>
@@ -192,7 +192,7 @@
 
             <!-- Sale -->
             <a href="pages/sale.html" class="group relative block aspect-[3/4] overflow-hidden bg-gray-100 dark:bg-neutral-900 border border-gray-100 dark:border-neutral-800 shadow-luxury">
-                <img src="assets/images/banners/hero-main-2.jpg" alt="Seasonal Sale" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <img src="assets/images/banners/seasonal-sale-banner.jpg" alt="Seasonal Sale" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-4 sm:p-6">
                     <h3 class="font-serif text-base sm:text-2xl text-white font-medium mb-1">Seasonal Sale</h3>
                     <span class="text-[8px] sm:text-[10px] tracking-widest text-red-500 font-bold uppercase">Up to 40% Off &rarr;</span>
@@ -375,7 +375,7 @@
                         <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-luxury-accent transition"><i class="fa-brands fa-instagram"></i></a>
                         <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-luxury-accent transition"><i class="fa-brands fa-pinterest"></i></a>
                         <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-luxury-accent transition"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-luxury-accent transition"><i class="fa-brands fa-tiktok"></i></a>
+                        
                     </div>
                 </div>
 
@@ -386,7 +386,7 @@
                         <li><a href="pages/men.html" class="hover:text-luxury-accent transition">Men's Department</a></li>
                         <li><a href="pages/women.html" class="hover:text-luxury-accent transition">Women's Department</a></li>
                         <li><a href="pages/new-arrivals.html" class="hover:text-luxury-accent transition">New Arrivals</a></li>
-                        <li><a href="pages/sale.html" class="hover:text-luxury-accent transition text-red-500">Sale Collection</a></li>
+                        <li><a href="pages/sale.html" class="hover:text-luxury-accent transition">Sale Collection</a></li>
                         <li><a href="pages/lookbook.html" class="hover:text-luxury-accent transition">Editorial Lookbook</a></li>
                     </ul>
                 </div>
@@ -409,7 +409,7 @@
                     <address class="text-xs text-gray-500 dark:text-neutral-400 not-italic flex flex-col gap-3 font-sans leading-relaxed">
                         <span class="flex items-start gap-2.5">
                             <i class="fa-solid fa-location-dot text-luxury-accent mt-0.5"></i>
-                            <span>45 Rue du Faubourg Saint-HonorÃ©,<br>75008 Paris, France</span>
+                            <span>45 Rue du Faubourg Saint-HonorÃƒÂ©,<br>75008 Paris, France</span>
                         </span>
                         <span class="flex items-center gap-2.5">
                             <i class="fa-solid fa-phone text-luxury-accent"></i>
@@ -671,6 +671,7 @@
     </script>
 </body>
 </html>
+
 
 
 

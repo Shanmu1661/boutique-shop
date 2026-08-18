@@ -27,26 +27,70 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // --- 1.5. ACTIVE NAVIGATION LINK HIGHLIGHTING ---
+    const currentPath = window.location.pathname.toLowerCase();
+    const desktopLinks = document.querySelectorAll("header nav a");
+    const mobileLinks = document.querySelectorAll("#mobile-drawer a");
+    const allNavLinks = [...desktopLinks, ...mobileLinks];
+    
+    allNavLinks.forEach(link => {
+        const href = link.getAttribute("href");
+        if (!href) return;
+        
+        const hrefLower = href.toLowerCase();
+        let isMatch = false;
+        
+        // Helper to check if this is the main Home trigger link
+        const isHomeTrigger = link.classList.contains("flex") && link.textContent.trim().toLowerCase().startsWith("home");
+        
+        if (currentPath.includes("blog")) {
+            isMatch = hrefLower.includes("blog.html");
+        } else if (currentPath.includes("product") || currentPath.includes("men.html") || currentPath.includes("women.html") || currentPath.includes("sale.html") || currentPath.includes("new-arrivals.html")) {
+            isMatch = hrefLower.includes("products.html");
+        } else if (currentPath.includes("about.html")) {
+            isMatch = hrefLower.includes("about.html");
+        } else if (currentPath.includes("pricing.html")) {
+            isMatch = hrefLower.includes("pricing.html");
+        } else if (currentPath.includes("contact.html")) {
+            isMatch = hrefLower.includes("contact.html");
+        } else if (currentPath.endsWith("/") || currentPath.includes("index.html") || currentPath.includes("index-2.html") || !currentPath.includes(".html")) {
+            if (isHomeTrigger) {
+                isMatch = true;
+            } else if (currentPath.includes("index-2.html")) {
+                isMatch = hrefLower.includes("index-2.html");
+            } else {
+                isMatch = hrefLower.includes("index.html") && !hrefLower.includes("index-2.html");
+            }
+        }
+        
+        if (isMatch) {
+            link.classList.add("text-luxury-accent");
+        } else {
+            // Clean up other section links if they had text-luxury-accent
+            if (hrefLower.includes("blog.html") || hrefLower.includes("products.html") || hrefLower.includes("about.html") || hrefLower.includes("pricing.html") || hrefLower.includes("contact.html") || hrefLower.includes("index.html") || hrefLower.includes("index-2.html")) {
+                link.classList.remove("text-luxury-accent");
+            }
+        }
+    });
+
     // --- 2. HEADER SCROLL EFFECT ---
     const header = document.getElementById("main-header");
-    // Only apply transparent header scroll effect on the main homepage (Home 1)
-    const isMainHomepage = window.location.pathname.endsWith("index.html") || 
-                           window.location.pathname.endsWith("/") || 
-                           !window.location.pathname.includes(".html");
+    // Apply transparent header scroll effect on pages with data-transparent-onload attribute
+    const isTransparentHeader = header && header.hasAttribute("data-transparent-onload");
 
-    if (header && isMainHomepage) {
+    if (header && isTransparentHeader) {
         // Set transparent on load if at top
         if (window.scrollY <= 20) {
-            header.classList.remove("shadow-luxury", "bg-white/95", "dark:bg-neutral-900/95", "backdrop-blur-md");
+            header.classList.remove("shadow-luxury", "bg-white", "dark:bg-neutral-900", "backdrop-blur-md");
             header.classList.add("bg-transparent");
         }
 
         window.addEventListener("scroll", () => {
             if (window.scrollY > 20) {
-                header.classList.add("shadow-luxury", "bg-white/95", "dark:bg-neutral-900/95", "backdrop-blur-md");
+                header.classList.add("shadow-luxury", "bg-white", "dark:bg-neutral-900", "backdrop-blur-md");
                 header.classList.remove("bg-transparent");
             } else {
-                header.classList.remove("shadow-luxury", "bg-white/95", "dark:bg-neutral-900/95", "backdrop-blur-md");
+                header.classList.remove("shadow-luxury", "bg-white", "dark:bg-neutral-900", "backdrop-blur-md");
                 header.classList.add("bg-transparent");
             }
         });
@@ -280,6 +324,26 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initial Cart Render
     window.Cart.render();
 
+    // Bind "View Bag" and "Checkout" redirects dynamically
+    document.querySelectorAll("button").forEach(btn => {
+        if (btn.textContent.trim().toLowerCase() === "view bag") {
+            btn.removeAttribute("onclick"); // Remove inline click handler
+            btn.addEventListener("click", (e) => {
+                e.preventDefault();
+                window.location.href = (window.pathPrefix || "") + "cart.html";
+            });
+        }
+    });
+
+    document.querySelectorAll("a").forEach(a => {
+        if (a.textContent.trim().toLowerCase() === "checkout" && a.closest("#cart-drawer")) {
+            a.addEventListener("click", (e) => {
+                e.preventDefault();
+                window.location.href = (window.pathPrefix || "") + "cart.html";
+            });
+        }
+    });
+
     // --- 6. WISHLIST MANAGEMENT ---
     let wishlistItems = JSON.parse(localStorage.getItem("boutique-wishlist")) || [];
     window.Wishlist = {
@@ -362,8 +426,6 @@ document.addEventListener("DOMContentLoaded", () => {
             url = "https://www.pinterest.com/";
         } else if (icon.classList.contains("fa-facebook") || icon.classList.contains("fa-facebook-f")) {
             url = "https://www.facebook.com/";
-        } else if (icon.classList.contains("fa-tiktok")) {
-            url = "https://www.tiktok.com/";
         }
 
         if (url) {
