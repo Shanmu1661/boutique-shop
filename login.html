@@ -43,9 +43,20 @@
 </head>
 <body class="bg-gray-50 dark:bg-luxury-darkBg text-gray-900 dark:text-gray-100 transition-colors duration-300 min-h-screen flex items-center justify-center p-4">
 
-    
-    
+    <!-- Top Right Controls (RTL & Theme Toggles) -->
+    <div class="fixed top-4 end-4 flex items-center gap-2.5 z-50">
+        <!-- RTL Toggle -->
+        <button onclick="window.ThemeToggler.toggleRTL(); window.location.reload();" class="h-8 flex items-center justify-center text-[10px] tracking-widest font-bold uppercase border border-gray-200 dark:border-neutral-800 px-3 hover:border-luxury-accent hover:text-luxury-accent transition duration-300 bg-white dark:bg-neutral-900 shadow-sm" title="Toggle Layout Direction (LTR/RTL)">
+            <span class="rtl:hidden">RTL</span>
+            <span class="hidden rtl:inline">LTR</span>
+        </button>
 
+        <!-- Theme Toggle -->
+        <button onclick="window.ThemeToggler.toggleTheme()" class="w-8 h-8 flex items-center justify-center text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-neutral-800 hover:border-luxury-accent hover:text-luxury-accent transition bg-white dark:bg-neutral-900 shadow-sm" title="Toggle Theme">
+            <i class="fa-regular fa-moon dark:hidden text-sm"></i>
+            <i class="fa-regular fa-sun hidden dark:block text-sm"></i>
+        </button>
+    </div>
     <!-- Auth Card -->
     <div class="bg-white dark:bg-neutral-900 border border-gray-100 dark:border-neutral-800 p-8 rounded shadow-2xl w-full max-w-md font-sans">
         
@@ -83,17 +94,17 @@
         </form>
 
         <div class="relative flex items-center justify-center my-6">
-            <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-gray-100 dark:border-neutral-800"></div></div>
-            <span class="relative px-3 bg-white dark:bg-neutral-900 text-[10px] uppercase font-bold text-gray-400 tracking-wider">Or Connect With</span>
+            <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-gray-200 dark:border-neutral-800"></div></div>
+            <span class="relative px-3 bg-white dark:bg-neutral-900 text-xs text-gray-400">or</span>
         </div>
 
         <!-- Social Signins -->
-        <div class="grid grid-cols-2 gap-3 text-xs font-semibold text-gray-600 dark:text-gray-300">
-            <button class="flex items-center justify-center gap-2 border border-gray-100 dark:border-neutral-800 py-3 hover:bg-gray-50 dark:hover:bg-neutral-800/45 transition">
-                <i class="fa-brands fa-google text-red-500"></i> Google
+        <div class="flex flex-col gap-3 text-xs font-semibold">
+            <button class="flex items-center justify-center gap-2.5 w-full py-3.5 bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800/50 transition">
+                <i class="fa-brands fa-google text-[#4285F4] text-sm"></i> Continue with Google
             </button>
-            <button class="flex items-center justify-center gap-2 border border-gray-100 dark:border-neutral-800 py-3 hover:bg-gray-50 dark:hover:bg-neutral-800/45 transition">
-                <i class="fa-brands fa-apple"></i> Apple ID
+            <button class="flex items-center justify-center gap-2.5 w-full py-3.5 bg-black dark:bg-white text-white dark:text-black rounded-lg hover:bg-neutral-800 dark:hover:bg-neutral-100 transition">
+                <i class="fa-brands fa-apple text-sm"></i> Continue with Apple
             </button>
         </div>
 

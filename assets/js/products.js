@@ -273,6 +273,69 @@ const PRODUCTS_DATA = [
         isNew: true,
         isSale: false,
         description: "Designed with a high rise and dramatic wide-leg drape, these trousers feature front double-pleats, structured belt loops, and hidden closures, styled with a signature pleated silk belt."
+    },
+    {
+        id: 13,
+        name: "Classic Cashmere Cable-Knit Sweater",
+        price: 165.00,
+        salePrice: null,
+        rating: 4.8,
+        reviewsCount: 18,
+        category: "men",
+        subCategory: "dresses",
+        sizes: ["S", "M", "L", "XL"],
+        colors: [
+            { name: "Oatmeal", hex: "#EAE6DF" },
+            { name: "Charcoal", hex: "#36454F" }
+        ],
+        images: [
+            "assets/images/products/men/sweater-1.jpg"
+        ],
+        isNew: true,
+        isSale: false,
+        description: "Luxuriously soft and classic, this crewneck sweater is knitted from premium long-fiber cashmere in a heritage cable pattern."
+    },
+    {
+        id: 14,
+        name: "Tailored Silk Wrap Dress",
+        price: 240.00,
+        salePrice: null,
+        rating: 4.9,
+        reviewsCount: 22,
+        category: "women",
+        subCategory: "dresses",
+        sizes: ["XS", "S", "M", "L"],
+        colors: [
+            { name: "Ruby Red", hex: "#9B111E" },
+            { name: "Black", hex: "#111111" }
+        ],
+        images: [
+            "assets/images/products/women/wrapdress-1.jpg"
+        ],
+        isNew: true,
+        isSale: false,
+        description: "Crafted from heavy sand-washed silk, this sophisticated wrap dress drapes elegantly, featuring a self-tie waist and french cuffs."
+    },
+    {
+        id: 15,
+        name: "Minimalist Suede Trench Coat",
+        price: 340.00,
+        salePrice: null,
+        rating: 4.8,
+        reviewsCount: 15,
+        category: "women",
+        subCategory: "dresses",
+        sizes: ["XS", "S", "M", "L"],
+        colors: [
+            { name: "Chestnut Tan", hex: "#8B5A2B" },
+            { name: "Charcoal Black", hex: "#1C1C1C" }
+        ],
+        images: [
+            "assets/images/products/women/trench-suede-1.jpg"
+        ],
+        isNew: true,
+        isSale: false,
+        description: "Tailored from exceptionally soft lambskin suede, this minimalist trench coat features clean raw-edge detailing, hidden button closures, and a matching self-tie belt."
     }
 ];
 

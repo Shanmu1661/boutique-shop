@@ -66,7 +66,13 @@ document.addEventListener("DOMContentLoaded", () => {
         cb.addEventListener("change", (e) => {
             const val = e.target.value;
             if (e.target.checked) {
-                state.category.push(val);
+                // Uncheck other category checkboxes to ensure exclusive selection
+                document.querySelectorAll(".filter-category-checkbox").forEach(otherCb => {
+                    if (otherCb !== e.target) {
+                        otherCb.checked = false;
+                    }
+                });
+                state.category = [val];
             } else {
                 state.category = state.category.filter(c => c !== val);
             }
@@ -79,7 +85,13 @@ document.addEventListener("DOMContentLoaded", () => {
         cb.addEventListener("change", (e) => {
             const val = e.target.value;
             if (e.target.checked) {
-                state.subCategory.push(val);
+                // Uncheck other subcategory checkboxes to ensure exclusive selection
+                document.querySelectorAll(".filter-subcategory-checkbox").forEach(otherCb => {
+                    if (otherCb !== e.target) {
+                        otherCb.checked = false;
+                    }
+                });
+                state.subCategory = [val];
             } else {
                 state.subCategory = state.subCategory.filter(c => c !== val);
             }

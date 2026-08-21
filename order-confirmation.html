@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="light" dir="ltr">
 <head>
     <meta charset="UTF-8">
@@ -155,6 +155,7 @@
                     <h4 class="font-serif text-sm font-bold text-gray-900 dark:text-white mb-3">Customer Coordinates</h4>
                     <p class="text-gray-600 dark:text-neutral-400 font-semibold mb-1" id="customer-name">Name</p>
                     <p class="text-gray-500 dark:text-neutral-500" id="customer-email">Email</p>
+                    <p class="text-gray-550 dark:text-neutral-500 mt-2">Payment Method: <span id="payment-method-disp" class="font-semibold text-gray-750 dark:text-gray-300">Credit Card</span></p>
                 </div>
                 <div>
                     <h4 class="font-serif text-sm font-bold text-gray-900 dark:text-white mb-3">Shipping Destination</h4>
@@ -359,6 +360,7 @@
             document.getElementById("customer-name").textContent = receiptData.customerName;
             document.getElementById("customer-email").textContent = receiptData.customerEmail;
             document.getElementById("shipping-address").textContent = receiptData.shippingAddress;
+            document.getElementById("payment-method-disp").textContent = receiptData.paymentMethod || "Credit Card";
             document.getElementById("invoice-subtotal").textContent = `$${receiptData.total.toFixed(2)}`;
             document.getElementById("invoice-total").textContent = `$${receiptData.total.toFixed(2)}`;
 

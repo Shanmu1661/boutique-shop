@@ -205,3 +205,147 @@ input[type=number] {
         border-radius: 4px !important;
     }
 }
+
+/* Unified Luxury Interactive Animations & Hover Effects */
+
+/* 1. Global smooth transitions for all clickable & interactive items */
+a, 
+button, 
+input[type="submit"], 
+input[type="button"], 
+.swiper-button-next, 
+.swiper-button-prev,
+.product-card,
+.group.relative.block.overflow-hidden {
+    transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* 2. Primary Buttons Hover Lift & tactile press feedback */
+button:not(.qv-size-btn):not(.qv-color-btn):not([onclick*="adjustQty"]):not([onclick*="updatePageQty"]):not([onclick*="setMainImage"]):not(#mobile-menu-btn):not([id*="close"]):not([class*="remove"]):not([class*="delete"]),
+a.px-8,
+a[class*="bg-black"],
+a[class*="bg-white"],
+a[class*="border-white"],
+a[class*="border-black"],
+input[type="submit"] {
+    position: relative;
+    will-change: transform, box-shadow;
+}
+
+button:not(.qv-size-btn):not(.qv-color-btn):not([onclick*="adjustQty"]):not([onclick*="updatePageQty"]):not([onclick*="setMainImage"]):not(#mobile-menu-btn):not([id*="close"]):not([class*="remove"]):not([class*="delete"]):hover,
+a.px-8:hover,
+a[class*="bg-black"]:hover,
+a[class*="bg-white"]:hover,
+a[class*="border-white"]:hover,
+a[class*="border-black"]:hover,
+input[type="submit"]:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Accent Button Soft Glow effect */
+button.bg-luxury-accent:hover,
+a.bg-luxury-accent:hover,
+[class*="bg-luxury-accent"]:hover,
+.hover\:bg-luxury-accent:hover {
+    box-shadow: 0 10px 25px rgba(197, 168, 128, 0.35) !important;
+}
+
+/* Active touch/click tactile feedback (press-down) */
+button:not(.qv-size-btn):not(.qv-color-btn):not([onclick*="adjustQty"]):not([onclick*="updatePageQty"]):not([onclick*="setMainImage"]):not(#mobile-menu-btn):not([id*="close"]):not([class*="remove"]):not([class*="delete"]):active,
+a.px-8:active,
+a[class*="bg-black"]:active,
+a[class*="bg-white"]:active,
+a[class*="border-white"]:active,
+a[class*="border-black"]:active,
+input[type="submit"]:active {
+    transform: translateY(0) scale(0.96) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* 3. Header Desktop Navigation Link underlines */
+header nav a {
+    position: relative;
+    padding-bottom: 4px;
+}
+header nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    background-color: #c5a880; /* luxury accent */
+    transform-origin: bottom right;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+header nav a:hover::after,
+header nav a.text-luxury-accent::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* 4. Interactive & Social Icons Lift */
+a:hover i[class^="fa-"], 
+a:hover i[class*=" fa-"],
+button:hover i[class^="fa-"],
+button:hover i[class*=" fa-"],
+header .flex.items-center.gap-3 button:hover i,
+header .flex.items-center.gap-5 button:hover i {
+    transform: scale(1.15) translateY(-2px);
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    color: #c5a880;
+}
+
+/* 5. Product & Category Cards elevation lift */
+.product-card:hover {
+    transform: translateY(-5px);
+}
+.group.relative.block.overflow-hidden:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+.dark .group.relative.block.overflow-hidden:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+/* 6. Footer Navigation vertical links nudge-right */
+footer ul li a {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+                color 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+footer ul li a:hover {
+    transform: translateX(4px);
+    color: #c5a880 !important;
+}
+
+/* 7. Brand Logo Header Link animations */
+header a[href$="index.html"].group {
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+header a[href$="index.html"].group:hover {
+    transform: translateY(-1px);
+}
+header a[href$="index.html"].group:active {
+    transform: scale(0.96) translateY(0) !important;
+}
+
+/* Logo Icon subtle scale and rotate */
+header a[href$="index.html"].group img {
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+header a[href$="index.html"].group:hover img {
+    transform: scale(1.1) rotate(6deg) !important;
+}
+
+/* AVENOIR Text sleek letter-spacing expansion and color shift */
+header a[href$="index.html"].group span:first-of-type {
+    transition: letter-spacing 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+                color 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+header a[href$="index.html"].group:hover span:first-of-type {
+    letter-spacing: 0.25em !important;
+    color: #c5a880 !important;
+}

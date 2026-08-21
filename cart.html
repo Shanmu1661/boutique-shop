@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="light" dir="ltr">
 <head>
     <meta charset="UTF-8">
@@ -201,6 +201,15 @@
                         </div>
                     </div>
                     <div>
+                        <label class="block text-[10px] uppercase font-bold text-gray-400 mb-1.5" for="checkout-method">Payment Method</label>
+                        <select id="checkout-method" class="w-full px-4 py-3 bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 outline-none focus:border-luxury-accent text-gray-900 dark:text-white" onchange="toggleCardField(this.value)">
+                            <option value="card">Credit / Debit Card</option>
+                            <option value="paypal">PayPal</option>
+                            <option value="bank">Bank Transfer</option>
+                            <option value="cod">Cash on Delivery (COD)</option>
+                        </select>
+                    </div>
+                    <div id="card-details-wrapper">
                         <label class="block text-[10px] uppercase font-bold text-gray-400 mb-1.5" for="checkout-card">Payment Details (Demo)</label>
                         <input type="text" id="checkout-card" required placeholder="4111 2222 3333 4444" class="w-full px-4 py-3 bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 outline-none focus:border-luxury-accent text-gray-900 dark:text-white">
                     </div>
@@ -439,6 +448,18 @@
             renderCartPage();
         }
         
+        function toggleCardField(value) {
+            const wrapper = document.getElementById("card-details-wrapper");
+            const cardInput = document.getElementById("checkout-card");
+            if (value === "card") {
+                wrapper.classList.remove("hidden");
+                cardInput.setAttribute("required", "required");
+            } else {
+                wrapper.classList.add("hidden");
+                cardInput.removeAttribute("required");
+            }
+        }
+
         function handlePlaceOrder(e) {
             e.preventDefault();
             
@@ -447,6 +468,7 @@
             const address = document.getElementById("checkout-address").value;
             const city = document.getElementById("checkout-city").value;
             const zip = document.getElementById("checkout-zip").value;
+            const method = document.getElementById("checkout-method").value;
             
             const cartItems = JSON.parse(localStorage.getItem("boutique-cart")) || [];
             const subtotal = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
@@ -457,6 +479,7 @@
                 customerName: name,
                 customerEmail: email,
                 shippingAddress: `${address}, ${city}, ${zip}`,
+                paymentMethod: method === 'card' ? 'Credit Card' : method === 'paypal' ? 'PayPal' : method === 'bank' ? 'Bank Transfer' : 'Cash on Delivery (COD)',
                 items: cartItems,
                 total: subtotal
             };

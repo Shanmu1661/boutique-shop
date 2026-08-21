@@ -144,7 +144,7 @@
                             <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-semibold tracking-wide leading-tight mb-6">Minimalist Elegance</h1>
                             <p class="font-sans text-xs sm:text-sm text-gray-200 tracking-wider mb-8 max-w-lg mx-auto">Discover clean lines, organic textiles, and timeless silhouettes engineered for the modern luxury capsule wardrobe.</p>
                             <div class="flex flex-wrap justify-center gap-4">
-                                <a href="products.html" class="px-8 py-3.5 bg-white text-black hover:bg-black hover:text-white font-semibold text-xs tracking-[0.2em] uppercase transition-all duration-300">Discover Shop</a>
+                                <a href="products.html" class="px-8 py-3.5 bg-white text-black hover:bg-luxury-accent hover:text-white font-semibold text-xs tracking-[0.2em] uppercase transition-all duration-300">Discover Shop</a>
                                 <a href="pages/lookbook.html" class="px-8 py-3.5 border border-white text-white hover:bg-white hover:text-black font-semibold text-xs tracking-[0.2em] uppercase transition-all duration-300">View Lookbook</a>
                             </div>
                         </div>
@@ -634,7 +634,7 @@
                     <div class="product-card group relative bg-white dark:bg-neutral-900 border border-gray-100 dark:border-neutral-800 shadow-luxury shadow-luxury-hover transition-luxury flex flex-col h-full">
                         <div class="relative img-zoom-container bg-gray-50 dark:bg-neutral-950 aspect-[3/4] overflow-hidden">
                             ${badge}
-                            <a href="${p.category === 'men' ? 'pages/men.html' : 'pages/women.html'}?id=${p.id}" class="block w-full h-full">
+                            <a href="product-details.html?id=${p.id}" class="block w-full h-full">
                                 <img src="${p.images[0]}" alt="${p.name}" class="w-full h-full object-cover">
                             </a>
                             <!-- Floating Quick Actions -->
