@@ -55,7 +55,7 @@
     <div class="w-full flex flex-col min-h-screen">
     <!-- Main Navigation Header -->
     <header id="main-header" data-transparent-onload="true" class="sticky top-0 z-40 w-full transition-all duration-300 bg-white dark:bg-neutral-900 shadow-luxury">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
             
             <!-- Left: Mobile Toggle & Logo -->
             <div class="flex items-center gap-4 sm:gap-6">
@@ -111,11 +111,6 @@
                     <i class="fa-regular fa-sun hidden dark:block text-lg"></i>
                 </button>
 
-                <!-- User Account -->
-                <a href="login.html" class="hidden sm:inline-block text-gray-800 dark:text-gray-200 hover:text-luxury-accent transition p-1" title="Account">
-                    <i class="fa-regular fa-user text-lg"></i>
-                </a>
-
                 <!-- Wishlist Link (Hidden on mobile) -->
                 <a href="#" onclick="window.Cart.showToast('Wishlist view coming soon!')" class="hidden sm:inline-block relative text-gray-800 dark:text-gray-200 hover:text-luxury-accent transition p-1" title="Wishlist">
                     <i class="fa-regular fa-heart text-lg"></i>
@@ -126,6 +121,11 @@
                 <a href="#" class="cart-toggle hidden sm:inline-block relative text-gray-800 dark:text-gray-200 hover:text-luxury-accent transition p-1" title="Shopping Bag">
                     <i class="fa-solid fa-bag-shopping text-lg"></i>
                     <span class="cart-count absolute -top-1 -right-1 bg-black text-white dark:bg-white dark:text-black text-[9px] font-bold rounded-full w-4 h-4 flex items-center justify-center hidden">0</span>
+                </a>
+
+                <!-- User Account -->
+                <a href="login.html" class="hidden sm:inline-block text-gray-800 dark:text-gray-200 hover:text-luxury-accent transition p-1" title="Account">
+                    <i class="fa-regular fa-user text-lg"></i>
                 </a>
             </div>
         </div>
@@ -291,56 +291,74 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Post 1 -->
-            <article class="group relative flex flex-col justify-end min-h-[420px] rounded-lg overflow-hidden border border-gray-150 dark:border-neutral-800 shadow-luxury hover:shadow-luxury-hover transition-all duration-500">
-                <img src="assets/images/blog/blog-1.jpg" alt="Capsule Wardrobe" class="absolute inset-0 w-full h-full object-cover transition-transform duration-750 group-hover:scale-108">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/75 to-black/35 group-hover:from-black/90 group-hover:via-black/65 transition-colors duration-500"></div>
-                <div class="relative p-7 flex flex-col flex-grow justify-end z-10 text-white">
-                    <div class="flex items-center gap-3 text-[10px] font-bold text-luxury-accent tracking-widest uppercase mb-3">
-                        <span>Aesthetics</span>
+            <article class="group relative rounded-2xl overflow-hidden min-h-[460px] sm:min-h-[480px] p-7 sm:p-8 flex flex-col justify-between border border-gray-200 dark:border-neutral-800 shadow-2xl hover:border-luxury-accent/60 transition-all duration-500 hover:-translate-y-1.5" data-aos="fade-up">
+                <img src="assets/images/blog/blog-1.jpg" alt="Capsule Wardrobe" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/70 group-hover:from-black/50 group-hover:to-black/75 transition-colors duration-500"></div>
+                
+                <div class="relative z-10 drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]">
+                    <div class="flex items-center gap-2.5 text-[10px] font-bold uppercase tracking-[0.2em] text-luxury-accent mb-3">
+                        <span>AESTHETICS</span>
                         <span>&bull;</span>
-                        <time datetime="2026-08-10">Aug 10, 2026</time>
+                        <time datetime="2026-08-10">AUG 10, 2026</time>
                     </div>
-                    <h3 class="font-serif text-xl font-medium text-white mb-3 group-hover:text-luxury-accent transition-colors leading-snug">
+                    <h3 class="font-serif text-xl sm:text-2xl font-medium text-white leading-snug group-hover:text-luxury-accent transition-colors">
                         <a href="blog-details.html">The Art of the Capsule Wardrobe: Curating Less, Styling More</a>
                     </h3>
-                    <p class="text-xs text-gray-300 dark:text-neutral-300 mb-4 line-clamp-2 leading-relaxed">Discover the philosophy of essential dressing and how to build a luxurious collection of minimal, durable, and interchangeable classics.</p>
-                    <a href="blog-details.html" class="link-hover-underline text-[10px] font-bold tracking-widest text-luxury-accent uppercase group-hover:text-white mt-auto inline-flex items-center gap-1.5 transition-colors">Read Story &rarr;</a>
+                    <p class="text-xs text-gray-300 leading-relaxed font-sans mt-3 line-clamp-3">Discover the philosophy of essential dressing and how to build a luxurious collection of minimal, durable, and interchangeable classics.</p>
+                </div>
+
+                <div class="relative z-10 pt-6 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                    <a href="blog-details.html" class="text-xs font-bold uppercase tracking-[0.2em] text-luxury-accent hover:text-white transition-colors duration-300 inline-flex items-center gap-2">
+                        READ STORY <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                    </a>
                 </div>
             </article>
 
             <!-- Post 2 -->
-            <article class="group relative flex flex-col justify-end min-h-[420px] rounded-lg overflow-hidden border border-gray-150 dark:border-neutral-800 shadow-luxury hover:shadow-luxury-hover transition-all duration-500">
-                <img src="assets/images/blog/blog-2.jpg" alt="Mulberry Silk Weaving" class="absolute inset-0 w-full h-full object-cover transition-transform duration-750 group-hover:scale-108">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/75 to-black/35 group-hover:from-black/90 group-hover:via-black/65 transition-colors duration-500"></div>
-                <div class="relative p-7 flex flex-col flex-grow justify-end z-10 text-white">
-                    <div class="flex items-center gap-3 text-[10px] font-bold text-luxury-accent tracking-widest uppercase mb-3">
-                        <span>Eco-Fashion</span>
+            <article class="group relative rounded-2xl overflow-hidden min-h-[460px] sm:min-h-[480px] p-7 sm:p-8 flex flex-col justify-between border border-gray-200 dark:border-neutral-800 shadow-2xl hover:border-luxury-accent/60 transition-all duration-500 hover:-translate-y-1.5" data-aos="fade-up" data-aos-delay="100">
+                <img src="assets/images/blog/blog-2.jpg" alt="Mulberry Silk Weaving" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/70 group-hover:from-black/50 group-hover:to-black/75 transition-colors duration-500"></div>
+                
+                <div class="relative z-10 drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]">
+                    <div class="flex items-center gap-2.5 text-[10px] font-bold uppercase tracking-[0.2em] text-luxury-accent mb-3">
+                        <span>ECO-FASHION</span>
                         <span>&bull;</span>
-                        <time datetime="2026-08-04">Aug 04, 2026</time>
+                        <time datetime="2026-08-04">AUG 04, 2026</time>
                     </div>
-                    <h3 class="font-serif text-xl font-medium text-white mb-3 group-hover:text-luxury-accent transition-colors leading-snug">
+                    <h3 class="font-serif text-xl sm:text-2xl font-medium text-white leading-snug group-hover:text-luxury-accent transition-colors">
                         <a href="blog-details-2.html">Traceable Textures: Where Luxury Meets Ethical Production</a>
                     </h3>
-                    <p class="text-xs text-gray-300 dark:text-neutral-300 mb-4 line-clamp-2 leading-relaxed">Step behind the curtain of our Italian workshops and meet the weavers behind our certified organic mulberry silks and linen threads.</p>
-                    <a href="blog-details-2.html" class="link-hover-underline text-[10px] font-bold tracking-widest text-luxury-accent uppercase group-hover:text-white mt-auto inline-flex items-center gap-1.5 transition-colors">Read Story &rarr;</a>
+                    <p class="text-xs text-gray-300 leading-relaxed font-sans mt-3 line-clamp-3">Step behind the curtain of our Italian workshops and meet the weavers behind our certified organic mulberry silks and linen threads.</p>
+                </div>
+
+                <div class="relative z-10 pt-6 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                    <a href="blog-details-2.html" class="text-xs font-bold uppercase tracking-[0.2em] text-luxury-accent hover:text-white transition-colors duration-300 inline-flex items-center gap-2">
+                        READ STORY <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                    </a>
                 </div>
             </article>
 
             <!-- Post 3 -->
-            <article class="group relative flex flex-col justify-end min-h-[420px] rounded-lg overflow-hidden border border-gray-150 dark:border-neutral-800 shadow-luxury hover:shadow-luxury-hover transition-all duration-500">
-                <img src="assets/images/blog/blog-3.jpg" alt="Autumn Outerwear Preview" class="absolute inset-0 w-full h-full object-cover transition-transform duration-750 group-hover:scale-108">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/75 to-black/35 group-hover:from-black/90 group-hover:via-black/65 transition-colors duration-500"></div>
-                <div class="relative p-7 flex flex-col flex-grow justify-end z-10 text-white">
-                    <div class="flex items-center gap-3 text-[10px] font-bold text-luxury-accent tracking-widest uppercase mb-3">
-                        <span>Trends</span>
+            <article class="group relative rounded-2xl overflow-hidden min-h-[460px] sm:min-h-[480px] p-7 sm:p-8 flex flex-col justify-between border border-gray-200 dark:border-neutral-800 shadow-2xl hover:border-luxury-accent/60 transition-all duration-500 hover:-translate-y-1.5" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/images/blog/blog-3.jpg" alt="Autumn Outerwear Preview" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/70 group-hover:from-black/50 group-hover:to-black/75 transition-colors duration-500"></div>
+                
+                <div class="relative z-10 drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]">
+                    <div class="flex items-center gap-2.5 text-[10px] font-bold uppercase tracking-[0.2em] text-luxury-accent mb-3">
+                        <span>TRENDS</span>
                         <span>&bull;</span>
-                        <time datetime="2026-07-28">Jul 28, 2026</time>
+                        <time datetime="2026-07-28">JUL 28, 2026</time>
                     </div>
-                    <h3 class="font-serif text-xl font-medium text-white mb-3 group-hover:text-luxury-accent transition-colors leading-snug">
+                    <h3 class="font-serif text-xl sm:text-2xl font-medium text-white leading-snug group-hover:text-luxury-accent transition-colors">
                         <a href="blog-details-3.html">Silhouettes of the Season: Autumn Outerwear Preview</a>
                     </h3>
-                    <p class="text-xs text-gray-300 dark:text-neutral-300 mb-4 line-clamp-2 leading-relaxed">An exclusive editorial preview of our double-breasted wool trenches, luxury suede bombers, and custom blazers designed for layering.</p>
-                    <a href="blog-details-3.html" class="link-hover-underline text-[10px] font-bold tracking-widest text-luxury-accent uppercase group-hover:text-white mt-auto inline-flex items-center gap-1.5 transition-colors">Read Story &rarr;</a>
+                    <p class="text-xs text-gray-300 leading-relaxed font-sans mt-3 line-clamp-3">An exclusive editorial preview of our double-breasted wool trenches, luxury suede bombers, and custom blazers designed for layering.</p>
+                </div>
+
+                <div class="relative z-10 pt-6 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                    <a href="blog-details-3.html" class="text-xs font-bold uppercase tracking-[0.2em] text-luxury-accent hover:text-white transition-colors duration-300 inline-flex items-center gap-2">
+                        READ STORY <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                    </a>
                 </div>
             </article>
         </div>
@@ -348,6 +366,7 @@
 
     <!-- Newsletter Subscription Segment -->
     <section class="bg-black text-white py-16 sm:py-24 border-t border-neutral-800">
+        <div class="max-w-4xl mx-auto px-4 text-center">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <span class="text-xs uppercase font-bold tracking-[0.3em] text-luxury-accent mb-4 block">Bespoke Updates</span>
             <h2 class="font-serif text-3xl sm:text-4xl text-white font-medium mb-6">Join The Club Avenoir</h2>
@@ -366,7 +385,13 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 <!-- Branding column -->
                 <div>
-                    <span class="font-serif text-xl font-semibold tracking-widest">AVENOIR</span>
+                    <a href="index.html" class="flex items-center gap-2 sm:gap-3 select-none group mb-4">
+                        <img src="assets/images/logo/logo-icon-transparent.png" alt="Avenoir Logo" class="w-8 h-8 sm:w-9 h-9 object-contain transition-transform group-hover:scale-105 duration-300">
+                        <div class="flex flex-col">
+                            <span class="font-serif text-lg sm:text-xl font-bold tracking-[0.15em] sm:tracking-[0.2em] text-gray-900 dark:text-white leading-none">AVENOIR</span>
+                            <span class="text-[7px] sm:text-[8px] tracking-[0.4em] uppercase text-luxury-accent font-bold mt-1">Haute Couture</span>
+                        </div>
+                    </a>
                     <p class="text-xs text-gray-500 dark:text-neutral-400 mt-4 leading-relaxed font-sans">A multipurpose luxury boutique template designed for fashion boutiques, couture houses, agencies, and elite e-commerce brands.</p>
                     <div class="flex gap-4 mt-6">
                         <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-luxury-accent transition"><i class="fa-brands fa-instagram"></i></a>

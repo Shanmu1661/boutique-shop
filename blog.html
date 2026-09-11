@@ -53,7 +53,7 @@
     <div class="w-full flex flex-col min-h-screen">
     <!-- Main Navigation Header -->
     <header id="main-header" class="sticky top-0 z-40 w-full transition-all duration-300 bg-white dark:bg-neutral-900 shadow-luxury">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
             
             <!-- Left: Mobile Toggle & Logo -->
             <div class="flex items-center gap-4 sm:gap-6">
@@ -109,11 +109,6 @@
                     <i class="fa-regular fa-sun hidden dark:block text-lg"></i>
                 </button>
 
-                <!-- User Account -->
-                <a href="login.html" class="hidden sm:inline-block text-gray-800 dark:text-gray-200 hover:text-luxury-accent transition p-1" title="Account">
-                    <i class="fa-regular fa-user text-lg"></i>
-                </a>
-
                 <!-- Wishlist Link (Hidden on mobile) -->
                 <a href="#" onclick="window.Cart.showToast('Wishlist view coming soon!')" class="hidden sm:inline-block relative text-gray-800 dark:text-gray-200 hover:text-luxury-accent transition p-1" title="Wishlist">
                     <i class="fa-regular fa-heart text-lg"></i>
@@ -124,6 +119,11 @@
                 <a href="#" class="cart-toggle hidden sm:inline-block relative text-gray-800 dark:text-gray-200 hover:text-luxury-accent transition p-1" title="Shopping Bag">
                     <i class="fa-solid fa-bag-shopping text-lg"></i>
                     <span class="cart-count absolute -top-1 -right-1 bg-black text-white dark:bg-white dark:text-black text-[9px] font-bold rounded-full w-4 h-4 flex items-center justify-center hidden">0</span>
+                </a>
+
+                <!-- User Account -->
+                <a href="login.html" class="hidden sm:inline-block text-gray-800 dark:text-gray-200 hover:text-luxury-accent transition p-1" title="Account">
+                    <i class="fa-regular fa-user text-lg"></i>
                 </a>
             </div>
         </div>
@@ -181,329 +181,238 @@
             <button class="blog-filter-btn px-4 py-2 text-[10px] font-bold uppercase tracking-widest border border-gray-200 dark:border-neutral-800 text-gray-500 hover:border-black dark:hover:border-white hover:text-black dark:hover:text-white transition-all duration-300 rounded-sm" data-category="aesthetics">Aesthetics</button>
             <button class="blog-filter-btn px-4 py-2 text-[10px] font-bold uppercase tracking-widest border border-gray-200 dark:border-neutral-800 text-gray-500 hover:border-black dark:hover:border-white hover:text-black dark:hover:text-white transition-all duration-300 rounded-sm" data-category="eco-fashion">Eco-Fashion</button>
             <button class="blog-filter-btn px-4 py-2 text-[10px] font-bold uppercase tracking-widest border border-gray-200 dark:border-neutral-800 text-gray-500 hover:border-black dark:hover:border-white hover:text-black dark:hover:text-white transition-all duration-300 rounded-sm" data-category="trends">Trends</button>
-            <button class="blog-filter-btn px-4 py-2 text-[10px] font-bold uppercase tracking-widest border border-gray-200 dark:border-neutral-800 text-gray-500 hover:border-black dark:hover:border-white hover:text-black dark:hover:text-white transition-all duration-300 rounded-sm" data-category="atelier design">Atelier Design</button>
         </div>
     </nav>
 
-    <!-- 3. Staggered Editorial Article Grid (No Sidebar) -->
+        <!-- 3. Editorial Post Grid (9 Stories - Full-Bleed Background Overlay Poster Cards) -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
-            <!-- Post 2 -->
-            <article class="group rounded-2xl overflow-hidden bg-white dark:bg-neutral-900 border border-gray-150 dark:border-neutral-800 shadow-luxury hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5 flex flex-col h-full" data-category="eco-fashion" data-aos="fade-up">
-                <!-- Top Image -->
-                <div class="relative w-full h-64 sm:h-72 overflow-hidden bg-gray-100 dark:bg-neutral-950">
-                    <img src="assets/images/banners/hero-main-1.jpg" alt="Traceable Textures & Mulberry Silk" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
-                    <span class="absolute top-4 left-4 bg-black/80 dark:bg-white/90 backdrop-blur-md text-white dark:text-black text-[9px] uppercase font-bold tracking-[0.2em] px-3 py-1 rounded-full shadow-md z-10">Eco-Fashion</span>
-                    <span class="absolute top-4 right-4 bg-black/60 backdrop-blur-md text-white/90 text-[9px] font-bold px-2.5 py-1 rounded-full shadow-md z-10 flex items-center gap-1">
-                        <i class="fa-regular fa-clock text-[8px] text-luxury-accent"></i> 4 min read
-                    </span>
+            <!-- Article 1 / Post 2 -->
+            <article class="group relative rounded-2xl overflow-hidden min-h-[460px] sm:min-h-[480px] p-7 sm:p-8 flex flex-col justify-between border border-gray-200 dark:border-neutral-800 shadow-2xl hover:border-luxury-accent/60 transition-all duration-500 hover:-translate-y-1.5" data-category="eco-fashion" data-aos="fade-up">
+                <img src="assets/images/blog/blog-2.jpg" alt="Traceable Textures" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/70 group-hover:from-black/50 group-hover:to-black/75 transition-colors duration-500"></div>
+                
+                <div class="relative z-10 drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]">
+                    <div class="flex items-center gap-2.5 text-[10px] font-bold uppercase tracking-[0.2em] text-luxury-accent mb-3">
+                        <span>ECO-FASHION</span>
+                        <span>&bull;</span>
+                        <time datetime="2026-08-04">AUG 04, 2026</time>
+                    </div>
+                    <h3 class="font-serif text-xl sm:text-2xl font-medium text-white leading-snug group-hover:text-luxury-accent transition-colors">
+                        <a href="blog-details-2.html">Traceable Textures: Where Luxury Meets Ethical Production</a>
+                    </h3>
+                    <p class="text-xs text-gray-300 leading-relaxed font-sans mt-3 line-clamp-3">Step behind the curtain of our Italian workshops and meet the weavers behind our certified organic mulberry silks and linen threads.</p>
                 </div>
-                <!-- Bottom Content -->
-                <div class="p-6 sm:p-7 flex flex-col flex-grow justify-between">
-                    <div>
-                        <div class="flex items-center gap-2 text-[10px] font-bold tracking-widest text-luxury-accent uppercase mb-2.5">
-                            <i class="fa-regular fa-calendar text-[10px]"></i>
-                            <time>August 04, 2026</time>
-                        </div>
-                        <h3 class="font-serif text-xl sm:text-2xl text-gray-900 dark:text-white leading-snug mb-3 group-hover:text-luxury-accent transition-colors">
-                            <a href="blog-details-2.html">Traceable Textures: Where Luxury Meets Ethical Production</a>
-                        </h3>
-                        <p class="text-xs text-gray-500 dark:text-neutral-400 mb-6 leading-relaxed font-sans line-clamp-2">Step behind the curtain of our Italian workshops and meet the weavers behind our certified organic mulberry silks and linen threads.</p>
-                    </div>
-                    <div class="pt-4 border-t border-gray-100 dark:border-neutral-800 flex items-center justify-between mt-auto">
-                        <div class="flex items-center gap-2.5">
-                            <img src="assets/images/team/member-2-new.jpg" alt="Elena Rostova" class="w-7 h-7 rounded-full object-cover border border-gray-200 dark:border-neutral-700">
-                            <span class="text-[11px] font-semibold text-gray-700 dark:text-neutral-300">Elena Rostova</span>
-                        </div>
-                        <a href="blog-details-2.html" class="link-hover-underline text-[11px] font-bold uppercase tracking-widest text-gray-900 dark:text-white group-hover:text-luxury-accent transition-colors inline-flex items-center gap-1.5">
-                            Read Story <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
-                        </a>
-                    </div>
+
+                <div class="relative z-10 pt-6 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                    <a href="blog-details-2.html" class="text-xs font-bold uppercase tracking-[0.2em] text-luxury-accent hover:text-white transition-colors duration-300 inline-flex items-center gap-2">
+                        READ STORY <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                    </a>
                 </div>
             </article>
 
-            <!-- Post 3 -->
-            <article class="group rounded-2xl overflow-hidden bg-white dark:bg-neutral-900 border border-gray-150 dark:border-neutral-800 shadow-luxury hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5 flex flex-col h-full" data-category="trends" data-aos="fade-up">
-                <!-- Top Image -->
-                <div class="relative w-full h-64 sm:h-72 overflow-hidden bg-gray-100 dark:bg-neutral-950">
-                    <img src="assets/images/banners/hero-main-2.jpg" alt="Autumn Outerwear Preview" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
-                    <span class="absolute top-4 left-4 bg-black/80 dark:bg-white/90 backdrop-blur-md text-white dark:text-black text-[9px] uppercase font-bold tracking-[0.2em] px-3 py-1 rounded-full shadow-md z-10">Trends</span>
-                    <span class="absolute top-4 right-4 bg-black/60 backdrop-blur-md text-white/90 text-[9px] font-bold px-2.5 py-1 rounded-full shadow-md z-10 flex items-center gap-1">
-                        <i class="fa-regular fa-clock text-[8px] text-luxury-accent"></i> 5 min read
-                    </span>
+            <!-- Article 2 / Post 3 -->
+            <article class="group relative rounded-2xl overflow-hidden min-h-[460px] sm:min-h-[480px] p-7 sm:p-8 flex flex-col justify-between border border-gray-200 dark:border-neutral-800 shadow-2xl hover:border-luxury-accent/60 transition-all duration-500 hover:-translate-y-1.5" data-category="trends" data-aos="fade-up" data-aos-delay="100">
+                <img src="assets/images/blog/blog-3.jpg" alt="Silhouettes of the Season" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/70 group-hover:from-black/50 group-hover:to-black/75 transition-colors duration-500"></div>
+                
+                <div class="relative z-10 drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]">
+                    <div class="flex items-center gap-2.5 text-[10px] font-bold uppercase tracking-[0.2em] text-luxury-accent mb-3">
+                        <span>TRENDS</span>
+                        <span>&bull;</span>
+                        <time datetime="2026-07-28">JUL 28, 2026</time>
+                    </div>
+                    <h3 class="font-serif text-xl sm:text-2xl font-medium text-white leading-snug group-hover:text-luxury-accent transition-colors">
+                        <a href="blog-details-3.html">Silhouettes of the Season: Autumn Outerwear Preview</a>
+                    </h3>
+                    <p class="text-xs text-gray-300 leading-relaxed font-sans mt-3 line-clamp-3">An exclusive editorial preview of our double-breasted wool trenches, luxury suede bombers, and custom blazers designed for layering.</p>
                 </div>
-                <!-- Bottom Content -->
-                <div class="p-6 sm:p-7 flex flex-col flex-grow justify-between">
-                    <div>
-                        <div class="flex items-center gap-2 text-[10px] font-bold tracking-widest text-luxury-accent uppercase mb-2.5">
-                            <i class="fa-regular fa-calendar text-[10px]"></i>
-                            <time>July 28, 2026</time>
-                        </div>
-                        <h3 class="font-serif text-xl sm:text-2xl text-gray-900 dark:text-white leading-snug mb-3 group-hover:text-luxury-accent transition-colors">
-                            <a href="blog-details-3.html">Silhouettes of the Season: Autumn Outerwear Preview</a>
-                        </h3>
-                        <p class="text-xs text-gray-500 dark:text-neutral-400 mb-6 leading-relaxed font-sans line-clamp-2">As the warm summer air gives way to autumn breezes, our focus shifts to structural layering, double-faced wool coats, and suede bombers.</p>
-                    </div>
-                    <div class="pt-4 border-t border-gray-100 dark:border-neutral-800 flex items-center justify-between mt-auto">
-                        <div class="flex items-center gap-2.5">
-                            <img src="assets/images/team/member-1-new.jpg" alt="Marc Antoine" class="w-7 h-7 rounded-full object-cover border border-gray-200 dark:border-neutral-700">
-                            <span class="text-[11px] font-semibold text-gray-700 dark:text-neutral-300">Marc-Antoine Valois</span>
-                        </div>
-                        <a href="blog-details-3.html" class="link-hover-underline text-[11px] font-bold uppercase tracking-widest text-gray-900 dark:text-white group-hover:text-luxury-accent transition-colors inline-flex items-center gap-1.5">
-                            Read Story <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
-                        </a>
-                    </div>
+
+                <div class="relative z-10 pt-6 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                    <a href="blog-details-3.html" class="text-xs font-bold uppercase tracking-[0.2em] text-luxury-accent hover:text-white transition-colors duration-300 inline-flex items-center gap-2">
+                        READ STORY <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                    </a>
                 </div>
             </article>
 
-            <!-- Post 4 -->
-            <article class="group rounded-2xl overflow-hidden bg-white dark:bg-neutral-900 border border-gray-150 dark:border-neutral-800 shadow-luxury hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5 flex flex-col h-full" data-category="atelier design" data-aos="fade-up">
-                <!-- Top Image -->
-                <div class="relative w-full h-64 sm:h-72 overflow-hidden bg-gray-100 dark:bg-neutral-950">
-                    <img src="assets/images/banners/craftsmanship.jpg" alt="The Geometry of Tailoring" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
-                    <span class="absolute top-4 left-4 bg-black/80 dark:bg-white/90 backdrop-blur-md text-white dark:text-black text-[9px] uppercase font-bold tracking-[0.2em] px-3 py-1 rounded-full shadow-md z-10">Atelier Design</span>
-                    <span class="absolute top-4 right-4 bg-black/60 backdrop-blur-md text-white/90 text-[9px] font-bold px-2.5 py-1 rounded-full shadow-md z-10 flex items-center gap-1">
-                        <i class="fa-regular fa-clock text-[8px] text-luxury-accent"></i> 6 min read
-                    </span>
+            <!-- Article 3 / Post 4 -->
+            <article class="group relative rounded-2xl overflow-hidden min-h-[460px] sm:min-h-[480px] p-7 sm:p-8 flex flex-col justify-between border border-gray-200 dark:border-neutral-800 shadow-2xl hover:border-luxury-accent/60 transition-all duration-500 hover:-translate-y-1.5" data-category="aesthetics" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/images/banners/craftsmanship.jpg" alt="The Geometry of Tailoring" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/70 group-hover:from-black/50 group-hover:to-black/75 transition-colors duration-500"></div>
+                
+                <div class="relative z-10 drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]">
+                    <div class="flex items-center gap-2.5 text-[10px] font-bold uppercase tracking-[0.2em] text-luxury-accent mb-3">
+                        <span>AESTHETICS</span>
+                        <span>&bull;</span>
+                        <time datetime="2026-07-15">JUL 15, 2026</time>
+                    </div>
+                    <h3 class="font-serif text-xl sm:text-2xl font-medium text-white leading-snug group-hover:text-luxury-accent transition-colors">
+                        <a href="blog-details-4.html">The Geometry of Tailoring: Behind the Neoclassical Silhouettes</a>
+                    </h3>
+                    <p class="text-xs text-gray-300 leading-relaxed font-sans mt-3 line-clamp-3">Precision cuts and sculptural silhouettes designed to elevate the modern wardrobe with refined poise and timeless elegance.</p>
                 </div>
-                <!-- Bottom Content -->
-                <div class="p-6 sm:p-7 flex flex-col flex-grow justify-between">
-                    <div>
-                        <div class="flex items-center gap-2 text-[10px] font-bold tracking-widest text-luxury-accent uppercase mb-2.5">
-                            <i class="fa-regular fa-calendar text-[10px]"></i>
-                            <time>July 15, 2026</time>
-                        </div>
-                        <h3 class="font-serif text-xl sm:text-2xl text-gray-900 dark:text-white leading-snug mb-3 group-hover:text-luxury-accent transition-colors">
-                            <a href="blog-details-4.html">The Geometry of Tailoring: Behind the Neoclassical Silhouettes</a>
-                        </h3>
-                        <p class="text-xs text-gray-500 dark:text-neutral-400 mb-6 leading-relaxed font-sans line-clamp-2">Tailoring is more than a process of joining textiles; it is an exercise in structural geometry. Learn how we balance proportion and drape.</p>
-                    </div>
-                    <div class="pt-4 border-t border-gray-100 dark:border-neutral-800 flex items-center justify-between mt-auto">
-                        <div class="flex items-center gap-2.5">
-                            <img src="assets/images/team/member-3-new.jpg" alt="Julian Reed" class="w-7 h-7 rounded-full object-cover border border-gray-200 dark:border-neutral-700">
-                            <span class="text-[11px] font-semibold text-gray-700 dark:text-neutral-300">Julian Reed</span>
-                        </div>
-                        <a href="blog-details-4.html" class="link-hover-underline text-[11px] font-bold uppercase tracking-widest text-gray-900 dark:text-white group-hover:text-luxury-accent transition-colors inline-flex items-center gap-1.5">
-                            Read Story <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
-                        </a>
-                    </div>
+
+                <div class="relative z-10 pt-6 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                    <a href="blog-details-4.html" class="text-xs font-bold uppercase tracking-[0.2em] text-luxury-accent hover:text-white transition-colors duration-300 inline-flex items-center gap-2">
+                        READ STORY <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                    </a>
                 </div>
             </article>
 
-            <!-- Post 5 -->
-            <article class="group rounded-2xl overflow-hidden bg-white dark:bg-neutral-900 border border-gray-150 dark:border-neutral-800 shadow-luxury hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5 flex flex-col h-full" data-category="eco-fashion" data-aos="fade-up">
-                <!-- Top Image -->
-                <div class="relative w-full h-64 sm:h-72 overflow-hidden bg-gray-100 dark:bg-neutral-950">
-                    <img src="assets/images/lookbook/look-2.jpg" alt="Sustainable Linen Flax" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
-                    <span class="absolute top-4 left-4 bg-black/80 dark:bg-white/90 backdrop-blur-md text-white dark:text-black text-[9px] uppercase font-bold tracking-[0.2em] px-3 py-1 rounded-full shadow-md z-10">Eco-Fashion</span>
-                    <span class="absolute top-4 right-4 bg-black/60 backdrop-blur-md text-white/90 text-[9px] font-bold px-2.5 py-1 rounded-full shadow-md z-10 flex items-center gap-1">
-                        <i class="fa-regular fa-clock text-[8px] text-luxury-accent"></i> 4 min read
-                    </span>
+            <!-- Article 4 / Post 5 -->
+            <article class="group relative rounded-2xl overflow-hidden min-h-[460px] sm:min-h-[480px] p-7 sm:p-8 flex flex-col justify-between border border-gray-200 dark:border-neutral-800 shadow-2xl hover:border-luxury-accent/60 transition-all duration-500 hover:-translate-y-1.5" data-category="eco-fashion" data-aos="fade-up">
+                <img src="assets/images/lookbook/look-2.jpg" alt="Organic Linen" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/70 group-hover:from-black/50 group-hover:to-black/75 transition-colors duration-500"></div>
+                
+                <div class="relative z-10 drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]">
+                    <div class="flex items-center gap-2.5 text-[10px] font-bold uppercase tracking-[0.2em] text-luxury-accent mb-3">
+                        <span>ECO-FASHION</span>
+                        <span>&bull;</span>
+                        <time datetime="2026-07-02">JUL 02, 2026</time>
+                    </div>
+                    <h3 class="font-serif text-xl sm:text-2xl font-medium text-white leading-snug group-hover:text-luxury-accent transition-colors">
+                        <a href="blog-details-5.html">The Sustainable Journey of Organic Linen: From Seed to Loom</a>
+                    </h3>
+                    <p class="text-xs text-gray-300 leading-relaxed font-sans mt-3 line-clamp-3">Tracing the natural life cycle of French flax and artisanal weaving traditions that minimize environmental impact.</p>
                 </div>
-                <!-- Bottom Content -->
-                <div class="p-6 sm:p-7 flex flex-col flex-grow justify-between">
-                    <div>
-                        <div class="flex items-center gap-2 text-[10px] font-bold tracking-widest text-luxury-accent uppercase mb-2.5">
-                            <i class="fa-regular fa-calendar text-[10px]"></i>
-                            <time>July 02, 2026</time>
-                        </div>
-                        <h3 class="font-serif text-xl sm:text-2xl text-gray-900 dark:text-white leading-snug mb-3 group-hover:text-luxury-accent transition-colors">
-                            <a href="blog-details-5.html">The Sustainable Journey of Organic Linen: From Seed to Loom</a>
-                        </h3>
-                        <p class="text-xs text-gray-500 dark:text-neutral-400 mb-6 leading-relaxed font-sans line-clamp-2">Discover how our flax fibers are cultivated with rainwater in Northern Italy and transformed into crisp, airy summer linens.</p>
-                    </div>
-                    <div class="pt-4 border-t border-gray-100 dark:border-neutral-800 flex items-center justify-between mt-auto">
-                        <div class="flex items-center gap-2.5">
-                            <img src="assets/images/team/member-2-new.jpg" alt="Elena Rostova" class="w-7 h-7 rounded-full object-cover border border-gray-200 dark:border-neutral-700">
-                            <span class="text-[11px] font-semibold text-gray-700 dark:text-neutral-300">Elena Rostova</span>
-                        </div>
-                        <a href="blog-details-5.html" class="link-hover-underline text-[11px] font-bold uppercase tracking-widest text-gray-900 dark:text-white group-hover:text-luxury-accent transition-colors inline-flex items-center gap-1.5">
-                            Read Story <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
-                        </a>
-                    </div>
+
+                <div class="relative z-10 pt-6 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                    <a href="blog-details-5.html" class="text-xs font-bold uppercase tracking-[0.2em] text-luxury-accent hover:text-white transition-colors duration-300 inline-flex items-center gap-2">
+                        READ STORY <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                    </a>
                 </div>
             </article>
 
-            <!-- Post 6 -->
-            <article class="group rounded-2xl overflow-hidden bg-white dark:bg-neutral-900 border border-gray-150 dark:border-neutral-800 shadow-luxury hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5 flex flex-col h-full" data-category="atelier design" data-aos="fade-up">
-                <!-- Top Image -->
-                <div class="relative w-full h-64 sm:h-72 overflow-hidden bg-gray-100 dark:bg-neutral-950">
-                    <img src="assets/images/lookbook/look-3.jpg" alt="Structured Suit Anatomy" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
-                    <span class="absolute top-4 left-4 bg-black/80 dark:bg-white/90 backdrop-blur-md text-white dark:text-black text-[9px] uppercase font-bold tracking-[0.2em] px-3 py-1 rounded-full shadow-md z-10">Atelier Design</span>
-                    <span class="absolute top-4 right-4 bg-black/60 backdrop-blur-md text-white/90 text-[9px] font-bold px-2.5 py-1 rounded-full shadow-md z-10 flex items-center gap-1">
-                        <i class="fa-regular fa-clock text-[8px] text-luxury-accent"></i> 5 min read
-                    </span>
+            <!-- Article 5 / Post 6 -->
+            <article class="group relative rounded-2xl overflow-hidden min-h-[460px] sm:min-h-[480px] p-7 sm:p-8 flex flex-col justify-between border border-gray-200 dark:border-neutral-800 shadow-2xl hover:border-luxury-accent/60 transition-all duration-500 hover:-translate-y-1.5" data-category="aesthetics" data-aos="fade-up" data-aos-delay="100">
+                <img src="assets/images/lookbook/look-3.jpg" alt="Suit Anatomy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/70 group-hover:from-black/50 group-hover:to-black/75 transition-colors duration-500"></div>
+                
+                <div class="relative z-10 drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]">
+                    <div class="flex items-center gap-2.5 text-[10px] font-bold uppercase tracking-[0.2em] text-luxury-accent mb-3">
+                        <span>AESTHETICS</span>
+                        <span>&bull;</span>
+                        <time datetime="2026-06-20">JUN 20, 2026</time>
+                    </div>
+                    <h3 class="font-serif text-xl sm:text-2xl font-medium text-white leading-snug group-hover:text-luxury-accent transition-colors">
+                        <a href="blog-details-6.html">The Anatomy of a Suit: Understanding Shoulder Structures</a>
+                    </h3>
+                    <p class="text-xs text-gray-300 leading-relaxed font-sans mt-3 line-clamp-3">From soft Neapolitan shoulders to structured Parisian roping—an atelier breakdown of sartorial construction.</p>
                 </div>
-                <!-- Bottom Content -->
-                <div class="p-6 sm:p-7 flex flex-col flex-grow justify-between">
-                    <div>
-                        <div class="flex items-center gap-2 text-[10px] font-bold tracking-widest text-luxury-accent uppercase mb-2.5">
-                            <i class="fa-regular fa-calendar text-[10px]"></i>
-                            <time>June 18, 2026</time>
-                        </div>
-                        <h3 class="font-serif text-xl sm:text-2xl text-gray-900 dark:text-white leading-snug mb-3 group-hover:text-luxury-accent transition-colors">
-                            <a href="blog-details-6.html">The Anatomy of a Suit: Understanding Shoulder Structures</a>
-                        </h3>
-                        <p class="text-xs text-gray-500 dark:text-neutral-400 mb-6 leading-relaxed font-sans line-clamp-2">Delve into the engineering of structured canvas and Neoclassical shoulders that define the signature Avenoir drape.</p>
-                    </div>
-                    <div class="pt-4 border-t border-gray-100 dark:border-neutral-800 flex items-center justify-between mt-auto">
-                        <div class="flex items-center gap-2.5">
-                            <img src="assets/images/team/member-3-new.jpg" alt="Julian Reed" class="w-7 h-7 rounded-full object-cover border border-gray-200 dark:border-neutral-700">
-                            <span class="text-[11px] font-semibold text-gray-700 dark:text-neutral-300">Julian Reed</span>
-                        </div>
-                        <a href="blog-details-6.html" class="link-hover-underline text-[11px] font-bold uppercase tracking-widest text-gray-900 dark:text-white group-hover:text-luxury-accent transition-colors inline-flex items-center gap-1.5">
-                            Read Story <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
-                        </a>
-                    </div>
+
+                <div class="relative z-10 pt-6 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                    <a href="blog-details-6.html" class="text-xs font-bold uppercase tracking-[0.2em] text-luxury-accent hover:text-white transition-colors duration-300 inline-flex items-center gap-2">
+                        READ STORY <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                    </a>
                 </div>
             </article>
 
-            <!-- Post 7 -->
-            <article class="group rounded-2xl overflow-hidden bg-white dark:bg-neutral-900 border border-gray-150 dark:border-neutral-800 shadow-luxury hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5 flex flex-col h-full" data-category="aesthetics" data-aos="fade-up">
-                <!-- Top Image -->
-                <div class="relative w-full h-64 sm:h-72 overflow-hidden bg-gray-100 dark:bg-neutral-950">
-                    <img src="assets/images/banners/women-home1.jpg" alt="Transitional Knit Colorways" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
-                    <span class="absolute top-4 left-4 bg-black/80 dark:bg-white/90 backdrop-blur-md text-white dark:text-black text-[9px] uppercase font-bold tracking-[0.2em] px-3 py-1 rounded-full shadow-md z-10">Aesthetics</span>
-                    <span class="absolute top-4 right-4 bg-black/60 backdrop-blur-md text-white/90 text-[9px] font-bold px-2.5 py-1 rounded-full shadow-md z-10 flex items-center gap-1">
-                        <i class="fa-regular fa-clock text-[8px] text-luxury-accent"></i> 3 min read
-                    </span>
+            <!-- Article 6 / Post 7 -->
+            <article class="group relative rounded-2xl overflow-hidden min-h-[460px] sm:min-h-[480px] p-7 sm:p-8 flex flex-col justify-between border border-gray-200 dark:border-neutral-800 shadow-2xl hover:border-luxury-accent/60 transition-all duration-500 hover:-translate-y-1.5" data-category="aesthetics" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/images/banners/women-home1.jpg" alt="Color Curation" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/70 group-hover:from-black/50 group-hover:to-black/75 transition-colors duration-500"></div>
+                
+                <div class="relative z-10 drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]">
+                    <div class="flex items-center gap-2.5 text-[10px] font-bold uppercase tracking-[0.2em] text-luxury-accent mb-3">
+                        <span>AESTHETICS</span>
+                        <span>&bull;</span>
+                        <time datetime="2026-06-10">JUN 10, 2026</time>
+                    </div>
+                    <h3 class="font-serif text-xl sm:text-2xl font-medium text-white leading-snug group-hover:text-luxury-accent transition-colors">
+                        <a href="blog-details-7.html">Color Curation: Styling Neutrals and Warm Accents for Autumn</a>
+                    </h3>
+                    <p class="text-xs text-gray-300 leading-relaxed font-sans mt-3 line-clamp-3">Mastering monochromatic layering with touches of amber, terracotta, and olive to enrich your seasonal palette.</p>
                 </div>
-                <!-- Bottom Content -->
-                <div class="p-6 sm:p-7 flex flex-col flex-grow justify-between">
-                    <div>
-                        <div class="flex items-center gap-2 text-[10px] font-bold tracking-widest text-luxury-accent uppercase mb-2.5">
-                            <i class="fa-regular fa-calendar text-[10px]"></i>
-                            <time>June 05, 2026</time>
-                        </div>
-                        <h3 class="font-serif text-xl sm:text-2xl text-gray-900 dark:text-white leading-snug mb-3 group-hover:text-luxury-accent transition-colors">
-                            <a href="blog-details-7.html">Color Curation: Styling Neutrals and Warm Accents for Autumn</a>
-                        </h3>
-                        <p class="text-xs text-gray-500 dark:text-neutral-400 mb-6 leading-relaxed font-sans line-clamp-2">Explore transitional color psychology, pairing warm camel tones and deep charcoal hues for a cohesive, rich seasonal palette.</p>
-                    </div>
-                    <div class="pt-4 border-t border-gray-100 dark:border-neutral-800 flex items-center justify-between mt-auto">
-                        <div class="flex items-center gap-2.5">
-                            <img src="assets/images/team/member-4-new.jpg" alt="Sofia Loren" class="w-7 h-7 rounded-full object-cover border border-gray-200 dark:border-neutral-700">
-                            <span class="text-[11px] font-semibold text-gray-700 dark:text-neutral-300">Sofia Loren</span>
-                        </div>
-                        <a href="blog-details-7.html" class="link-hover-underline text-[11px] font-bold uppercase tracking-widest text-gray-900 dark:text-white group-hover:text-luxury-accent transition-colors inline-flex items-center gap-1.5">
-                            Read Story <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
-                        </a>
-                    </div>
+
+                <div class="relative z-10 pt-6 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                    <a href="blog-details-7.html" class="text-xs font-bold uppercase tracking-[0.2em] text-luxury-accent hover:text-white transition-colors duration-300 inline-flex items-center gap-2">
+                        READ STORY <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                    </a>
                 </div>
             </article>
 
-            <!-- Post 8 -->
-            <article class="group rounded-2xl overflow-hidden bg-white dark:bg-neutral-900 border border-gray-150 dark:border-neutral-800 shadow-luxury hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5 flex flex-col h-full" data-category="trends" data-aos="fade-up">
-                <!-- Top Image -->
-                <div class="relative w-full h-64 sm:h-72 overflow-hidden bg-gray-100 dark:bg-neutral-950">
-                    <img src="assets/images/lookbook/look-1.jpg" alt="Heritage Leathercraft Suede" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
-                    <span class="absolute top-4 left-4 bg-black/80 dark:bg-white/90 backdrop-blur-md text-white dark:text-black text-[9px] uppercase font-bold tracking-[0.2em] px-3 py-1 rounded-full shadow-md z-10">Trends</span>
-                    <span class="absolute top-4 right-4 bg-black/60 backdrop-blur-md text-white/90 text-[9px] font-bold px-2.5 py-1 rounded-full shadow-md z-10 flex items-center gap-1">
-                        <i class="fa-regular fa-clock text-[8px] text-luxury-accent"></i> 4 min read
-                    </span>
+            <!-- Article 7 / Post 8 -->
+            <article class="group relative rounded-2xl overflow-hidden min-h-[460px] sm:min-h-[480px] p-7 sm:p-8 flex flex-col justify-between border border-gray-200 dark:border-neutral-800 shadow-2xl hover:border-luxury-accent/60 transition-all duration-500 hover:-translate-y-1.5" data-category="trends" data-aos="fade-up">
+                <img src="assets/images/lookbook/look-1.jpg" alt="The Suede Revolution" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/70 group-hover:from-black/50 group-hover:to-black/75 transition-colors duration-500"></div>
+                
+                <div class="relative z-10 drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]">
+                    <div class="flex items-center gap-2.5 text-[10px] font-bold uppercase tracking-[0.2em] text-luxury-accent mb-3">
+                        <span>TRENDS</span>
+                        <span>&bull;</span>
+                        <time datetime="2026-05-28">MAY 28, 2026</time>
+                    </div>
+                    <h3 class="font-serif text-xl sm:text-2xl font-medium text-white leading-snug group-hover:text-luxury-accent transition-colors">
+                        <a href="blog-details-8.html">The Suede Revolution: Reviving Heritage Leathercraft</a>
+                    </h3>
+                    <p class="text-xs text-gray-300 leading-relaxed font-sans mt-3 line-clamp-3">How buttery calfskin suede and tactile finishes became the definitive statement textures of contemporary luxury.</p>
                 </div>
-                <!-- Bottom Content -->
-                <div class="p-6 sm:p-7 flex flex-col flex-grow justify-between">
-                    <div>
-                        <div class="flex items-center gap-2 text-[10px] font-bold tracking-widest text-luxury-accent uppercase mb-2.5">
-                            <i class="fa-regular fa-calendar text-[10px]"></i>
-                            <time>May 20, 2026</time>
-                        </div>
-                        <h3 class="font-serif text-xl sm:text-2xl text-gray-900 dark:text-white leading-snug mb-3 group-hover:text-luxury-accent transition-colors">
-                            <a href="blog-details-8.html">The Suede Revolution: Reviving Heritage Leathercraft</a>
-                        </h3>
-                        <p class="text-xs text-gray-500 dark:text-neutral-400 mb-6 leading-relaxed font-sans line-clamp-2">Uncover the resurgence of fine-grained suede in modern silhouettes, from soft utility bombers to handcrafted chelsea boots.</p>
-                    </div>
-                    <div class="pt-4 border-t border-gray-100 dark:border-neutral-800 flex items-center justify-between mt-auto">
-                        <div class="flex items-center gap-2.5">
-                            <img src="assets/images/team/member-1-new.jpg" alt="Marc Antoine" class="w-7 h-7 rounded-full object-cover border border-gray-200 dark:border-neutral-700">
-                            <span class="text-[11px] font-semibold text-gray-700 dark:text-neutral-300">Marc-Antoine Valois</span>
-                        </div>
-                        <a href="blog-details-8.html" class="link-hover-underline text-[11px] font-bold uppercase tracking-widest text-gray-900 dark:text-white group-hover:text-luxury-accent transition-colors inline-flex items-center gap-1.5">
-                            Read Story <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
-                        </a>
-                    </div>
+
+                <div class="relative z-10 pt-6 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                    <a href="blog-details-8.html" class="text-xs font-bold uppercase tracking-[0.2em] text-luxury-accent hover:text-white transition-colors duration-300 inline-flex items-center gap-2">
+                        READ STORY <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                    </a>
                 </div>
             </article>
 
-            <!-- Post 9 -->
-            <article class="group rounded-2xl overflow-hidden bg-white dark:bg-neutral-900 border border-gray-150 dark:border-neutral-800 shadow-luxury hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5 flex flex-col h-full" data-category="trends" data-aos="fade-up">
-                <!-- Top Image -->
-                <div class="relative w-full h-64 sm:h-72 overflow-hidden bg-gray-100 dark:bg-neutral-950">
-                    <img src="assets/images/blog/blog-5.jpg" alt="Summer Open Weave Knit" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
-                    <span class="absolute top-4 left-4 bg-black/80 dark:bg-white/90 backdrop-blur-md text-white dark:text-black text-[9px] uppercase font-bold tracking-[0.2em] px-3 py-1 rounded-full shadow-md z-10">Trends</span>
-                    <span class="absolute top-4 right-4 bg-black/60 backdrop-blur-md text-white/90 text-[9px] font-bold px-2.5 py-1 rounded-full shadow-md z-10 flex items-center gap-1">
-                        <i class="fa-regular fa-clock text-[8px] text-luxury-accent"></i> 3 min read
-                    </span>
+            <!-- Article 8 / Post 9 -->
+            <article class="group relative rounded-2xl overflow-hidden min-h-[460px] sm:min-h-[480px] p-7 sm:p-8 flex flex-col justify-between border border-gray-200 dark:border-neutral-800 shadow-2xl hover:border-luxury-accent/60 transition-all duration-500 hover:-translate-y-1.5" data-category="trends" data-aos="fade-up" data-aos-delay="100">
+                <img src="assets/images/blog/blog-5.jpg" alt="Summer Knits" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/70 group-hover:from-black/50 group-hover:to-black/75 transition-colors duration-500"></div>
+                
+                <div class="relative z-10 drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]">
+                    <div class="flex items-center gap-2.5 text-[10px] font-bold uppercase tracking-[0.2em] text-luxury-accent mb-3">
+                        <span>TRENDS</span>
+                        <span>&bull;</span>
+                        <time datetime="2026-05-14">MAY 14, 2026</time>
+                    </div>
+                    <h3 class="font-serif text-xl sm:text-2xl font-medium text-white leading-snug group-hover:text-luxury-accent transition-colors">
+                        <a href="blog-details-9.html">Summer Knits: Breathable Cotton-Linen Open Weaves</a>
+                    </h3>
+                    <p class="text-xs text-gray-300 leading-relaxed font-sans mt-3 line-clamp-3">Exploring lightweight textures and open-stitch knitwear that offer effortless sophistication under warm skies.</p>
                 </div>
-                <!-- Bottom Content -->
-                <div class="p-6 sm:p-7 flex flex-col flex-grow justify-between">
-                    <div>
-                        <div class="flex items-center gap-2 text-[10px] font-bold tracking-widest text-luxury-accent uppercase mb-2.5">
-                            <i class="fa-regular fa-calendar text-[10px]"></i>
-                            <time>May 08, 2026</time>
-                        </div>
-                        <h3 class="font-serif text-xl sm:text-2xl text-gray-900 dark:text-white leading-snug mb-3 group-hover:text-luxury-accent transition-colors">
-                            <a href="blog-details-9.html">Summer Knits: Breathable Cotton-Linen Open Weaves</a>
-                        </h3>
-                        <p class="text-xs text-gray-500 dark:text-neutral-400 mb-6 leading-relaxed font-sans line-clamp-2">Delve into lightweight open-weave construction techniques combining cotton softness with organic linen breathability for peak summer drape.</p>
-                    </div>
-                    <div class="pt-4 border-t border-gray-100 dark:border-neutral-800 flex items-center justify-between mt-auto">
-                        <div class="flex items-center gap-2.5">
-                            <img src="assets/images/team/member-2-new.jpg" alt="Elena Rostova" class="w-7 h-7 rounded-full object-cover border border-gray-200 dark:border-neutral-700">
-                            <span class="text-[11px] font-semibold text-gray-700 dark:text-neutral-300">Elena Rostova</span>
-                        </div>
-                        <a href="blog-details-9.html" class="link-hover-underline text-[11px] font-bold uppercase tracking-widest text-gray-900 dark:text-white group-hover:text-luxury-accent transition-colors inline-flex items-center gap-1.5">
-                            Read Story <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
-                        </a>
-                    </div>
+
+                <div class="relative z-10 pt-6 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                    <a href="blog-details-9.html" class="text-xs font-bold uppercase tracking-[0.2em] text-luxury-accent hover:text-white transition-colors duration-300 inline-flex items-center gap-2">
+                        READ STORY <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                    </a>
                 </div>
             </article>
 
-            <!-- Post 10 -->
-            <article class="group rounded-2xl overflow-hidden bg-white dark:bg-neutral-900 border border-gray-150 dark:border-neutral-800 shadow-luxury hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5 flex flex-col h-full" data-category="eco-fashion" data-aos="fade-up">
-                <!-- Top Image -->
-                <div class="relative w-full h-64 sm:h-72 overflow-hidden bg-gray-100 dark:bg-neutral-950">
-                    <img src="assets/images/blog/blog-4.jpg" alt="Artisanal Indigo Dyeing" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
-                    <span class="absolute top-4 left-4 bg-black/80 dark:bg-white/90 backdrop-blur-md text-white dark:text-black text-[9px] uppercase font-bold tracking-[0.2em] px-3 py-1 rounded-full shadow-md z-10">Eco-Fashion</span>
-                    <span class="absolute top-4 right-4 bg-black/60 backdrop-blur-md text-white/90 text-[9px] font-bold px-2.5 py-1 rounded-full shadow-md z-10 flex items-center gap-1">
-                        <i class="fa-regular fa-clock text-[8px] text-luxury-accent"></i> 5 min read
-                    </span>
+            <!-- Article 9 / Post 10 -->
+            <article class="group relative rounded-2xl overflow-hidden min-h-[460px] sm:min-h-[480px] p-7 sm:p-8 flex flex-col justify-between border border-gray-200 dark:border-neutral-800 shadow-2xl hover:border-luxury-accent/60 transition-all duration-500 hover:-translate-y-1.5" data-category="eco-fashion" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/images/blog/blog-4.jpg" alt="Artisanal Indigo" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/70 group-hover:from-black/50 group-hover:to-black/75 transition-colors duration-500"></div>
+                
+                <div class="relative z-10 drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]">
+                    <div class="flex items-center gap-2.5 text-[10px] font-bold uppercase tracking-[0.2em] text-luxury-accent mb-3">
+                        <span>ECO-FASHION</span>
+                        <span>&bull;</span>
+                        <time datetime="2026-04-30">APR 30, 2026</time>
+                    </div>
+                    <h3 class="font-serif text-xl sm:text-2xl font-medium text-white leading-snug group-hover:text-luxury-accent transition-colors">
+                        <a href="blog-details-10.html">The Artisanal Indigo Process: Hand-Dyed Sustainable Denim</a>
+                    </h3>
+                    <p class="text-xs text-gray-300 leading-relaxed font-sans mt-3 line-clamp-3">Reviving centuries-old natural indigo fermentation vats to produce denim with depth, soul, and zero synthetic pollutants.</p>
                 </div>
-                <!-- Bottom Content -->
-                <div class="p-6 sm:p-7 flex flex-col flex-grow justify-between">
-                    <div>
-                        <div class="flex items-center gap-2 text-[10px] font-bold tracking-widest text-luxury-accent uppercase mb-2.5">
-                            <i class="fa-regular fa-calendar text-[10px]"></i>
-                            <time>April 24, 2026</time>
-                        </div>
-                        <h3 class="font-serif text-xl sm:text-2xl text-gray-900 dark:text-white leading-snug mb-3 group-hover:text-luxury-accent transition-colors">
-                            <a href="blog-details-10.html">The Artisanal Indigo Process: Hand-Dyed Sustainable Denim</a>
-                        </h3>
-                        <p class="text-xs text-gray-500 dark:text-neutral-400 mb-6 leading-relaxed font-sans line-clamp-2">Explore the ancient craft of natural indigo fermentation and vat-dipping that creates the depth of shade in our limited-edition denim jackets.</p>
-                    </div>
-                    <div class="pt-4 border-t border-gray-100 dark:border-neutral-800 flex items-center justify-between mt-auto">
-                        <div class="flex items-center gap-2.5">
-                            <img src="assets/images/team/member-3-new.jpg" alt="Julian Reed" class="w-7 h-7 rounded-full object-cover border border-gray-200 dark:border-neutral-700">
-                            <span class="text-[11px] font-semibold text-gray-700 dark:text-neutral-300">Julian Reed</span>
-                        </div>
-                        <a href="blog-details-10.html" class="link-hover-underline text-[11px] font-bold uppercase tracking-widest text-gray-900 dark:text-white group-hover:text-luxury-accent transition-colors inline-flex items-center gap-1.5">
-                            Read Story <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
-                        </a>
-                    </div>
+
+                <div class="relative z-10 pt-6 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                    <a href="blog-details-10.html" class="text-xs font-bold uppercase tracking-[0.2em] text-luxury-accent hover:text-white transition-colors duration-300 inline-flex items-center gap-2">
+                        READ STORY <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                    </a>
                 </div>
             </article>
         </div>
     </main>
 
-    <!-- 4. Typographic Quote Block -->
-    <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center" data-aos="fade-up">
+<!-- 4. Typographic Quote Block -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center" data-aos="fade-up">
         <div class="border-t border-b border-gray-100 dark:border-neutral-800/80 py-16">
             <i class="fa-solid fa-quote-left text-luxury-accent text-3xl mb-6 block"></i>
             <blockquote class="font-serif text-2xl sm:text-3xl text-gray-800 dark:text-neutral-200 italic leading-relaxed max-w-3xl mx-auto">
                 "True design is a silent dialog between origin, pattern, and the natural flow of gravity."
             </blockquote>
-            <cite class="not-italic text-xs font-bold uppercase tracking-[0.25em] text-luxury-accent mt-6 block">Ã¢â‚¬â€ Marc-Antoine Valois, Creative Director</cite>
+            <cite class="not-italic text-xs font-bold uppercase tracking-[0.25em] text-luxury-accent mt-6 block">— Marc-Antoine Valois, Creative Director</cite>
         </div>
     </section>
 
@@ -593,7 +502,13 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 <!-- Branding column -->
                 <div>
-                    <span class="font-serif text-xl font-semibold tracking-widest text-gray-900 dark:text-white">AVENOIR</span>
+                    <a href="index.html" class="flex items-center gap-2 sm:gap-3 select-none group mb-4">
+                        <img src="assets/images/logo/logo-icon-transparent.png" alt="Avenoir Logo" class="w-8 h-8 sm:w-9 h-9 object-contain transition-transform group-hover:scale-105 duration-300">
+                        <div class="flex flex-col">
+                            <span class="font-serif text-lg sm:text-xl font-bold tracking-[0.15em] sm:tracking-[0.2em] text-gray-900 dark:text-white leading-none">AVENOIR</span>
+                            <span class="text-[7px] sm:text-[8px] tracking-[0.4em] uppercase text-luxury-accent font-bold mt-1">Haute Couture</span>
+                        </div>
+                    </a>
                     <p class="text-xs text-gray-500 dark:text-neutral-400 mt-4 leading-relaxed font-sans">A multipurpose luxury boutique template designed for fashion boutiques, couture houses, agencies, and elite e-commerce brands.</p>
                     <div class="flex gap-4 mt-6">
                         <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-luxury-accent transition"><i class="fa-brands fa-instagram"></i></a>
