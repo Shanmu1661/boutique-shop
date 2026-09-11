@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation | Avenoir Boutique HTML Template</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 leading-relaxed">
+
+    <!-- Top nav -->
+    <header class="bg-black text-white py-6 border-b border-neutral-800 sticky top-0 z-30">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <span class="font-serif text-xl font-bold tracking-widest">AVENOIR</span>
+                <span class="text-xs bg-neutral-800 px-2 py-1 rounded text-gray-400">v1.0.0 Docs</span>
+            </div>
+            <a href="../index.html" class="text-xs font-bold uppercase tracking-wider hover:text-amber-400 transition">&larr; Return to Boutique</a>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row gap-12">
+        <!-- Sidebar Navigation -->
+        <aside class="w-full md:w-64 shrink-0 text-sm font-semibold">
+            <div class="sticky top-28 bg-white border border-gray-200 p-6 rounded shadow-sm">
+                <h3 class="text-xs uppercase font-bold text-gray-400 tracking-wider mb-4">Table of Contents</h3>
+                <nav class="flex flex-col gap-3 text-gray-600">
+                    <a href="#intro" class="hover:text-black transition">1. Introduction</a>
+                    <a href="#structure" class="hover:text-black transition">2. File Structure</a>
+                    <a href="#tailwind" class="hover:text-black transition">3. Tailwind Customization</a>
+                    <a href="#products" class="hover:text-black transition">4. Managing Products</a>
+                    <a href="#theme-rtl" class="hover:text-black transition">5. Theme &amp; RTL Modes</a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Documentation Content -->
+        <main class="flex-grow bg-white border border-gray-200 p-8 sm:p-12 rounded shadow-sm">
+            
+            <!-- Section 1 -->
+            <section id="intro" class="mb-12">
+                <h2 class="text-2xl font-serif font-bold text-gray-900 border-b border-gray-200 pb-3 mb-4">1. Introduction</h2>
+                <p class="text-gray-650 mb-4">Welcome to the <strong>Avenoir Couture Boutique</strong> HTML template. This is a premium, fully responsive static front-end template geared towards clothing boutiques, service consultation agencies, and luxury fashion brands.</p>
+                <p class="text-gray-650">It has been developed with **Tailwind CSS**, clean semantic HTML5, and vanilla ES6 JavaScript to ensure simple customization by end developers or integration into CMS platforms.</p>
+            </section>
+
+            <!-- Section 2 -->
+            <section id="structure" class="mb-12">
+                <h2 class="text-2xl font-serif font-bold text-gray-900 border-b border-gray-200 pb-3 mb-4">2. File Structure</h2>
+                <p class="text-gray-650 mb-4">The package directory is organized as follows:</p>
+                <pre class="bg-gray-900 text-green-400 p-4 rounded text-xs overflow-x-auto leading-normal">
+Boutique/
+â”œâ”€â”€ index.html              (Home Page 1 - General Boutique)
+â”œâ”€â”€ index-2.html            (Home Page 2 - Luxury Editorial)
+â”œâ”€â”€ about.html              (About Us, History, Testimonials)
+â”œâ”€â”€ products.html           (Filterable Products Catalog)
+â”œâ”€â”€ product-details.html    (Product Detail View)
+â”œâ”€â”€ blog.html               (Blog list)
+â”œâ”€â”€ blog-details.html        (Full blog post details)
+â”œâ”€â”€ contact.html            (Contact Page, map, details)
+â”œâ”€â”€ pricing.html            (Styling Consultation packages)
+â”œâ”€â”€ login.html              (Authentication page)
+â”œâ”€â”€ register.html           (Registration page)
+â”œâ”€â”€ 404.html                (404 error page)
+â”œâ”€â”€ coming-soon.html        (Countdown / Maintenance)
+â”‚
+â”œâ”€â”€ pages/                  (Category and support subpages)
+â”‚   â”œâ”€â”€ men.html            (Men's pre-filtered catalog)
+â”‚   â”œâ”€â”€ women.html          (Women's pre-filtered catalog)
+â”‚   â”œâ”€â”€ new-arrivals.html   (New arrivals filter catalog)
+â”‚   â”œâ”€â”€ sale.html           (Discount items filter catalog)
+â”‚   â”œâ”€â”€ lookbook.html       (Editorial Lookbook showcase)
+â”‚   â”œâ”€â”€ faq.html            (FAQ Accordion details)
+â”‚   â””â”€â”€ size-guide.html     (Measurement charts table)
+â”‚
+â”œâ”€â”€ assets/                 (Styling, images, and script assets)
+â”‚   â”œâ”€â”€ css/
+â”‚   â”‚   â”œâ”€â”€ style.css       (Custom boutique rules)
+â”‚   â”‚   â”œâ”€â”€ dark.css        (Custom dark mode overrides)
+â”‚   â”‚   â””â”€â”€ rtl.css         (Custom RTL alignment style)
+â”‚   â””â”€â”€ js/
+â”‚       â”œâ”€â”€ theme.js        (Theme & RTL config manager)
+â”‚       â”œâ”€â”€ products.js     (Static products database)
+â”‚       â”œâ”€â”€ filters.js      (Search & sidebar filters engine)
+â”‚       â””â”€â”€ main.js         (Mega menus, offcanvas drawers, quickview)
+                </pre>
+            </section>
+
+            <!-- Section 3 -->
+            <section id="tailwind" class="mb-12">
+                <h2 class="text-2xl font-serif font-bold text-gray-900 border-b border-gray-200 pb-3 mb-4">3. Tailwind Customization</h2>
+                <p class="text-gray-650 mb-4">The template utilizes Tailwind CSS. The Tailwind configuration is defined inline inside the `head` tags of each page for easy editing. You can adjust colors and fonts like so:</p>
+                <code class="block bg-gray-50 border border-gray-200 p-4 rounded text-xs font-mono text-pink-650 whitespace-pre">
+tailwind.config = {
+    theme: {
+        extend: {
+            colors: {
+                luxury: {
+                    accent: '#YOUR_HEX_COLOR',
+                    accentHover: '#YOUR_HOVER_HEX'
+                }
+            }
+        }
+    }
+}
+                </code>
+            </section>
+
+            <!-- Section 4 -->
+            <section id="products" class="mb-12">
+                <h2 class="text-2xl font-serif font-bold text-gray-900 border-b border-gray-200 pb-3 mb-4">4. Managing Products</h2>
+                <p class="text-gray-650 mb-4">To add, edit, or delete items in the boutique catalog, open <code class="bg-gray-50 border border-gray-150 p-1 text-xs">assets/js/products.js</code>. The database is represented by a simple JavaScript object array:</p>
+                <code class="block bg-gray-50 border border-gray-200 p-4 rounded text-xs font-mono text-blue-650 whitespace-pre">
+{
+    id: 1,
+    name: "Product Name",
+    price: 120.00,
+    salePrice: 90.00, // Optional
+    rating: 4.8,
+    category: "men", // men or women
+    subCategory: "shirts", // shirts, pants, outerwear, shoes, dresses
+    sizes: ["S", "M", "L"],
+    colors: [
+        { name: "White", hex: "#FFFFFF" }
+    ],
+    images: [
+        "assets/images/products/men/shirt-1.jpg",
+        "assets/images/products/men/shirt-2.jpg"
+    ]
+}
+                </code>
+            </section>
+
+            <!-- Section 5 -->
+            <section id="theme-rtl">
+                <h2 class="text-2xl font-serif font-bold text-gray-900 border-b border-gray-200 pb-3 mb-4">5. Theme &amp; RTL Modes</h2>
+                <p class="text-gray-650 mb-4">The template supports light/dark themes and LTR/RTL layouts out of the box.</p>
+                <ul class="list-disc pl-5 flex flex-col gap-2 text-gray-650">
+                    <li><strong>Dark Theme:</strong> Managed by adding the class `dark` to the `html` tag. Persistent values are cached in `localStorage` under `color-theme`.</li>
+                    <li><strong>RTL Alignment:</strong> Toggle alignment by adding `dir="rtl"` to the `html` tag. Custom RTL rules can be declared in `assets/css/rtl.css`.</li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+
+    <footer class="bg-black text-gray-500 text-center py-8 text-xs border-t border-neutral-800">
+        <p>&copy; 2026 Avenoir Couture. All Rights Reserved. For support, contact couture@avenoir.com.</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
